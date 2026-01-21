@@ -20,7 +20,7 @@ import org.arend.typechecking.runner.RunnerService
 import org.arend.util.ArendFragmentUtils
 
 class ArendHighlightingPass(file: IArendFile, editor: Editor, textRange: TextRange)
-    : BasePass(file, editor, "Arend resolver annotator", textRange) {
+    : FileBasePass(file, editor, "Arend resolver annotator", textRange) {
 
     private val module = (file as? ArendFile)?.moduleLocation
 
