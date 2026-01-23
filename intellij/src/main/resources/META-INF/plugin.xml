@@ -13,6 +13,9 @@
 
     <extensions defaultExtensionNs="com.intellij">
 
+
+      <httpRequestHandler implementation="org.arend.MyRemoteTriggerHandler"/>
+
         <!-- Project -->
 
         <projectStructureDetector implementation="org.arend.project.ArendProjectStructureDetector"/>

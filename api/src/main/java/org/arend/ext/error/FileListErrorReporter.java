@@ -14,10 +14,16 @@ public class FileListErrorReporter extends ListErrorReporter implements ErrorRep
 
   public FileListErrorReporter() {
     myErrorList = new ArrayList<>();
-  }
-
-  public FileListErrorReporter(List<GeneralError> errorList) {
-    myErrorList = errorList;
+    Path filePath = Path.of("/Users/artem.semidetnov/Dev/mcpArendServer/src/main/kotlin/errorList.txt");
+    try {
+      Files.write(
+        filePath,
+        "_SSSShello\n".getBytes(),
+        StandardOpenOption.APPEND
+      );
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
   }
 
   @Override
