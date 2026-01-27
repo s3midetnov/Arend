@@ -3,7 +3,6 @@ package org.arend.server.impl;
 import org.arend.error.DummyErrorReporter;
 import org.arend.ext.ArendExtension;
 import org.arend.ext.error.ErrorReporter;
-import org.arend.ext.error.FileListErrorReporter;
 import org.arend.ext.error.GeneralError;
 import org.arend.ext.module.LongName;
 import org.arend.ext.module.ModulePath;
@@ -111,33 +110,6 @@ public class ArendServerImpl implements ArendServer {
         });
       }
     };
-    myCacheReferences = cacheReferences;
-    myLogger.setLevel(withLogging ? Level.INFO : Level.OFF);
-    myLibraryService = new LibraryService(this);
-    myClearLemmas = clearLemmas;
-    copyLogger(ArendCheckerImpl.getLogger());
-
-    myLogger.info(() -> "Server started");
-  }
-
-  public ArendServerImpl(@NotNull ArendServerRequester requester,
-                         boolean cacheReferences,
-                         boolean withLogging,
-                         boolean clearLemmas,
-                         boolean isMCPCalled){
-    myRequester = new DelegateServerRequester(requester) {
-      @Override
-      public <T> T runUnderReadLock(@NotNull Supplier<T> supplier) {
-        return requester.runUnderReadLock(() -> {
-          synchronized (ArendServerImpl.this) {
-            return supplier.get();
-          }
-        });
-      }
-    };
-    if (isMCPCalled) {
-      myErrorService.addErrorReporter(new FileListErrorReporter());
-    }
     myCacheReferences = cacheReferences;
     myLogger.setLevel(withLogging ? Level.INFO : Level.OFF);
     myLibraryService = new LibraryService(this);

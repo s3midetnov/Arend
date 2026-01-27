@@ -9,6 +9,7 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiFileFactory
 import org.arend.ArendLanguage
 import org.arend.error.DummyErrorReporter
+import org.arend.ext.error.FileListErrorReporter
 import org.arend.prelude.Prelude
 import org.arend.psi.ArendFile
 import org.arend.server.impl.ArendServerImpl
@@ -47,31 +48,32 @@ class ArendServerService(val project: Project) : Disposable {
             return server
         }
     }
-  private fun initializeWithFile(): ArendServer {
-    synchronized(this) {
-      val server = ArendServerImpl(ArendServerRequesterImpl(project), true, false, !ApplicationManager.getApplication().isUnitTestMode, true)
-      println("Initializing server error reporters")
-      serverFieldWithFile = server
-      val preludeFileName = Prelude.MODULE_PATH.toString() + FileUtils.EXTENSION
-      val preludeText = String(
-        ArendServerService::class.java.getResourceAsStream("/lib/$preludeFileName")!!.readBytes(),
-        StandardCharsets.UTF_8
-      )
-      preludeField = runReadAction {
-        val prelude = PsiFileFactory.getInstance(project)
-          .createFileFromText(preludeFileName, ArendLanguage.INSTANCE, preludeText) as? ArendFile
-        if (prelude != null) {
-          prelude.virtualFile?.isWritable = false
-          prelude.generatedModuleLocation = Prelude.MODULE_LOCATION
-          server.addReadOnlyModule(Prelude.MODULE_LOCATION) {
-            ConcreteBuilder.convertGroup(prelude, Prelude.MODULE_LOCATION, DummyErrorReporter.INSTANCE)
+
+    private fun initializeWithFile(): ArendServer {
+      synchronized(this) {
+        val server = ArendServerImpl(ArendServerRequesterImpl(project), true, false, !ApplicationManager.getApplication().isUnitTestMode)
+        server.addErrorReporter(FileListErrorReporter(project.getBasePath()))
+        serverFieldWithFile = server
+        val preludeFileName = Prelude.MODULE_PATH.toString() + FileUtils.EXTENSION
+        val preludeText = String(
+          ArendServerService::class.java.getResourceAsStream("/lib/$preludeFileName")!!.readBytes(),
+          StandardCharsets.UTF_8
+        )
+        preludeField = runReadAction {
+          val prelude = PsiFileFactory.getInstance(project)
+            .createFileFromText(preludeFileName, ArendLanguage.INSTANCE, preludeText) as? ArendFile
+          if  (prelude != null) {
+            prelude.virtualFile?.isWritable = false
+            prelude.generatedModuleLocation = Prelude.MODULE_LOCATION
+            server.addReadOnlyModule(Prelude.MODULE_LOCATION) {
+              ConcreteBuilder.convertGroup(prelude, Prelude.MODULE_LOCATION, DummyErrorReporter.INSTANCE)
+            }
           }
+          prelude
         }
-        prelude
+        return server
       }
-      return server
     }
-  }
 
     val server: ArendServer
         get() = initialize()

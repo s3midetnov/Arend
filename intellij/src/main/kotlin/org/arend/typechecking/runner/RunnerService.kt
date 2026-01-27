@@ -11,7 +11,6 @@ import com.intellij.platform.util.progress.reportRawProgress
 import com.intellij.platform.util.progress.reportSequentialProgress
 import kotlinx.coroutines.*
 import org.arend.error.DummyErrorReporter
-import org.arend.ext.error.FileListErrorReporter
 import org.arend.ext.module.LongName
 import org.arend.ext.module.ModuleLocation
 import org.arend.server.ArendServerRequesterImpl
@@ -21,7 +20,6 @@ import org.arend.typechecking.CoroutineCancellationIndicator
 import org.arend.typechecking.error.NotificationErrorReporter
 import org.arend.ext.module.FullName
 import org.arend.naming.reference.TCDefReferable
-import org.arend.server.ArendServer
 import org.arend.term.concrete.Concrete
 import org.arend.typechecking.visitor.ArendCheckerFactory
 
@@ -78,18 +76,11 @@ class RunnerService(private val project: Project, private val coroutineScope: Co
             } }
         }
 
-  private fun runChecker(library: String?, isTest: Boolean, module: ModuleLocation?, definition: LongName?, onlyResolve: Boolean, checkerFactory: ArendCheckerFactory?, renamed: Map<TCDefReferable, TCDefReferable>?, bgAction: (() -> Unit)?, edtAction: (() -> Unit)?, isFileErrorReporting : Boolean) =
+  private fun runCheckerWithFile(library: String?, isTest: Boolean, module: ModuleLocation?, definition: LongName?, onlyResolve: Boolean, checkerFactory: ArendCheckerFactory?, renamed: Map<TCDefReferable, TCDefReferable>?, bgAction: (() -> Unit)?, edtAction: (() -> Unit)?) =
     coroutineScope.launch {
-      println("correct runChecker is run at $module")
       val message = module?.toString() ?: (library ?: "project")
-      var server : ArendServer
-      if (isFileErrorReporting) {
-        println("we have server with file writing")
-        server = project.service<ArendServerService>().serverWithFile
-      }else {
-        println("we don't have server with file writing")
-        server = project.service<ArendServerService>().server
-      }
+      val server = project.service<ArendServerService>().serverWithFile
+
       withBackgroundProgress(project, "Checking $message") { reportSequentialProgress { reporter ->
         val checker = reporter.nextStep(if (onlyResolve) 100 else 5, "Resolving $message") { reportRawProgress { reporter ->
           if (module == null) {
@@ -149,6 +140,6 @@ class RunnerService(private val project: Project, private val coroutineScope: Co
     fun runChecker(module: ModuleLocation, onlyResolve: Boolean = false) =
         runChecker(module.libraryName, module.locationKind == ModuleLocation.LocationKind.TEST, module, null, onlyResolve)
 
-    fun runChecker(module: ModuleLocation, onlyResolve: Boolean = false, isFileErrorReporting : Boolean) =
-        runChecker(module.libraryName, module.locationKind == ModuleLocation.LocationKind.TEST, module, null, onlyResolve, null, null, null, null, isFileErrorReporting)
+    fun runCheckerWithFile(module: ModuleLocation, onlyResolve: Boolean = false) =
+        runCheckerWithFile(module.libraryName, module.locationKind == ModuleLocation.LocationKind.TEST, module, null, onlyResolve, null, null, null, null)
 }

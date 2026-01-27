@@ -350,11 +350,9 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
         // Server actions
         val resolveModulesAction = ResolveSelectedModulesAction()
         val typecheckAction = TypecheckSelectedAction()
-        val typecheckActionToFile = TypecheckSelectedActionToFile()
 
         toolbarGroup.add(resolveModulesAction)
         toolbarGroup.add(typecheckAction)
-        toolbarGroup.add(typecheckActionToFile)
 
         val toolbar = ActionManager.getInstance().createActionToolbar("ArendServerStateView.toolbar", toolbarGroup, false)
         toolbar.targetComponent = panel
@@ -683,38 +681,6 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
 
         override fun getActionUpdateThread() = ActionUpdateThread.BGT
     }
-
-  private inner class TypecheckSelectedActionToFile : AnAction("Typecheck to file") {
-    override fun update(e: AnActionEvent) {
-      e.presentation.icon = ArendIcons.TURNSTILE
-      e.presentation.isEnabled = selectedDefinition() != null || selectedModuleLocations().isNotEmpty() || selectedLibraryNames().isNotEmpty()
-    }
-
-    override fun actionPerformed(e: AnActionEvent) {
-      println("Typechecking to file")
-      val def = selectedDefinition()
-      if (def != null) {
-        val fullName = def.refFullName
-        project.service<RunnerService>().runChecker(fullName.module ?: return, fullName.longName)
-      } else {
-        val modules = selectedModuleLocations()
-        val libraries = selectedLibraryNames()
-        if (modules.isNotEmpty()) {
-          for (module in modules) {
-            println("typechecking module $module")
-            project.service<RunnerService>().runChecker(module, false, true)
-          }
-        } else {
-          // Typecheck whole libraries (both sources and tests)
-          for (lib in libraries) {
-            project.service<RunnerService>().runChecker(lib, true, null, null, false)
-          }
-        }
-      }
-    }
-
-    override fun getActionUpdateThread() = ActionUpdateThread.BGT
-  }
 
     private fun showContextMenu(e: MouseEvent) {
         val path = tree.getPathForLocation(e.x, e.y)

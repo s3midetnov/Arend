@@ -1,9 +1,9 @@
 package org.arend.ext.error;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +11,29 @@ import java.util.List;
 
 public class FileListErrorReporter extends ListErrorReporter implements ErrorReporter{
   final private List<GeneralError> myErrorList;
+  private final Path filePath;
 
-  public FileListErrorReporter() {
+  public FileListErrorReporter(String dir) {
     myErrorList = new ArrayList<>();
-    Path filePath = Path.of("/Users/artem.semidetnov/Dev/mcpArendServer/src/main/kotlin/errorList.txt");
+    Path dirPath = Paths.get(dir, ".junieCommunication");
+
     try {
-      Files.write(
-        filePath,
-        "_SSSShello\n".getBytes(),
-        StandardOpenOption.APPEND
-      );
+      // 2. Create the directory (does nothing if it already exists)
+      Files.createDirectories(dirPath);
+
+      // 3. Create the file inside (optional, based on your previous request)
+      Path filePath = dirPath.resolve("errorFile.txt");
+      if (!Files.exists(filePath)) {
+        Files.createFile(filePath);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    filePath = Path.of(dir + "/.junieCommunication/errorFile.txt");
+    try {
+      if (Files.notExists(filePath)) {
+        Files.createFile(filePath);
+      }
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
@@ -29,14 +42,7 @@ public class FileListErrorReporter extends ListErrorReporter implements ErrorRep
   @Override
   public void report(GeneralError error) {
     myErrorList.add(error);
-    Path filePath = Path.of("/Users/artem.semidetnov/Dev/mcpArendServer/src/main/kotlin/errorList.txt");
-    try {
-      if (Files.notExists(filePath)) {
-        Files.createFile(filePath);
-      }
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
+
     String text = error.toString() + "\n";
     try {
       Files.write(
