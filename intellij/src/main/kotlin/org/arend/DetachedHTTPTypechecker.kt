@@ -9,9 +9,15 @@ import org.arend.ext.module.ModuleLocation.LocationKind
 import org.arend.ext.module.ModulePath
 import org.arend.typechecking.runner.RunnerService
 import org.jetbrains.ide.RestService
+import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.StandardOpenOption
+import java.util.concurrent.atomic.AtomicInteger
 
 class DetachedTypecheckerService() : RestService() {
   val delimiter = "%%"
+  private val doneMarker = "TYPECHECK_DONE"
 
   override fun getServiceName(): String {
     return "detachedTypechecker"
@@ -33,18 +39,63 @@ class DetachedTypecheckerService() : RestService() {
       ModuleLocation(parsedUserRequest.libraryName, LocationKind.SOURCE, ModulePath.fromString(it.split("/").last()))
     }
     println("modules $modules , ${parsedUserRequest.libraryName}")
+    val project = getLastFocusedOrOpenedProject()
+    val errorFilePath = ensureCommunicationFile(project?.basePath)
+
     ApplicationManager.getApplication().invokeLater {
+      if (project == null) return@invokeLater
+      val runnerService = project.service<RunnerService>()
+      val remaining = if (errorFilePath != null) AtomicInteger(modules.size) else null
+
+      if (modules.isEmpty() && errorFilePath != null) {
+        try {
+          Files.write(
+            errorFilePath,
+            (doneMarker + "\n").toByteArray(StandardCharsets.UTF_8),
+            StandardOpenOption.CREATE,
+            StandardOpenOption.APPEND
+          )
+        } catch (_: Exception) {
+        }
+      }
+
       for (module in modules){
-        module.let {
-//          val module = ModuleLocation("demo", LocationKind.SOURCE, ModulePath.fromString(module.toString()))
-//          TODO : check, if this works with new libraryName
-          getLastFocusedOrOpenedProject()?.service<RunnerService>()?.runCheckerWithFile(module, false)
+        val job = runnerService.runCheckerWithFile(module, false)
+        if (errorFilePath != null) {
+          job.invokeOnCompletion {
+            val shouldSignal = remaining?.decrementAndGet() == 0
+            if (shouldSignal) {
+              try {
+                Files.write(
+                  errorFilePath,
+                  (doneMarker + "\n").toByteArray(StandardCharsets.UTF_8),
+                  StandardOpenOption.CREATE,
+                  StandardOpenOption.APPEND
+                )
+              } catch (_: Exception) {
+              }
+            }
+          }
         }
       }
     }
 
     sendOk(request, context)
     return null
+  }
+
+  private fun ensureCommunicationFile(basePath: String?): Path? {
+    if (basePath == null) return null
+    val dirPath = Path.of(basePath, ".junieCommunication")
+    val filePath = dirPath.resolve("errorFile.txt")
+    try {
+      Files.createDirectories(dirPath)
+      if (Files.notExists(filePath)) {
+        Files.createFile(filePath)
+      }
+    } catch (_: Exception) {
+    }
+    return filePath
   }
 
   fun parseServerData(encodedPayload: String): DecodedRequestData {
