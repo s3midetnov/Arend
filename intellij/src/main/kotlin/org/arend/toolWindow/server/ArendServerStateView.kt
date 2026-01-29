@@ -671,7 +671,6 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
                         project.service<RunnerService>().runChecker(module, false)
                     }
                 } else {
-                    // Typecheck whole libraries (both sources and tests)
                     for (lib in libraries) {
                         project.service<RunnerService>().runChecker(lib, true, null, null, false)
                     }

@@ -10,7 +10,7 @@ import org.arend.ext.module.ModulePath
 import org.arend.typechecking.runner.RunnerService
 import org.jetbrains.ide.RestService
 
-class MyRemoteTriggerHandler() : RestService() {
+class DetachedTypecheckerService() : RestService() {
   val delimiter = "%%"
 
   override fun getServiceName(): String {
@@ -26,15 +26,17 @@ class MyRemoteTriggerHandler() : RestService() {
     request: FullHttpRequest,
     context: ChannelHandlerContext
   ): String? {
+    System.err.println(request.uri())
     val encodedPayload = urlDecoder.parameters()["action"]?.firstOrNull() ?: ""
     val parsedUserRequest : DecodedRequestData = parseServerData(encodedPayload)
     val modules : List<ModuleLocation> = parsedUserRequest.modulePaths.map{
       ModuleLocation(parsedUserRequest.libraryName, LocationKind.SOURCE, ModulePath.fromString(it.split("/").last()))
     }
-    for (modulePath in modules){
-      ApplicationManager.getApplication().invokeLater {
-        modulePath.let {
-          val module = ModuleLocation(parsedUserRequest.libraryName, LocationKind.SOURCE, ModulePath.fromString(modulePath.toString()))
+    println("modules $modules , ${parsedUserRequest.libraryName}")
+    ApplicationManager.getApplication().invokeLater {
+      for (module in modules){
+        module.let {
+//          val module = ModuleLocation("demo", LocationKind.SOURCE, ModulePath.fromString(module.toString()))
 //          TODO : check, if this works with new libraryName
           getLastFocusedOrOpenedProject()?.service<RunnerService>()?.runCheckerWithFile(module, false)
         }

@@ -14,7 +14,7 @@
     <extensions defaultExtensionNs="com.intellij">
 
 
-      <httpRequestHandler implementation="org.arend.MyRemoteTriggerHandler"/>
+      <httpRequestHandler implementation="org.arend.DetachedTypecheckerService"/>
 
         <!-- Project -->
 

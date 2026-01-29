@@ -1,6 +1,0 @@
-\import Algebra.Group
-\import Algebra.Meta
-
-\func f(G : Group)(x y : G) : x G.* y G.* (inverse y) = x => equation.group
-
-\func x18x18 (x : Nat) : Nat => \Type
