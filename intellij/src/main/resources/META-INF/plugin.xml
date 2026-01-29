@@ -15,6 +15,7 @@
 
 
       <httpRequestHandler implementation="org.arend.DetachedTypecheckerService"/>
+      <inline.completion.provider implementation="org.arend.ArendCopilotProvider"/>
 
         <!-- Project -->
 
