@@ -13,9 +13,6 @@
 
     <extensions defaultExtensionNs="com.intellij">
 
-
-      <httpRequestHandler implementation="org.arend.DetachedTypecheckerService"/>
-
         <!-- Project -->
 
         <projectStructureDetector implementation="org.arend.project.ArendProjectStructureDetector"/>

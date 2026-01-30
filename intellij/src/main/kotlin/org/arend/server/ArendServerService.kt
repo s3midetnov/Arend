@@ -20,13 +20,13 @@ import java.nio.charset.StandardCharsets
 @Service(Service.Level.PROJECT)
 class ArendServerService(val project: Project) : Disposable {
     private var serverField: ArendServer? = null
-    private var serverFieldWithFile: ArendServer? = null
     private var preludeField: ArendFile? = null
 
     private fun initialize(): ArendServer {
         serverField?.let { return it }
         synchronized(this) {
             val server = ArendServerImpl(ArendServerRequesterImpl(project), true, false, !ApplicationManager.getApplication().isUnitTestMode)
+            server.addErrorReporter(FileListErrorReporter(project.getBasePath()))
             serverField = server
             val preludeFileName = Prelude.MODULE_PATH.toString() + FileUtils.EXTENSION
             val preludeText = String(
@@ -49,37 +49,8 @@ class ArendServerService(val project: Project) : Disposable {
         }
     }
 
-    private fun initializeWithFile(): ArendServer {
-      synchronized(this) {
-        val server = ArendServerImpl(ArendServerRequesterImpl(project), true, false, !ApplicationManager.getApplication().isUnitTestMode)
-        server.addErrorReporter(FileListErrorReporter(project.getBasePath()))
-        serverFieldWithFile = server
-        val preludeFileName = Prelude.MODULE_PATH.toString() + FileUtils.EXTENSION
-        val preludeText = String(
-          ArendServerService::class.java.getResourceAsStream("/lib/$preludeFileName")!!.readBytes(),
-          StandardCharsets.UTF_8
-        )
-        preludeField = runReadAction {
-          val prelude = PsiFileFactory.getInstance(project)
-            .createFileFromText(preludeFileName, ArendLanguage.INSTANCE, preludeText) as? ArendFile
-          if  (prelude != null) {
-            prelude.virtualFile?.isWritable = false
-            prelude.generatedModuleLocation = Prelude.MODULE_LOCATION
-            server.addReadOnlyModule(Prelude.MODULE_LOCATION) {
-              ConcreteBuilder.convertGroup(prelude, Prelude.MODULE_LOCATION, DummyErrorReporter.INSTANCE)
-            }
-          }
-          prelude
-        }
-        return server
-      }
-    }
-
     val server: ArendServer
         get() = initialize()
-
-    val serverWithFile : ArendServer
-      get() = initializeWithFile()
 
     fun isPrelude(file: VirtualFile) = file == preludeField?.virtualFile
 
