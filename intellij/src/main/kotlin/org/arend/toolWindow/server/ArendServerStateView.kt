@@ -350,7 +350,6 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
         // Server actions
         val resolveModulesAction = ResolveSelectedModulesAction()
         val typecheckAction = TypecheckSelectedAction()
-
         toolbarGroup.add(resolveModulesAction)
         toolbarGroup.add(typecheckAction)
 
@@ -667,7 +666,6 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
                 val libraries = selectedLibraryNames()
                 if (modules.isNotEmpty()) {
                     for (module in modules) {
-                        println("libraryName = ${module.libraryName}, locationKind = ${module.locationKind}, modulePath = ${module.modulePath}")
                         project.service<RunnerService>().runChecker(module, false)
                     }
                 } else {

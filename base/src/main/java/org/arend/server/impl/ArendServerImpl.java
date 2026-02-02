@@ -115,6 +115,7 @@ public class ArendServerImpl implements ArendServer {
 
     myLogger.info(() -> "Server started");
   }
+
   void copyLogger(Logger to) {
     to.setLevel(myLogger.getLevel());
     to.setUseParentHandlers(myLogger.getUseParentHandlers());
