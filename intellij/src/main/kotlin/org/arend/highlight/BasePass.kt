@@ -70,11 +70,11 @@ import org.arend.typechecking.error.local.inference.LambdaInferenceError
 import org.arend.typechecking.error.local.inference.RecursiveInstanceInferenceError
 import java.util.*
 
-abstract class BasePass(protected open val file: IArendFile, editor: Editor, name: String, protected open val textRange: TextRange)
+abstract class BasePass(protected open val file: IArendFile, editor: Editor, name: String, protected val textRange: TextRange)
     : ProgressableTextEditorHighlightingPass(file.project, editor.document, name, file, editor, textRange, false, null), ErrorReporter, HighlightingCollector {
 
     private val highlights = ArrayList<HighlightInfo>()
-    val errorList = ArrayList<GeneralError>()
+    private val errorList = ArrayList<GeneralError>()
 
     fun getHighlights() = highlights
 

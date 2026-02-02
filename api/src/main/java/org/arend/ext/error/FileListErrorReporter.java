@@ -18,10 +18,7 @@ public class FileListErrorReporter extends ListErrorReporter implements ErrorRep
     Path dirPath = Paths.get(dir, ".junieCommunication");
 
     try {
-      // 2. Create the directory (does nothing if it already exists)
       Files.createDirectories(dirPath);
-
-      // 3. Create the file inside (optional, based on your previous request)
       Path filePath = dirPath.resolve("errorFile.txt");
       if (!Files.exists(filePath)) {
         Files.createFile(filePath);
@@ -42,6 +39,15 @@ public class FileListErrorReporter extends ListErrorReporter implements ErrorRep
   @Override
   public void report(GeneralError error) {
     myErrorList.add(error);
+
+    try {
+      Files.createDirectories(filePath.getParent());
+      if (Files.notExists(filePath)) {
+        Files.createFile(filePath);
+      }
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
 
     String text = error.toString() + "\n";
     try {
