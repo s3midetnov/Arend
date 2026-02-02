@@ -96,10 +96,7 @@ public class ArendServerImpl implements ArendServer {
     return defData == null ? new ArendInstances() : defData.instances();
   };
 
-  public ArendServerImpl(@NotNull ArendServerRequester requester,
-                         boolean cacheReferences,
-                         boolean withLogging,
-                         boolean clearLemmas) {
+  public ArendServerImpl(@NotNull ArendServerRequester requester, boolean cacheReferences, boolean withLogging, boolean clearLemmas) {
     myRequester = new DelegateServerRequester(requester) {
       @Override
       public <T> T runUnderReadLock(@NotNull Supplier<T> supplier) {
