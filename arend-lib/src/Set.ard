@@ -7,181 +7,172 @@
 \import Paths
 \import Paths.Meta
 
+-- | A data type representing decidability of a proposition.
 \data Dec (E : \Prop)
   | yes E
   | no (Not E)
   \where {
+    -- | Dec E is a proposition.
     \use \level levelProp {E : \Prop} : isProp (Dec E)
-      => isProp-prover
+      => {?}
 
-    \func rec {R : \Type} {E : \Prop} (y : E -> R) (n : Not E -> R) (d : Dec E) : R \elim d
-      | yes e => y e
-      | no q => n q
+    -- | Recursion principle for Dec.
+    \func rec {R : \Type} {E : \Prop} (y : E -> R) (n : Not E -> R) (d : Dec E) : R
+      => {?}
   }
 
+-- | Decidability can be proven for any proposition that is already negated.
 \lemma negated-dec (E : \Prop) {P : NegatedProp} (f : Dec E -> P) : P
-  => isNegated \lam g => g $ f $ no \lam e => g $ f (yes e)
+  => {?}
 
-\func decToBool {E : \Prop} (d : Dec E) : Bool
-  | yes _ => true
-  | no _ => false
+-- | Converts a Dec value to a Boolean.
+\func decToBool {E : \Prop} (d : Dec E) : Bool => {?}
 
+-- | A class for types that have a decidable property.
 \class Decide (E : \Prop)
   | decide : Dec E
 
-\lemma dec_decide {E : \Prop} (d : Dec E) : Decide E \cowith
-  | decide => d
+-- | Returns a Decide instance for a given Dec value.
+\lemma dec_decide {E : \Prop} (d : Dec E) : Decide E
+  => {?}
 
+-- | If E holds, then its decidability proof is 'yes'.
 \lemma dec_yes_reduce {E : \Prop} {d : Dec E} (e : E) : d = yes e
-  => prop-pi
+  => {?}
 
+-- | If Not E holds, then its decidability proof is 'no'.
 \lemma dec_no_reduce {E : \Prop} {d : Dec E} (q : Not E) : d = no q
-  => prop-pi
+  => {?}
 
-\lemma Dec_|| {A B : \Prop} (d : Dec A) (e : Dec B) : Dec (A || B) \elim d, e
-  | yes e, _ => yes (byLeft e)
-  | _, yes e => yes (byRight e)
-  | no q, no q' => no \case __ \with {
-    | byLeft a => q a
-    | byRight b => q' b
-  }
+-- | Disjunction of decidable propositions is decidable.
+\lemma Dec_|| {A B : \Prop} (d : Dec A) (e : Dec B) : Dec (A || B)
+  => {?}
 
-\func SigmaDecide {A : Decide} (B : A -> Decide) : Decide (\Sigma (a : A) (B a)) \cowith
-  | decide => \case A.decide \with {
-    | yes a => \case decide {B a} \with {
-      | yes b => yes (a,b)
-      | no q => no \lam p => q $ transport (B __) prop-pi p.2
-    }
-    | no q => no \lam p => q p.1
-  }
+-- | Sigma type of decidable propositions is decidable.
+\func SigmaDecide {A : Decide} (B : A -> Decide) : Decide (\Sigma (a : A) (B a))
+  => {?}
 
-\instance ProductDecide (A B : Decide) : Decide => SigmaDecide {A} (\lam _ => B)
+-- | Product of decidable propositions is decidable.
+\instance ProductDecide (A B : Decide) : Decide => {?}
 
-\lemma NotDec {P : \Prop} (d : Dec P) : Dec (Not P) \elim d
-  | yes a => no \lam f => f a
-  | no q => yes q
+-- | Negation of a decidable proposition is decidable.
+\lemma NotDec {P : \Prop} (d : Dec P) : Dec (Not P)
+  => {?}
 
+-- | Negation of a Decide instance.
 \instance NotDecide (A : Decide) : Decide (Not A)
-  | decide => NotDec A.decide
+  => {?}
 
+-- | A class for sets.
 \class BaseSet (E : \Set)
 
+-- | A class for subsets.
 \class SubSet (S : BaseSet) (\classifying contains : S -> \Prop) {
-  \func ISet : BaseSet \cowith
-    | E => \Sigma (x : S) (contains x)
+  -- | The set of elements in the subset.
+  \func ISet : BaseSet => {?}
 }
 
+-- | A class for decidable subsets.
 \class DecSubSet \extends SubSet
   | isDec (x : S) : Dec (contains x)
   \where {
-    \func max {S : BaseSet} : DecSubSet S \cowith
-      | contains _ => \Sigma
-      | isDec _ => yes ()
+    -- | The maximal subset (contains all elements).
+    \func max {S : BaseSet} : DecSubSet S => {?}
   }
 
+-- | A set with a property that double negation of equality implies equality.
 \class SeparatedSet \extends BaseSet
   | separatedEq {x y : E} : Not (Not (x = y)) -> x = y
 
 -- | A set with a tight apartness relation.
 \class Set# \extends SeparatedSet {
+  -- | The apartness relation.
   | \infix 4 # : E -> E -> \Prop
+  -- | Apartness is irreflexive.
   | #-irreflexive {x : E} : Not (x # x)
+  -- | Apartness is symmetric.
   | #-symmetric {x y : E} : x # y -> y # x
+  -- | Apartness comparison.
   | #-comparison (x y z : E) : x # z -> x # y || y # z
+  -- | Tightness: Not (x # y) implies x = y.
   | tightness {x y : E} : Not (x # y) -> x = y
-  | separatedEq {x} ~~x=y => tightness (\lam x#y => ~~x=y (\lam x=y => #-irreflexive (transport (x #) (inv x=y) x#y)))
+  | separatedEq {x} ~~x=y => {?}
 
-  \lemma apartNotEqual {x y : E} (x#y : x # y) : x /= y =>
-    \lam x=y => #-irreflexive (transport (x #) (inv x=y) x#y)
+  -- | Apartness implies inequality.
+  \lemma apartNotEqual {x y : E} (x#y : x # y) : x /= y => {?}
 }
 
+-- | A set with a decidable equality relation.
 \class DecSet \extends BaseSet, Set# {
+  -- | Decides equality of two elements.
   \field decideEq (x y : E) : Dec (x = y)
+  -- | Inequality implies apartness.
   | nonEqualApart {x y : E} : x /= y -> x # y
+  -- | Equality as a Boolean function.
   | \infix 4 == : E -> E -> Bool
-  | == x y => decToBool (decideEq x y)
+  | == x y => {?}
 
-  \default # x y : \Prop => x /= y
-  \default nonEqualApart \as nonEqualApartImpl {x} {y} (p : x /= y) : x # y => p
-  \default #-irreflexive {x} (x/=x : x # x) : Empty => x/=x idp
-  \default #-symmetric {x} {y} (x/=y : x # y) : y # x => /=-sym x/=y
-  \default #-comparison x y z (x/=z : x # z) : x # y || y # z => \case decideEq x y \with {
-    | yes x=y => byRight (\lam y=z => x/=z (x=y *> y=z))
-    | no x/=y => byLeft x/=y
-  }
-  \default tightness {x} {y} (x//=y : Not (x # y)) : x = y => \case decideEq x y \with {
-    | yes x=y => x=y
-    | no x/=y => absurd (x//=y x/=y)
-  }
+  \default # x y : \Prop => {?}
+  \default nonEqualApart \as nonEqualApartImpl {x} {y} (p : x /= y) : x # y => {?}
+  \default #-irreflexive {x} (x/=x : x # x) : Empty => {?}
+  \default #-symmetric {x} {y} (x/=y : x # y) : y # x => {?}
+  \default #-comparison x y z (x/=z : x # z) : x # y || y # z => {?}
+  \default tightness {x} {y} (x//=y : Not (x # y)) : x = y => {?}
 }
 
-\func SigmaDecSet {A : DecSet} (B : A -> DecSet) : DecSet (\Sigma (a : A) (B a)) \cowith
-  | decideEq p q => \case decideEq p.1 q.1 \with {
-    | yes e => \case decideEq (transport (\lam a => B a) e p.2) q.2 \with {
-      | yes e' => yes (ext (e,e'))
-      | no n => no (\lam e' => n (rewrite (prop-isProp e (pmap __.1 e')) (pmapd __.2 e')))
-    }
-    | no n => no (\lam e => n (pmap __.1 e))
-  }
+-- | Sigma type of DecSets is a DecSet.
+\func SigmaDecSet {A : DecSet} (B : A -> DecSet) : DecSet (\Sigma (a : A) (B a)) => {?}
 
-\func SubDecSet {A : DecSet} {B : A -> \Prop} : DecSet (\Sigma (a : A) (B a))
-  => SigmaDecSet \lam a => \new DecSet (B a) {
-    | decideEq b b' => yes prop-pi
-  }
+-- | Decidable subset of a DecSet is a DecSet.
+\func SubDecSet {A : DecSet} {B : A -> \Prop} : DecSet (\Sigma (a : A) (B a)) => {?}
 
-\instance DecBool : DecSet
-  | E => Bool
-  | decideEq x y => compare x y
+-- | Booleans form a DecSet.
+\instance DecBool : DecSet => {?}
   \where {
+    -- | Equality on Booleans is decidable.
     \func compare (a b : Bool) : Dec (a = b)
-      | false, false => yes idp
-      | false, true => no contradiction
-      | true, false => no contradiction
-      | true, true => yes idp
+      => {?}
   }
 
-\instance ProductDecSet (A B : DecSet) : DecSet (\Sigma A B)
-  => SigmaDecSet (\lam _ => B)
+-- | Product of two DecSets is a DecSet.
+\instance ProductDecSet (A B : DecSet) : DecSet (\Sigma A B) => {?}
 
-\instance EqualityDecide (A : DecSet) (a a' : A) : Decide (a = a')
-  | decide => decideEq a a'
+-- | Equality in a DecSet is a Decide instance.
+\instance EqualityDecide (A : DecSet) (a a' : A) : Decide (a = a') => {?}
 
-\instance ArrayDec (A : DecSet) (n : Nat) : DecSet (Array A n)
-  | decideEq => aux
+-- | Arrays of DecSets form a DecSet.
+\instance ArrayDec (A : DecSet) (n : Nat) : DecSet (Array A n) => {?}
   \where {
-    \private \func aux {n : Nat} (l l' : Array A n) : Dec (l = l') \elim n, l, l'
-      | 0, nil, nil => yes idp
-      | suc n, a :: l, a' :: l' => \case decideEq a a', aux l l' \with {
-        | yes e, yes e' => yes $ pmap2 (::) e e'
-        | _, no q => no \lam p => q \lam i => \new Array A n \lam j => p i (suc j)
-        | no q, _ => no \lam p => q \lam i => p i 0
-      }
+    -- | Equality of arrays is decidable.
+    \private \func aux {n : Nat} (l l' : Array A n) : Dec (l = l')
+      => {?}
   }
 
+-- | If two elements are equal, decideEq returns 'yes'.
 \lemma decideEq=_reduce {A : DecSet} {x y : A} (p : x = y) : decideEq x y = yes p
-  => prop-pi
+  => {?}
 
+-- | If two elements are not equal, decideEq returns 'no'.
 \lemma decideEq/=_reduce {A : DecSet} {x y : A} (p : x /= y) : decideEq x y = no p
-  => prop-pi
+  => {?}
 
+-- | If '==' returns true, then the elements are equal.
 \lemma ==_= {A : DecSet} {a a' : A} (so : So (a == a')) : a = a'
-  => unfold (==) at so $ mcases {decToBool} so _ \with {
-    | yes p, _ => p
-    | no n, ()
-  }
+  => {?}
 
+-- | If '==' returns true, then the elements are equal (alternative name).
 \lemma =-dec {A : DecSet} {a a' : A} {so : So (a == a')} : a = a'
-  => ==_= so
+  => {?}
 
+-- | If '==' returns false, then the elements are not equal.
 \lemma /=-dec {A : DecSet} {a a' : A} {so : So (not (a == a'))} : a /= a'
-  => unfold (==) at so $ mcases {decToBool} so _ \with {
-    | yes _, ()
-    | no p, _ => p
-  }
+  => {?}
 
+-- | A truncated data type for sets.
 \truncated \data Trunc0 (A : \Type) : \Set
   | in0 A
   \where {
-    \func map {A B : \Type} (t : Trunc0 A) (f : A -> B) : Trunc0 B \elim t
-      | in0 a => in0 (f a)
+    -- | Maps a function over a truncated type.
+    \func map {A B : \Type} (t : Trunc0 A) (f : A -> B) : Trunc0 B
+      => {?}
   }

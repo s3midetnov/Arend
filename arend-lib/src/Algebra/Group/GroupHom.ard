@@ -10,105 +10,98 @@
 \import Paths
 \import Paths.Meta
 
+-- | A homomorphism of groups.
 \record GroupHom \extends MonoidHom {
   \override Dom : Group
   \override Cod : Group
 
   | func-ide => cancel_*-left (func ide) $ inv func-* *> pmap func ide-left *> inv ide-right
 
-  \lemma func-inverse {a : Dom} : func (inverse a) = inverse (func a)
-    => MonoidHom.presInvElem \this (Group.makeInv a) (Group.makeInv (func a))
+  -- | Group homomorphisms preserve inverses.
+  \lemma func-inverse {a : Dom} : func (inverse a) = inverse (func a) => {?}
 
+  -- | The kernel of a group homomorphism is a normal subgroup.
   \func Kernel : NormalSubGroup Dom \cowith
     | contains x => func x = ide
     | contains_ide => func-ide
-    | contains_inverse {x : Dom} (p : func x = ide) =>
-      func (inverse x)     ==< func-inverse >==
-      inverse (func x)     ==< pmap inverse p >==
-      inverse ide          ==< Group.inverse_ide >==
-      ide `qed
-
-    | isNormal g {h} p =>
-      func (g * h * inverse g)                ==< func-* >==
-      func (g * h) * func (inverse g)         ==< pmap (`* (func (inverse g))) func-* >==
-      func g * func h * func (inverse g)      ==< pmap (\lam z => func g * z * func (inverse g)) p >==
-      func g * ide * func (inverse g)         ==< pmap (`* (func (inverse g))) ide-right >==
-      func g * func (inverse g)               ==< inv func-* >==
-      func (g * inverse g)                    ==< pmap func inverse-right >==
-      func ide                                ==< func-ide >==
-      ide `qed
-
-    | contains_* {x} {y} p q =>
-      func (x * y)     ==< func-* >==
-      func x * func y  ==< pmap (`* func y) p >==
-      ide * func y     ==< ide-left >==
-      func y           ==< q >==
-      ide `qed
-
+    | contains_inverse {x : Dom} (p : func x = ide) => {?}
+    | isNormal g {h} p => {?}
+    | contains_* {x} {y} p q => {?}
+  -- | A property that the kernel consists only of the identity element.
   \func TrivialKernel : \Prop => \Pi {g : Dom} -> Kernel g -> g = ide
 
-  \func same-images-test {a b : Dom} (p : func a = func b) : Kernel (inverse a * b) =>
-    func (inverse a * b)          ==< func-* >==
-    func (inverse a) * func b     ==< pmap (`* func b) func-inverse >==
-    inverse (func a) * func b     ==< Group.equality-corrolary (func a) (func b) p >==
-    ide `qed
+  -- | If `f(a) = f(b)`, then `a^-1 * b` is in the kernel.
+  \func same-images-test {a b : Dom} (p : func a = func b) : Kernel (inverse a * b) => {?}
 
-  \lemma Kernel-injectivity-test (p : TrivialKernel) : IsInj func =>
-    \lam q => Group.equality-check (p (same-images-test q))
+  -- | If the kernel is trivial, the homomorphism is injective.
+  \lemma Kernel-injectivity-test (p : TrivialKernel) : IsInj func => {?}
 
-  \lemma Kernel-injectivity-corrolary (p : IsInj func) : TrivialKernel =>
-    \lam q => p (q *> inv func-ide)
+  -- | If the homomorphism is injective, the kernel is trivial.
+  \lemma Kernel-injectivity-corrolary (p : IsInj func) : TrivialKernel => {?}
 
+  -- | A group homomorphism is an isomorphism if it is both injective and surjective.
   \func IsIsomorphism : \Prop => \Sigma (IsInj func) (IsSurj func)
 } \where {
+  -- | The identity group homomorphism.
   \func id {G : Group} : GroupHom G G \cowith
     | func x => x
     | func-* => idp
 
+  -- | Composition of group homomorphisms.
   \func \fixl 8 compose \alias \infixl 8 ∘ {G H K : Group} (g : GroupHom H K) (f : GroupHom G H) : GroupHom G K \cowith
     | func x => g (f x)
-    | func-* => pmap g f.func-* *> g.func-*
+    | func-* => {?}
 }
 
+-- | A homomorphism of additive groups.
 \record AddGroupHom \extends AddMonoidHom {
   \override Dom : AddGroup
   \override Cod : AddGroup
   | func-zro => AddGroup.cancel-left (func 0) (inv func-+ *> pmap func zro-right *> inv zro-right)
 
+  -- | Additive group homomorphisms preserve negative elements.
   \lemma func-negative {x : Dom} : func (negative x) = negative (func x)
-    => AddGroup.cancel-left (func x) (inv (negative-right *> inv (pmap func negative-right *> func-zro) *> func-+))
+    => {?}
 
+  -- | Additive group homomorphisms preserve subtraction.
   \lemma func-minus {x y : Dom} : func (x - y) = func x - func y
-    => func-+ *> pmap (_ +) func-negative
+    => {?}
 
+  -- | An additive group homomorphism is injective if its kernel is trivial.
   \lemma injective (p : \Pi {a : Dom} -> func a = 0 -> a = 0) : IsInj func
-    => \lam q => AddGroup.fromZero $ p $ func-+ *> pmap (_ +) func-negative *> AddGroup.toZero q
+    => {?}
 
+  -- | Additive group homomorphisms preserve multiplication by an integer.
   \lemma func-*i {n : Int} {x : Dom} : func (n AddGroup.*i x) = n AddGroup.*i func x \elim n
-    | pos n => func-*n
-    | neg n => func-*n *> pmap (n AddMonoid.*n) func-negative
+    | pos n => {?}
+    | neg n => {?}
 
+  -- | The kernel of an additive group homomorphism.
   \protected \func Kernel : SubAddGroup Dom \cowith
     | contains x => func x = zro
     | contains_zro => func-zro
-    | contains_+ p q => rewrite (func-+, p, q, zro-left) idp
-    | contains_negative p => rewrite (func-negative, p, AddGroup.negative_zro) idp
+    | contains_+ p q => {?}
+    | contains_negative p => {?}
 
+  -- | The image of an additive group homomorphism.
   \protected \func Image : SubAddGroup Cod \cowith
     | contains x => ∃ (y : Dom) (func y = x)
     | contains_zro => inP (zro, func-zro)
-    | contains_+ (inP (a, p)) (inP (b, q)) => inP (a + b, rewrite (func-+,p, q) idp)
-    | contains_negative (inP (a, p)) => inP (negative a, rewrite (AddGroupHom.func-negative, p) idp)
+    | contains_+ (inP (a, p)) (inP (b, q)) => {?}
+    | contains_negative (inP (a, p)) => {?}
 
 } \where {
+  -- | Converts an additive group homomorphism to a group homomorphism.
   \func toGroupHom {G H : AddGroup} (f : AddGroupHom G H) : GroupHom (AddGroup.toGroup G) (AddGroup.toGroup H) \cowith
     | func x => f x
     | func-* => f.func-+
 
+  -- | Converts a group homomorphism between additive groups to an additive group homomorphism.
   \func fromGroupHom {G H : Group} (f : GroupHom G H) : AddGroupHom (AddGroup.fromGroup G) (AddGroup.fromGroup H) \cowith
     | func x => f x
     | func-+ => f.func-*
 
+  -- | The identity additive group homomorphism.
   \func id {G : AddGroup} : AddGroupHom G G \cowith
     | func x => x
     | func-+ => idp
