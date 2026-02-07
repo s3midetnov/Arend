@@ -7,9 +7,11 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener
+import com.intellij.ui.content.ContentFactory
 import com.intellij.util.messages.MessageBusConnection
 import org.arend.server.ArendServerListener
 import org.arend.server.ArendServerService
+import org.arend.toolWindow.ArendChatView
 
 @Service(Service.Level.PROJECT)
 class ArendServerStateService(private val project: Project) : Disposable {
@@ -28,6 +30,11 @@ class ArendServerStateService(private val project: Project) : Disposable {
     fun initView(toolWindow: ToolWindow) {
         this.toolWindow = toolWindow
         view = ArendServerStateView(project, toolWindow)
+
+      val contentFactory = ContentFactory.getInstance()
+      val chatView = ArendChatView()
+      val chatContent = contentFactory.createContent(chatView.mainPanel, "Chat", false)
+      toolWindow.contentManager.addContent(chatContent)
 
         // Listen for tool window visibility changes to apply pending refreshes
         connection = project.messageBus.connect(this).also { conn ->
