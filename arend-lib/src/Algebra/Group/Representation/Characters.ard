@@ -75,7 +75,7 @@
           => rewrite (BigSumScalarLeftHelp e, BigSumScalarLeft' G.finCard (\lam j => f (e j) F.* g (G.inverse (e j)))) idp
         \protected \lemma BigSumScalarLeftHelp(e : Equiv {Fin G.finCard} {G}) :
           F.BigSum (\lam j => r F.* f (e j) F.* g (G.inverse (e j))) = F.BigSum (\lam j => r * (f (e j) * g (G.inverse (e j))))
-          => Trace-prod.BigSum-ext (\lam i => F.*-assoc)
+          => Trace-prod.BigSum-ext (\lam _ => F.*-assoc)
         \protected \func BigSumScalarLeft' (n : Nat)(a : Array F n)(r : F) :
           F.BigSum (\lam j => r * (a j)) = r * (F.BigSum a) => inv $ F.BigSum-ldistr
       }
@@ -132,7 +132,7 @@
       \where {
         \protected \func helper' : F.FinSum (\lam x => f x * (r * (g (G.inverse x)))) = r F.* F.FinSum (\lam x => (f x) * (g (G.inverse x)))
           => \case F.FinSum_char (\lam x => f x * (r * (g (G.inverse x)))) \with {
-            | inP (e, p) => \case F.FinSum_char2 (\lam x => (f x) * (g (G.inverse x))) e \with {
+            | inP (e, p) => \case F.FinSum_char2 {G} {\lam x => (f x) * (g (G.inverse x))} e \with {
               | p1 => rewrite (p, p1, BigSumScalarRight e) idp
             }
           }
@@ -188,7 +188,82 @@
 
     \func rewriteBilinearform' :
       F.FinSum (\lam g => (MatrixElements l1-bas i j g) * (MatrixElements l2-bas k h (inverse g))) =
-      (LinearMap.toMatrix l1 l2-bas (SumOverGroup Ejk-lin)) i h => {?}
+      (LinearMap.toMatrix l1 l2-bas (SumOverGroup Ejk-lin)) i h =>
+      F.FinSum_char2 (\lam g => (MatrixElements l1-bas i j g) * (MatrixElements l2-bas k h (inverse g))) (Equiv.id {G}) *>
+      \let | mat-sum => LinearMap.toMatrix l1 l2-bas (SumOverGroup Ejk-lin)
+           | g-mat (g : G) => LinearMap.toMatrix l1 l1-bas (E1.toLinearMap g)
+           | g-inv-mat (g : G) => LinearMap.toMatrix l2 l2-bas (E2.toLinearMap (inverse g))
+           | n => G.finCard
+           | l1-len => l1.len
+           | l2-len => l2.len
+      \in F.BigSum (\lam (idx : Fin n) => \let g => Equiv.id {G} idx \in (g-mat g) i j * (g-inv-mat g) k h)
+          ==< pmap F.BigSum (arrayExt \lam idx => \let g => Equiv.id {G} idx \in Matrix-elementary-product (g-mat g) (g-inv-mat g)) >==
+          F.BigSum (\lam (idx : Fin n) => \let g => Equiv.id {G} idx \in (g-mat g MatrixRing.product Ejk MatrixRing.product g-inv-mat g) i h)
+          ==< inv (Matrix-sum (\lam (idx : Fin n) => \let g => Equiv.id {G} idx \in g-mat g MatrixRing.product Ejk MatrixRing.product g-inv-mat g) i h) >==
+          (F.BigSum (\lam (idx : Fin n) => \let g => Equiv.id {G} idx \in g-mat g MatrixRing.product Ejk MatrixRing.product g-inv-mat g)) i h
+          ==< pmap (__ i h) (inv Matrix-SumOverGroup) >==
+          mat-sum i h
+          `out
+      \where {
+        \lemma Matrix-elementary-product (A : Matrix F l1.len l1.len) (B : Matrix F l2.len l2.len) :
+          (A i j * B k h) = (A MatrixRing.product Ejk MatrixRing.product B) i h
+          => pmap (\lam (M : Matrix F l1.len l2.len) => (M MatrixRing.product B) i h) (inv Matrix-elementary-product-left) *> Matrix-elementary-product-right
+          \where {
+            \func AEjk : Matrix F l1.len l2.len => A MatrixRing.product Ejk
+            \lemma Matrix-elementary-product-left : AEjk = mkMatrix (\lam a b => \case decideEq b k \with { | yes _ => A a j | no _ => F.zro })
+              => matrixExt \lam a b => unfold (MatrixRing.product, Ejk) (F.BigSum-unique j (\lam a' a'/=j => \case decideEq a' j \with { | yes e => absurd (a'/=j e) | no _ => F.*-zro-right }) *> \case decideEq j j \with { | yes _ => \case decideEq b k \with { | yes _ => F.ide-right | no _ => F.*-zro-right } | no n => absurd (n idp) })
+            \lemma Matrix-elementary-product-right : (AEjk MatrixRing.product B) i h = A i j * B k h
+              => unfold (MatrixRing.product) (F.BigSum-unique k (\lam b b/=k => rewrite Matrix-elementary-product-left (\case decideEq b k \with { | yes e => absurd (b/=k e) | no _ => F.zro-product }) ) *> rewrite Matrix-elementary-product-left (\case decideEq k k \with { | yes _ => idp | no n => absurd (n idp) }))
+          }
+
+        \lemma Matrix-sum {n_ : Nat} {r c : Nat} (f : Fin n_ -> Matrix F r c) (i' : Fin r) (h' : Fin c) :
+          (AbGroup.BigSum f) i' h' = F.BigSum (\lam idx => (f idx) i' h') \elim n_
+          | 0 => idp
+          | suc n_ => pmap (__ i' h') (AbGroup.BigSum-suc f) *> idp
+
+        \lemma Matrix-SumOverGroup :
+          LinearMap.toMatrix l1 l2-bas (SumOverGroup Ejk-lin) =
+          AbGroup.BigSum (\lam idx => \let g => Equiv.id {G} idx \in
+            LinearMap.toMatrix l1 l1-bas (E1.toLinearMap g) MatrixRing.product
+            Ejk MatrixRing.product
+            LinearMap.toMatrix l2 l2-bas (E2.toLinearMap (inverse g)))
+          => \let | n => G.finCard
+                  | T (g : G) => LinearMap.toMatrix l1 l2-bas (SumOverGroup.adjust g Ejk-lin)
+                  | T' idx => T (Equiv.id {G} idx)
+             \in toMatrix_BigSum (SumOverGroup.adjust __ Ejk-lin) l1 l2-bas *>
+                 pmap AbGroup.BigSum (arrayExt \lam idx => \let g => Equiv.id {G} idx \in Matrix-adjust g)
+          \where {
+            \lemma toMatrix_BigSum {R : Ring} {U V : LModule R} {lv : Array V} (f : G -> LinearMap U V) (lu : Array U) (bv : V.IsBasis lv) :
+              LinearMap.toMatrix lu bv (AbGroup.FinSum f) = AbGroup.FinSum (\lam g => LinearMap.toMatrix lu bv (f g))
+              => \case AbGroup.FinSum_char f \with {
+                | inP (e, p) => \case AbGroup.FinSum_char2 (\lam g => LinearMap.toMatrix lu bv (f g)) e \with {
+                  | p1 => rewrite (p, p1) (toMatrix_BigSum_help e)
+                }
+              }
+            \lemma toMatrix_BigSum_help {R : Ring} {U V : LModule R} {lv : Array V} {n : Nat} (e : Array (LinearMap U V) n) (lu : Array U) (bv : V.IsBasis lv) :
+              LinearMap.toMatrix lu bv (AbGroup.BigSum e) = AbGroup.BigSum (\new Array (Matrix R lu.len lv.len) n (\lam i => LinearMap.toMatrix lu bv (e i))) \elim n
+              | 0 => matrixExt \lam i j => V.basis-split-unique bv (\lam _ => R.zro) idp j
+              | suc n => pmap (LinearMap.toMatrix lu bv) (AbGroup.BigSum-suc e) *> toMatrix_+ (e 0) (AbGroup.BigSum (\lam i => e (suc i))) lu bv *> pmap (_ MatrixAbGroup.+ ) (toMatrix_BigSum_help (\lam i => e (suc i)) lu bv)
+            \lemma toMatrix_+ {R : Ring} {U V : LModule R} {lv : Array V} (f g : LinearMap U V) (lu : Array U) (bv : V.IsBasis lv) :
+              LinearMap.toMatrix lu bv (f + g) = LinearMap.toMatrix lu bv f MatrixAbGroup.+ LinearMap.toMatrix lu bv g
+              => matrixExt \lam i j => V.basis-split_+ bv (f (lu i)) (g (lu i)) j
+            \lemma Matrix-adjust (g : G) :
+              LinearMap.toMatrix l1 l2-bas (SumOverGroup.adjust g Ejk-lin) =
+              LinearMap.toMatrix l1 l1-bas (E1.toLinearMap g) MatrixRing.product
+              Ejk MatrixRing.product
+              LinearMap.toMatrix l2 l2-bas (E2.toLinearMap (inverse g))
+              => LinearMap.toMatrix_* (E2.toLinearMap (inverse g) ∘ Ejk-lin) (E1.toLinearMap g) l1 l2-bas l2-bas *>
+                 pmap (`MatrixRing.product _) (LinearMap.toMatrix_* Ejk-lin (E2.toLinearMap (inverse g)) l1 l1-bas l2-bas) *>
+                 pmap (\lam M => (M MatrixRing.product LinearMap.toMatrix l2 l2-bas (E2.toLinearMap (inverse g))) MatrixRing.product LinearMap.toMatrix l1 l1-bas (E1.toLinearMap g)) Ejk-lin-mat *>
+                 MatrixRing.*-assoc *> pmap (_ MatrixRing.product) MatrixRing.*-comm *> inv MatrixRing.*-assoc
+            \lemma Ejk-lin-mat : LinearMap.toMatrix l1 l2-bas Ejk-lin = Ejk
+              => (LinearMap.matrix-equiv l1-bas l2-bas).f_sec Ejk
+            \lemma Representation-toMatrix (g : G) : LinearMap.toMatrix l1 l1-bas (E1.toLinearMap g) = LinearMap.toMatrix l1 l1-bas (E1.toLinearMap g)
+              => idp
+            \lemma Representation-toMatrix-inv (g : G) : LinearMap.toMatrix l2 l2-bas (E2.toLinearMap (inverse g)) = LinearMap.toMatrix l2 l2-bas (E2.toLinearMap (inverse g))
+              => idp
+          }
+      }
 
     \func rewriteBilinearform :
       B (MatrixElements l1-bas i j) (MatrixElements l2-bas k h) =
