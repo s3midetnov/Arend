@@ -96,7 +96,7 @@ Also, this does not make much sense over a trivial ring, thus we eliminate this 
 {- | We prove that $span(1,1,\ldots)$ is neither zero submodule nor does it
    - contain the whole space. To prove the second claim we show that
   Non-constant-vector does not lie in the image of invSubMod map.  -}
-  \func SubRepr-non-trivial : Not invSubRepr.isTrivial => \lam p => \case \elim p \with {
+  \func SubRepr-non-trivial : Not invSubRepr.isTrivialSubRepresentation => \lam p => \case \elim p \with {
     | byLeft zeromod => not-trivial-ring (inv (zeromod R.ide))
     | byRight isSurj-in => \case isSurj-in Non-constant-vector \with {
       | inP a => not-trivial-ring (rewrite (inv Non-constant-vector.equation-1,

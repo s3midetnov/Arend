@@ -8,7 +8,7 @@
 \import Category
 \import Logic
 
-\func Irreducible {R : Ring}{G : Group} (E : LinRepres R G) => \Pi (A : SubLRepres E) -> A.isTrivial
+\func Irreducible {R : Ring}{G : Group} (E : LinRepres R G) => \Pi (A : SubLRepres E) -> A.isTrivialSubRepresentation
 
 \class Hom-between-Irreducible \noclassifying {R : Ring}{G : Group} {A B : LinRepres R G} (p : Irreducible A) (q : Irreducible B) {
   \func Schur's-Lemma (f : InterwiningMap A B) : IsZeroMap f || Iso f => \case q (ImageSubLRepres f) \with {

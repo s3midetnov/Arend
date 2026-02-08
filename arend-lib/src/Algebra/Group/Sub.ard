@@ -150,6 +150,25 @@
     }
 }
 
+
+\func upSubGroup {G : Group} : NormalSubGroup G \cowith
+  | contains => \lam _ => \Sigma
+  | contains_ide => ()
+  | contains_* => \lam _ _ => ()
+  | contains_inverse => \lam _ => ()
+  | isNormal _ _ => ()
+
+\instance bottomSubGroup {G : Group} : NormalSubGroup G
+  | contains x => x = G.ide
+  | contains_ide => idp
+  | contains_* x=e y=e => rewriteEq (x=e, y=e) $ idp
+  | contains_inverse x=e => rewriteEq x=e $ equation.group
+  | isNormal _ h=1 => rewrite h=1 equation.group
+
+\func is-bottomSubGroup {G : Group} (A : SubGroup G) : \Prop
+  => \Pi (a : G) (A a) -> a = G.ide
+
+
 \class SubAddGroup \extends SubAddMonoid {
   \override S : AddGroup
   | contains_negative {x : S} : contains x -> contains (negative x)

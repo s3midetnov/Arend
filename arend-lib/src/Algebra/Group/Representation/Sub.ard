@@ -11,7 +11,7 @@
   | in : InterwiningMap S E
   | in-mono : IsInj in
 
-  \func isTrivial => IsZeroMod S || IsSurj in
+  \func isTrivialSubRepresentation => IsZeroMod S || IsSurj in
 
   \func \infix 7 **'in (g : G)(s : S) : S => (LinRepres.** {S}) g s
 

@@ -22,40 +22,45 @@
 \import Paths.Meta
 \import Set.Fin
 
-\class Maschke'sLemma {R : CRing} {G : FinGroup} {|G|^-1 : R} (q : R.natCoef G.finCard R.* |G|^-1 = R.ide)
-                      {E : LinRepres R G} {S : SubLRepres E} {
+\class SemiSimpleRepresentationDatum (R : CRing) (G : FinGroup)
+  | |G|^-1 : R
+  | invert : R.natCoef G.finCard R.* |G|^-1 = R.ide
+  | E : LinRepres R G
+  | S : SubLRepres E
 
-  \func mean_func {E W : LinRepres R G} (f : LinearMap E W) : InterwiningMap E W
-    => LModule.*c |G|^-1 (SumOverGroup f)
 
-  \func retracts (p : SplitMono {LModuleCat R} S.in) : SplitMono {RepresentationCat R G} {S} {E} S.in \cowith
-    | hinv => mean_func p.hinv
-    | hinv_f => exts \lam e => rewrite (meanFuncPreserve p-hinv-decypher e) idp
-    \where \protected{
-      \lemma p-hinv-decypher (s : S) : p.hinv (S.in s) = s
-        => path (\lam i => (p.hinv_f i) s)
-    }
+\func Maschke'sLemma (R : CRing){G : FinGroup}
+                     (datum : SemiSimpleRepresentationDatum R G)
+                     {E : LinRepres R G}{S : SubLRepres E}
+                     (p : SplitMono {LModuleCat R} S.in)
+  : SplitMono {RepresentationCat R G} {S} {E} S.in \cowith
+  | hinv => mean_func p.hinv
+  | hinv_f => exts \lam e => rewrite (meanFuncPreserve p-hinv-decypher e) idp
+  \where {
+    \lemma p-hinv-decypher (s : S) : p.hinv (S.in s) = s
+      => path (\lam i => (p.hinv_f i) s)
 
-  \lemma meanFuncPreserve {f : LinearMap E S} (p : \Pi(s : S) -> f (S.in s) = s) (t : S)
-    : mean_func f (S.in t) = t
-    => unfold (rewrite (SumOverGroupMultiply, inv $ LModule.*c-assoc {S.S}, R.*-comm, q, ide_*c) idp)
-    \where \protected{
-      \func SumOverGroupMultiply : SumOverGroup f (S.in t) = R.natCoef G.finCard *c t
-              => rewrite (SumOverGroupSameElements, SumOverGroup.FinSumEqual-multiply t) idp
-      \where {
-        \lemma SumOverGroupSub : SumOverGroup f (S.in t) = AbMonoid.FinSum {S} (\lam (g : G) => g S.**'in f (inverse {G} g E.** S.in t))
-          => SumOverGroup.FinSumRewrite (\lam g => SumOverGroup.adjust g f) (in {S} t)
+    \func mean_func {E W : LinRepres R G} (f : LinearMap E W) : InterwiningMap E W
+      => LModule.*c datum.|G|^-1 (SumOverGroup f)
 
-        \lemma SumOverGroupSameElements : SumOverGroup f (S.in t) = AbMonoid.FinSum {S} (\lam (_ : G) => t)
-          => rewrite (SumOverGroupSub, SumOverGroup.FinSumEquality (\lam (g : G) => SumOverGroupSubReprProperty g t)) idp
+    \lemma meanFuncPreserve {f : LinearMap E S} (p : \Pi(s : S) -> f (S.in s) = s) (t : S)
+      : mean_func f (S.in t) = t
+      => unfold (rewrite (SumOverGroupMultiply, inv $ LModule.*c-assoc {S.S}, R.*-comm, datum.invert, ide_*c) idp)
+      \where \protected{
+        \func SumOverGroupMultiply : SumOverGroup f (S.in t) = R.natCoef G.finCard *c t
+          => rewrite (SumOverGroupSameElements, SumOverGroup.FinSumEqual-multiply t) idp
+          \where {
+            \lemma SumOverGroupSub : SumOverGroup f (S.in t) = AbMonoid.FinSum {S} (\lam (g : G) => g S.**'in f (inverse {G} g E.** S.in t))
+              => SumOverGroup.FinSumRewrite (\lam g => SumOverGroup.adjust g f) (in {S} t)
 
-        \lemma SumOverGroupSubReprProperty (g : G) (t : S) : g S.**'in f (inverse g E.** S.in t) = t
-          => rewrite (inv $ S.in.func-**, p (inverse g S.**'in t), **-assoc, G.inverse-right, id-action) idp
+            \lemma SumOverGroupSameElements : SumOverGroup f (S.in t) = AbMonoid.FinSum {S} (\lam (_ : G) => t)
+              => rewrite (SumOverGroupSub, SumOverGroup.FinSumEquality (\lam (g : G) => SumOverGroupSubReprProperty g t)) idp
+
+            \lemma SumOverGroupSubReprProperty (g : G) (t : S) : g S.**'in f (inverse g E.** S.in t) = t
+              => rewrite (inv $ S.in.func-**, p (inverse g S.**'in t), **-assoc, G.inverse-right, id-action) idp
+          }
       }
-    }
-}
-
-
+  }
 
 {- | It is a function that given a linear map $f : A \to B$ between two representations of a finite group $G$
 produces an interwining linear map $f'$ via the following formula
@@ -161,7 +166,9 @@ produces an interwining linear map $f'$ via the following formula
 \func SumOverGroupSchur {R : CRing} {G : FinGroup} {A B  : LRepres R G}
                         (A-ir : Irreducible A) (B-ir : Irreducible B)
                         (not-eq : Not (Iso {_} {A}{B}))
-                        (f : LinearMap A B) : isZeroMap (SumOverGroup f) => \case  Hom-between-Irreducible.Schur's-Lemma {IrredInstance} (SumOverGroup f) \with {
+                        (f : LinearMap A B) : isZeroMap (SumOverGroup f)
+  => \case  Hom-between-Irreducible.Schur's-Lemma {IrredInstance} (SumOverGroup f)
+  \with {
   | byLeft a => a
   | byRight b => absurd (not-eq b)
 }

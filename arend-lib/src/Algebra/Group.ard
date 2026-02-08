@@ -175,6 +175,10 @@
   \class Dec \extends Group, DecSet
 }
 
+\func is-trivial-group (G : Group) => \Pi (a : G) -> a = G.ide
+
+\func is-abelian-group (G : Group) => \Pi (a b : G) -> a * b = b * a
+
 \func \infixl 7 / {G : Group} (x y : G) => x * inverse y
 
 \func conjugate {E : Group} (g h : E)
