@@ -1,3 +1,4 @@
+-- Defines categories for monoids and additive monoids, including homomorphisms, kernels, and images. Establishes bicompleteness and equivalences between monoid categories and models.
 \import Algebra.Monoid
 \import Algebra.Monoid.MonoidHom
 \import Algebra.Pointed.PointedCategory

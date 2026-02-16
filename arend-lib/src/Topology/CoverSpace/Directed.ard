@@ -1,3 +1,4 @@
+-- The file defines functions related to directed cover spaces and their topology, including `DirectedCoverSpace`, `EventualityFilter`, `DirectProdCover`, and `directedProdCover-char`, focusing on cauchy and cover properties in directed sets and product spaces.
 \import Data.Bool
 \import Function.Meta
 \import Logic

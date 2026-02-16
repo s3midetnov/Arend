@@ -1,3 +1,4 @@
+-- The file defines `RingSolverModel`, a solver for rings with operations like `normalize` and `interpret`, along with consistency lemmas. It includes data structures for terms and normal forms and various lemmas for correctness and equality of terms.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Algebra.Pointed

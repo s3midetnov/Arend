@@ -1,3 +1,4 @@
+-- The file defines `Field` and `DiscreteField` classes, extends algebraic structures, and includes lemmas for invertibility and field properties like `finv`, `eitherZeroOrInv`, and various `finv` transformations.
 \import Algebra.Domain.Euclidean
 \import Algebra.Domain.GCD
 \import Algebra.Group

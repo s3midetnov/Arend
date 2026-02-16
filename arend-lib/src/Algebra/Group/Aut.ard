@@ -1,3 +1,4 @@
+-- The file defines a group instance `Aut` for the truncated loop space `Trunc0 (a = a)` and a monoid structure `End` for endomorphisms in a precategory.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Category

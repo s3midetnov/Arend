@@ -1,3 +1,5 @@
+-- The file defines `BiorderedSet` and `BiorderedLattice` classes, extending order structures with transitive properties, monotonicity lemmas, and universal lattice properties.
+-- The file defines `BiorderedSet` and `BiorderedLattice` classes, extending various order structures. It includes transitive properties, monotonicity lemmas for meet and join operations, and universal properties for lattice elements.
 \import Data.Array
 \import Order.Lattice
 \import Order.PartialOrder

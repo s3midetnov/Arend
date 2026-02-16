@@ -1,3 +1,4 @@
+-- This file defines properties and functions related to reduction systems: `isNormalForm`, `HasNormalForm`, and `isNormalizing` for checking normal forms, `Acc` and `Acc-Trans` for accessibility, `isTerminating` for termination, `well-founded-induction` and `well-founded-induction-transitive` for induction, and `ReductionPath` for reduction paths.
 \import Logic.Rewriting.ARS.AbstractReductionSystem
 \import Logic
 \import Logic.Meta

@@ -1,3 +1,5 @@
+-- Defines `LexicographicalArray` for arrays with lexicographical order using `<A`. Includes irreflexivity, transitivity, trichotomy, and internal definition of `<A`.
+-- Defines `LexicographicalArray` instance for arrays with a lexicographical order using `<A`. Includes functions for irreflexivity, transitivity, and trichotomy of this order.
 \import Logic
 \import Order.LinearOrder
 \import Order.StrictOrder

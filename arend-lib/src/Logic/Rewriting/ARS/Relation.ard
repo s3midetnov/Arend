@@ -1,3 +1,4 @@
+-- Defines a type `Rel` for relations and a `StraightJoin` record for common reducts. Introduces `Closure` data for relational closure with functions: `compose` to chain closures, `lift` to map closures, `flatten` to reduce nested closures, and `extract` to analyze closures.
 \import Data.Or
 
 \func Rel (A : \Type) : \Type => A -> A -> \Type

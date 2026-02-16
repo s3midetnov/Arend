@@ -1,3 +1,4 @@
+-- This file defines logical structures for a formal theory with main components including `Signature`, `Formula`, `substF`, `Sequent`, `Theory`, `Structure`, and `Model`. Key functions are `substF` for formula substitution, `interpret` for term evaluation, and `isFormulaTrue` for formula validity. Lemmas like `congruence`, `symmetry`, and `transitivity` establish properties of theorem proofs.
 \import Algebra.Meta
 \import Data.Bool
 \import Data.Or

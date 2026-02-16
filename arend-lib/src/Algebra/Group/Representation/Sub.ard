@@ -1,3 +1,4 @@
+-- The file defines `SubLRepres`, `KernelSubLRepres`, and `ImageSubLRepres` for linear representations, with properties like `in-mono` ensuring injectivity. Functions `isTrivial`, `**'in`, and morphisms are included.
 \import Algebra.Group
 \import Algebra.Group.Representation.Category
 \import Algebra.Group.Representation

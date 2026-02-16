@@ -1,3 +1,4 @@
+-- The file defines `polyImage`, `mPolyImage`, and associated lemmas and functions for evaluating polynomial images under ring homomorphisms. It includes notions of integrality, such as `isIntegral`, and constructs like `integralClosure`, `integral_factor`, and their associated properties, e.g., `integralClosure-closed`. It explores relationships between integrality and algebraic structures, including colimits and homomorphic images.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.LatticeColimit

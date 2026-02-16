@@ -1,3 +1,4 @@
+-- The file defines the `lift2` function for lifting cover maps to completions, and several lemmas (`lift2-char`, `unique1`, `unique2`, `unique3`, `unique1_<=`, `unique2_<=`) for proving uniqueness and inequalities in completion spaces. It also includes `completion-lift-neighborhood2` and `strongCompletion-lift-neighborhood2` for neighborhood properties in these spaces.
 \import Arith.Real.UpperReal
 \import Function.Meta
 \import Logic

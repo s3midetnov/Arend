@@ -1,3 +1,4 @@
+-- This file defines lemmas related to Nakayama's lemma and linear maps. It contains three main lemmas: `nakayama`, `nakayama'`, and `nakayama-ideal`, which explore conditions on finitely generated modules and ideals. Another lemma, `linear-surj-equiv`, addresses the equivalence of linear maps under certain conditions.
 \import Algebra.Group
 \import Algebra.Group.Sub
 \import Algebra.Linear.Matrix

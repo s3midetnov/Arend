@@ -1,3 +1,5 @@
+-- Defines categories for posets, strict posets, and decidable linear orders with records for morphisms: PosetHom, StrictPosetHom, and instances: PosetCat, StrictPosetCat, DecLinearOrderCat.
+-- The file defines categories for posets, strict posets, and decidable linear orders using records for morphisms (PosetHom, StrictPosetHom) and instances (PosetCat, StrictPosetCat, DecLinearOrderCat).
 \import Category
 \import Category.Meta
 \import Function ()

@@ -1,3 +1,4 @@
+-- Defines `CGroupSolverModel` and `AbGroupSolverModel` for solving group equations, with functions for normalization, interpretation, and applying axioms. Includes lemmas for term equality and consistency.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

@@ -1,3 +1,4 @@
+-- The file defines a `RealNearField` instance for `Real`, leveraging modules like `RealField`, `RealNormed`, and others. It uses imports from algebra, real arithmetic, function logic, and topology to establish properties like continuity and density in the real numbers.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Arith.Real

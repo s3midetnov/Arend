@@ -1,3 +1,4 @@
+-- The file follows Graham Manuell's paper on uniform locales. It defines various functions and classes, including `star`, `nucleus-star`, `PreuniformLocale`, `UniformHom`, `UniformEmbedding`, and `UniformLocale`. It provides lemmas such as `star_<=`, `star-refl`, and `<=u-trans-left`, and implements categories `PreuniformCat` and `UniformCat`, along with functions like `completion`, `completion-functor`, and `completion-factor`.
 {- | We follow the following paper:
      Graham Manuell, Uniform locales and their constructive aspects, 2021, https://arxiv.org/abs/2106.00678
  -}

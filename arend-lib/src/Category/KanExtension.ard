@@ -1,3 +1,4 @@
+-- The file defines `LeftKanExt` and `RightKanExt` for functors between categories, using limits and cones. It introduces `DoubleLimit` for expressing double limits as single limits over a comma category, and provides supporting functions and lemmas for handling these constructions.
 \import Category
 \import Category.Comma
 \import Category.Functor

@@ -1,3 +1,4 @@
+-- The file defines `Transitive` and `Equivalence` classes, handling properties like transitivity, reflexivity, and symmetry. It introduces `Closure` data for transitive relations and `Quotient` for equivalence classes, with lemmas for mapping and equality. Functions for lifting arrays and handling choices are also included.
 \import Function
 \import Logic
 \import Logic.Classical

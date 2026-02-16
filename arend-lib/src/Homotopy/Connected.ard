@@ -1,3 +1,4 @@
+-- Defines `Connected0` class for spaces with all paths truncated, instances for unit and pushout spaces.
 \import Homotopy.Pushout
 \import Homotopy.Space
 \import Homotopy.Suspension

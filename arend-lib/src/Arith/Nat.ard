@@ -1,3 +1,4 @@
+-- This file defines natural number operations and their properties, including subtraction (`-'`), predecessor (`pred`), and ordering relations like `<` and `<=`. It provides lemmas on arithmetic properties (e.g., associativity, commutativity) and instances for semirings and semilattices. It also includes functions and lemmas for modular arithmetic and finite natural numbers (`Fin`).
 \import Algebra.Monoid(Monoid)
 \import Algebra.Ordered
 \import Algebra.StrictlyOrdered

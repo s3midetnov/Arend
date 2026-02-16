@@ -1,3 +1,4 @@
+-- The file defines filters over lattices, including `Filter`, `CompleteFilter`, `SetFilter`, and their `map` functions. It also introduces `WeaklyProperFilter` and `ProperFilter` with associated semilattice instances.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

@@ -1,3 +1,4 @@
+-- The file defines `shift-index` for mapping indices between sublists and multiple lemmas in the `Shifts` module, such as `over-identity`, `over-skip`, and `over-right-single`, which establish properties and transformations of indices across list operations.
 \import Data.Fin
 \import Data.List
 \import Logic.Rewriting.TRS.Utils.FinFunctions

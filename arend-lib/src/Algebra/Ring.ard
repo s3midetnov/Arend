@@ -1,3 +1,4 @@
+-- The file defines various algebraic structures, including `PseudoRing`, `Ring`, and `CRing`, with associated lemmas and properties like distributive laws (`ldistr`, `rdistr`), the concept of nilpotency (`IsNilpotent`), and Bezout properties. It also includes extensions for handling zero and non-zero elements, apartness relations, and decidable equality.
 \import Algebra.Domain.Bezout
 \import Algebra.Group
 \import Algebra.Meta

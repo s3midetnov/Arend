@@ -1,3 +1,4 @@
+-- The file defines functions related to confluence and rewriting systems. Key functions include `fill-confluence`, which constructs a `StraightJoin` using rewrite relations, and `unify-reduction`, which unifies reductions through closures. The `Internal` module includes `embed-rewrite-relation` and `unembed-rewrite-relation`, handling parallel reductions and embedding/unembedding rewrite relations.
 \import Arith.Fin.Order
 \import Data.List \hiding (Sort)
 \import Data.Maybe

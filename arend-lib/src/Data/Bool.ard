@@ -1,3 +1,4 @@
+-- This file defines `Bool` with constructors `true` and `false`, logical operations `not`, `and`, `or`, `xor`, and the `if` function. It includes propositions `So` and related lemmas, such as `fromSo`, `toSo`, `not-isInv`, and proofs for `and`/`or` correctness.
 \import Logic
 \import Meta
 \import Paths

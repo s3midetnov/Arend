@@ -1,3 +1,4 @@
+-- The file defines a `LocalRing` class extending `Ring` and `NonZeroRing` with lemmas about invertibility and connectedness. It also defines `LocalCRing` extending `LocalRing` and `NonZeroCRing`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

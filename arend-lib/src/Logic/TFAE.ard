@@ -1,3 +1,4 @@
+-- The file defines a type `TFAE` for proving equivalence in logic statements and includes functions for path construction in graphs (`Graph`, `Path`). It contains lemmas for checking connectivity (`checkConnected`, `checkConnected-correct`) and related auxiliary functions for list and graph operations (`step1`, `makeStep`, `collect`). Additionally, it defines lemmas for path correctness and monotonicity in graph traversal.
 \import Arith.Nat
 \import Data.Array (Index, forall, forall-char, map, taild)
 \import Data.Bool

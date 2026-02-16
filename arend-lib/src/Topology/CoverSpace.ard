@@ -1,3 +1,4 @@
+-- The file defines `PrecoverSpace` and `CoverSpace` classes, extending topological spaces with notions of Cauchy covers. It introduces functions like `HasDensePoints`, `HasWeaklyDensePoints`, and `PrecoverMap` for mappings between `PrecoverSpace` instances. It includes lemmas for properties of Cauchy sets, embeddings, and relationships between different types of spaces. The file also defines various instances and transfer functions for constructing spaces with specific regularity and completeness properties.
 \import Data.Bool
 \import Function.Meta
 \import Logic

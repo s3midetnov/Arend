@@ -1,3 +1,4 @@
+-- The file defines "Maschke'sLemma" for group representations, emphasizing functions like "mean_func" and "SumOverGroup" for linear maps, and includes lemmas for properties of these functions in the context of group actions and modules.
 \import Algebra.Group
 \import Algebra.Group.GSet
 \import Algebra.Group.Representation.Category

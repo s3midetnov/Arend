@@ -1,3 +1,4 @@
+-- The file defines `LocType` and `LocAbType`, types of localized monoids, along with their equivalence relations. It provides instances `LocMonoid` and `LocAbMonoid` for these types, implementing monoid operations (`*`, `+`) and identities (`ide`, `zro`). It also defines `MaxLocAbType` and `GrothendieckAbGroup` for maximal localization.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

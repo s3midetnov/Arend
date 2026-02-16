@@ -1,3 +1,4 @@
+-- The file defines several functions and lemmas related to CoverSpaces and Locales in topology, including `CoverSpaceLocale`, `LocalePrecoverSpace`, and `LocaleCoverSpaceFunctor`. It explores properties like regularity, cauchy covers, and dense points. The file also provides constructions for strongly regular and complete cover spaces and establishes functorial relationships between locales and precover spaces.
 \import Category.Functor
 \import Data.Bool
 \import Equiv

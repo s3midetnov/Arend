@@ -1,3 +1,4 @@
+-- The file defines `SubList`, a data type representing sublists, and functions for manipulating these sublists. Key functions include `identity`, `extend-left-both`, `extend-right-both`, and `compose`, which manage sublist extensions and compositions. The file also includes transport-related utilities within the `Transports` module.
 \import Data.List
 \import Logic
 \import Logic.Meta

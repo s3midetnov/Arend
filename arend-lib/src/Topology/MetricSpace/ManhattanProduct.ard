@@ -1,3 +1,4 @@
+-- The file defines an instance `ManhattanProductPseudoMetricSpace` for combining two metric spaces X and Y into a product space using the Manhattan distance. It includes properties like reflexivity, symmetry, and the triangle inequality, and handles uniform structures and continuity conditions.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Ordered

@@ -1,3 +1,4 @@
+-- This file defines operations and properties on multivariate polynomials over a commutative ring, including definitions for `MPoly`, `mPolyHom`, `mPoly-map`, and `mPolyEval`. It also includes lemmas for polynomial mappings, evaluation, and surjectivity, as well as degree computations and transformations for polynomials, particularly focusing on finite sets and extensions.
 \import Algebra.Algebra
 \import Algebra.Group.GroupHom
 \import Algebra.Meta

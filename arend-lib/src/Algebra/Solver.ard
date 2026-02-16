@@ -1,3 +1,4 @@
+-- The file defines the `SolverModel` class with protected types and functions for terms, normal forms, normalization, and interpretation. It includes lemmas for term equality. The `SubstSolverModel` extends `SolverModel`, adding substitution operations and a lemma for applying axioms.
 \import Data.Fin
 \import Logic
 \import Paths

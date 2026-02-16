@@ -1,3 +1,4 @@
+-- The file defines the `Functor` class for precategories and associated lemmas for homomorphisms transport. It includes the identity functor, composition of functors, and constant functors. It introduces `NatTrans` for natural transformations and their operations. Instances for `FunctorPrecat`, `FunctorCat`, and families of precategories are provided. Classes for faithful, full, and fully faithful functors extend `Functor`, with methods for proving faithfulness, fullness, and equivalences.
 \import Algebra.Meta
 \import Category
 \import Equiv

@@ -1,3 +1,4 @@
+-- The file defines the Yoneda embedding as a fully faithful functor, constructs a precategory of elements, and defines a presheaf colimit. It also explores embedding universality in cocomplete categories, providing constructions and properties related to functors, limits, and natural transformations.
 \import Category
 \import Category.Functor
 \import Category.Limit

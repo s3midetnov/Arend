@@ -1,3 +1,4 @@
+-- This file defines `ProductPrecat` and `ProductCat` as instances of `Precat` and `Cat` for product categories, and functions `iso-first` and `iso-second` to derive isomorphisms in component categories.
 \import Category
 \import Equiv (QEquiv, ret)
 \import Paths

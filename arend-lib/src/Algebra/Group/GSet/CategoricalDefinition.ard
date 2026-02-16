@@ -1,3 +1,4 @@
+-- The file defines a class `MonoidCatAction`, an instance `DeloopM` for monoids as categories, a function `functor->action` mapping functors to monoid actions, and an equivalence `Action<->Functor` between monoid actions and functors.
 \import Algebra.Group.Aut
 \import Algebra.Monoid
 \import Algebra.Monoid.MonoidHom

@@ -1,3 +1,4 @@
+-- The file defines a class `CompleteTopAbGroup` extending `TopAbGroup` and `CompleteUniformSpace`. It includes functions for lifting dense topological abelian group maps (`dense-topAb-lift`) and constructs an instance `TopAbGroupCompletion` of `CompleteTopAbGroup`. It also defines operations like `+-cover`, `+-func`, `negative-cover`, and related lemmas.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

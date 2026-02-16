@@ -1,3 +1,4 @@
+-- The file defines `MonoidTerm` for constructing terms over a monoid and provides functions for normalization and interpretation within `MonoidData` and `CMonoidData` classes. It includes lemmas for term equality and consistency checks such as `normalize-consistent` and `terms-equality`. `LData` extends `CMonoidData` with `removeDuplicates` for handling duplicates in a lattice context.
 \import Algebra.Monoid
 \import Algebra.Pointed
 \import Arith.Fin.Order

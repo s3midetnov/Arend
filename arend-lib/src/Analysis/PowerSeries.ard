@@ -1,3 +1,4 @@
+-- The file defines and proves properties about power series in the context of PseudoNormedRings. Key functions include `powerSeries`, `convRadius`, and `IsPowerSeriesConv`, with lemmas like `powerSeries_0`, `convRadius-absConv`, and `power-ratio-test` proving series convergence under various conditions.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Ordered

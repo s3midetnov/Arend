@@ -1,3 +1,4 @@
+-- The file defines and proves properties related to totally bounded and locally uniform spaces. Key functions include `IsTotallyBounded`, `IsCompact`, and `IsLocallyUniformSpace`. Lemmas address conditions and characterizations for total boundedness and uniformity in various contexts, like `totallyBounded-uniform`, `makeUniformMapTB`, and `locallyUniform-cauchy`. The file also handles totally bounded subsets and locally totally bounded spaces.
 \import Algebra.Pointed
 \import Arith.Rat
 \import Arith.Real.UpperReal

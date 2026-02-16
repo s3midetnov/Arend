@@ -1,3 +1,4 @@
+-- The file defines a higher-order term rewriting system using classes and records. Key components include `FSignature` for functional symbols, `MetaContext` for metavariable contexts, `Term` data for terms, `Substitution` for variable substitution, `MetaSubstitution` for metavariable substitution, `RewriteRule` and `RuleRegistry` for managing rewrite rules. It also defines `RewriteRelation` for rewriting relations and extends `HigherOrderTermRewritingSystem` and `SimpleHigherOrderTermRewritingSystem` for term rewriting systems.
 \import Logic.Rewriting.ARS.AbstractReductionSystem
 \import Data.List \hiding (Sort)
 \import Logic

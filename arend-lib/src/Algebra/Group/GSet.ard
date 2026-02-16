@@ -1,3 +1,4 @@
+-- This file defines a `GroupAction` class with operators, including the `Stabilizer` subgroup and `choosePoint` function. It extends to `TransitiveGroupAction`, ensuring transitivity. The `ActionBySubgroup` function creates group actions by subgroups, and `TransitiveActionBySubgroup` provides transitive group actions through subgroup cosets.
 \import Algebra.Group
 \import Algebra.Group.Sub
 \import Algebra.Monoid

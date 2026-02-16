@@ -1,3 +1,4 @@
+-- The file defines `ExtendedLowerReal` and `LowerReal` structures, with properties like closure (`L-closed`) and roundedness (`L-rounded`). It implements operations like `BJoin`, `meet`, and `join` on `LowerReal`. Instances for `LowerReal` as a `BiorderedLatticeAbMonoid` and `ExtendedLowerReal` as a `CompleteLattice` are provided, defining arithmetic and order operations.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

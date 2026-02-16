@@ -1,3 +1,4 @@
+-- The file defines algebraic structures and proves properties about integral extensions and zero-dimensional rings. Key functions include `integralExt-zeroDim`, `polyImage_field`, and `mPoly_integral`, which address relationships between fields, rings, and polynomial mappings. Additionally, it explores integrality and zero-dimensionality, using lemmas like `integral_dom-zeroDim` and `finGenExt-char`. These establish criteria for when a ring homomorphism is integral and how it relates to the dimension of the target ring.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Meta

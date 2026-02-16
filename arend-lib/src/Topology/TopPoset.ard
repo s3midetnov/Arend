@@ -1,3 +1,4 @@
+-- The file defines classes `HausdorffTopPoset` and `HausdorffTopPosetAbGroup`, extending topological and order structures. Key functions include `<=-closed`, `<=-closed-left`, `<=-closed-right`, `limit-Join`, and `limit-Meet`, which deal with closed sets and limits in directed sets.
 \import Algebra.Group
 \import Algebra.Ordered
 \import Function.Meta

@@ -1,3 +1,4 @@
+-- The file defines `SubBooleanPseudoRing`, extending `SubPseudoRing`, with `S` as a `BooleanRing`, and introduces `IBooleanPseudoRing` as a `BooleanRing` with specific properties.
 \import Algebra.Ring.Boolean
 \import Algebra.Ring.Sub
 \import Paths.Meta

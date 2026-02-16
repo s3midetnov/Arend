@@ -1,3 +1,4 @@
+-- The file defines homomorphisms and properties for semirings, rings, and fields, including `SemiringHom`, `RingHom`, and functions like `natMap` and `intMap`. It includes lemmas for commutativity, injectivity, and surjectivity, and defines algebra generation and composition operations.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Group.GroupHom

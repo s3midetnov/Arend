@@ -1,3 +1,4 @@
+-- This file defines instances for lattice colimits of algebraic structures like Monoid, AddMonoid, AddGroup, AbGroup, Ring, and CRing over a BottomJoinSemilattice. Functions include `inMap`, `Func-app`, and lemmas for coherence conditions. Instances ensure operations like addition and multiplication are well-defined within these colimits.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Group.GroupCategory

@@ -1,3 +1,4 @@
+-- Defines `Truncated_-1+` class for higher homotopy levels with functions `ext`, `equiv`, `up`. Introduces `Trunc_-1+` data type for truncations, with `elim`, `elim2`, `equality` functions for eliminations and equivalences. Instances include `truncatedEquiv`, `truncatedTypesLevel`, and `level` for homotopy types and equivalences.
 \import Equiv
 \import Equiv.Path
 \import Equiv.Univalence

@@ -1,3 +1,4 @@
+-- Defines a `SetHom` record for homomorphisms between sets `Dom` and `Cod` with a coercion function `func`.
 \import Set
 
 \record SetHom (Dom Cod : BaseSet)

@@ -1,3 +1,4 @@
+-- This file defines concepts of equivalences, embeddings, and surjections in type theory. Key structures include `Map`, `Section`, `Retraction`, `Equiv`, `QEquiv`, `Embedding`, `Surjection`, and `ESEquiv`. It also explores properties like injectivity, surjectivity, and provides functions for constructing and verifying equivalences and embeddings, including `transEquiv`, `transEmbedding`, and `two-out-of-three` properties.
 \import Equiv.Fiber
 \import Equiv.Path
 \import Function

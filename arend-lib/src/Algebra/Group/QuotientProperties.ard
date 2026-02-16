@@ -1,3 +1,4 @@
+-- This file contains functions and lemmas related to group homomorphisms and quotient groups, including the First Isomorphism Theorem. Key definitions include `GroupTriangle`, `UniversalGroupQuotient`, and `FirstIsomorphismTheorem`. Functions like `universalQuotientMorphismSetwise`, `universalQuotientMorph`, and lemmas like `universalQuotientProperty`, `univKer-mono`, and `univKer-epi` are used to establish group homomorphism properties and isomorphisms. The file concludes with corollaries applying the First Isomorphism Theorem.
 \import Algebra.Group
 \import Algebra.Group.GroupCategory
 \import Algebra.Group.GroupHom

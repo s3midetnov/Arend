@@ -1,3 +1,4 @@
+-- This file defines reduction systems, including abstract and simple systems, with various closure and reversal functions like `~>`, `~>_+`, `~>_*`, and `<~>`. It also includes lemmas for composing, reversing, and concatenating reductions, and introduces notions like `Join` and `Join~` for joinability in these systems.
 \import Paths
 \import Paths.Meta
 \import Relation.Truncated

@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas for handling h-levels in type theory, including operations like retracts, pi-types, and sigma-types. It distinguishes between prop-based and contr-based h-levels, proving their equivalence and properties.
 \import Arith.Nat
 \import Equiv
 \import Equiv.Path

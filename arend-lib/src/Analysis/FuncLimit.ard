@@ -1,3 +1,4 @@
+-- The file defines and proves properties of function convergence in various topological and metric spaces. It includes concepts such as `IsFuncConvergent`, `IsUniFuncConvergent`, `funcLimit`, and `funcConvergent-char`, exploring convergence in uniform, metric, and topological abelian group contexts.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Pointed

@@ -1,3 +1,4 @@
+-- The file defines `SemiringSolverModel` for solving semiring expressions, including functions like `normalize`, `multiply`, and `interpret`. It provides proofs for consistency and correctness of operations, such as `normalize-consistent` and `interpretNF-consistent`. The `Data` class structures interpretation within a semiring, using axioms and lemmas for algebraic properties.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

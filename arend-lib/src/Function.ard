@@ -1,3 +1,4 @@
+-- The file defines identity, composition, and injection/surjection properties for functions. It includes `id`, function composition operators `-o`, `o-`, and `o`, as well as predicates `IsInj` and `IsSurj` with a lemma for surjective composition. It also provides `Image` type and `flip` meta function.
 \import Logic
 \import Logic.Meta
 \import Paths

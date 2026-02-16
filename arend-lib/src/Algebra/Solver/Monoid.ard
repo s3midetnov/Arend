@@ -1,3 +1,4 @@
+-- This file defines `MonoidSolverModel`, a substitution solver model for monoids, with key functions like `normalize`, `interpret`, and `interpretNF`. It also includes lemmas for consistency and a similar model, `AddMonoidSolverModel`, for additive monoids.
 \import Algebra.Monoid
 \import Algebra.Solver
 \import Data.List

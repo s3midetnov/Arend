@@ -1,3 +1,4 @@
+-- The file defines a class `NoetherianCRing` extending `CRing`, with a key property `isNoetherian` for ideals, ensuring they satisfy the Chain Condition via finite generation.
 \import Algebra.Ring
 \import Algebra.Ring.Ideal
 

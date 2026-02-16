@@ -1,3 +1,4 @@
+-- Defines `SubPointed` and `SubAddPointed` classes extending `SubSet`, with `contains_ide` and `contains_zro`, respectively. Also defines internal `max` functions.
 \import Algebra.Pointed
 \import Set
 

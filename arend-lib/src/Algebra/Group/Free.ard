@@ -1,3 +1,4 @@
+-- The file defines a `FreeGroup` instance, operations (e.g., `inverse`, `*`), and properties (e.g., `equivMulLeft`, `equiv_inv`). It includes functions like `reduce`, `univ_map`, and `reduceHom`, along with lemmas for equality and irreducibility. It also provides universal properties and a `DecWordMonoid` instance for word-based decision procedures.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Monoid

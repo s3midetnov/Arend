@@ -1,3 +1,4 @@
+-- This file defines a `List` data type and various list functions such as `length`, `!!`, `++`, `replicate`, and `map`. It provides lemmas for properties like associativity of `++` and length equality for `map`. It introduces `All` and `All2` for propositional lists and `Perm` for permutations. It includes sorting algorithms like insertion and red-black tree sorts, verifying properties like sortedness and permutation. Additionally, it defines `contains`, `union`, and `InList` for membership and union related properties.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Data.Bool

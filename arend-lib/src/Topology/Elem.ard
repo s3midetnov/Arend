@@ -1,3 +1,4 @@
+-- The file defines instances for `Elem` subsets in various topological contexts: `ElemTopSpace`, `ElemCoverSpace`, `ElemUniformSpace`, and `ElemMetricSpace`. It also includes the lemma `elemCont` for continuous mapping.
 \import Paths.Meta
 \import Set.Subset
 \import Topology.CoverSpace

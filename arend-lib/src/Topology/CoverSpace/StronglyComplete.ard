@@ -1,3 +1,4 @@
+-- The file defines types and operations related to weakly and strongly Cauchy filters in the context of cover spaces. It includes instances for `WeaklyCauchyFilterPoset` and `WeaklyCauchyFilterEquivalence`, defines operations like `WCF~_meet`, and establishes connections between filters and points in strongly complete cover spaces. It also introduces the `StrongCompletion` and operations for lifting maps through weakly dense embeddings. The file establishes properties and lemmas like `sregCF_<=`, `pointSCF`, and `weaklyDense-lift`.
 \import Function.Meta
 \import Logic.Unique
 \import Logic

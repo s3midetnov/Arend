@@ -1,3 +1,4 @@
+-- This file defines the `KFinSet` class extending `BoundedPigeonholeSet`, with key functions including `search`, `||-search`, and `dec`, leveraging finite surjections. Lemmas like `fromArray`, `toArray`, and `QuotientKFin` manage conversions and operations on finite sets.
 \import Arith.Nat(id<suc)
 \import Data.Array
 \import Data.Or

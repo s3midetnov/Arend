@@ -1,3 +1,4 @@
+-- The file defines an untyped lambda calculus in Arend, featuring key components like `LC-FSignature`, `BetaRedexContext`, and rewrite rules `beta-reduction`. It includes lambda terms `K`, `I`, and `I_I`, and demonstrates a rewrite relation `I_I~>I`.
 \import Logic.Rewriting.TRS.HRS
 \import Logic.Rewriting.TRS.MetaContexts
 \import Logic.Rewriting.TRS.Utils

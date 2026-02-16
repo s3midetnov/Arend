@@ -1,3 +1,4 @@
+-- The file defines the construction of the image of a map using pushouts and colimits, based on Egbert Rijke's paper. Key functions include `MJoin`, `MImageAppr`, `MImage`, `dom-map`, and `cod-map`, with lemmas `dom-map-surj` and `cod-map-emb`. It also defines `YImage` using `MData` with instances and surjection and embedding properties.
 {- | The construction of the image of a map from the paper
  -   Egbert Rijke, The join construction, https://arxiv.org/pdf/1701.07538.pdf
  -}

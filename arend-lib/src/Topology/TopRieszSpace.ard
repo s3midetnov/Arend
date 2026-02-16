@@ -1,3 +1,4 @@
+-- Defines `TopRieszSpace`, extending `TopAbGroup` and `RieszSpace`, with lemmas `abs-uniform`, `*q-right-uniform`, `join-uniform`, and `meet-uniform` for uniformity in operations.
 \import Algebra.Group
 \import Algebra.Ordered.RieszSpace
 \import Arith.Int

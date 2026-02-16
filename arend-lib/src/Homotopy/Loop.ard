@@ -1,3 +1,4 @@
+-- The file defines loop space operations and equivalences, including `Loop`, `Loop-Func`, `loop-level`, `loop-level-iter`, and `loop-level-iter-inv`. It introduces `SuspLoopEquiv` and `SphereLoopEquiv` for relating suspensions and spheres to loops. `Omega^` and `Omega^-Func` define higher iterated loop spaces and their mappings.
 \import Equiv.Sigma
 \import Function.Iterate
 \import Homotopy.HLevel

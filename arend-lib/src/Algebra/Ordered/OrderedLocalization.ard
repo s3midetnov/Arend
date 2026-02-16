@@ -1,3 +1,4 @@
+-- This file defines instances for localized algebraic structures, including `LocPosetAbMonoid`, `GrothendieckOrderedAbGroup`, `LocPosetMeetSemilattice`, and `GrothendieckMeetLattice`. It establishes properties like order relations, transitivity, antisymmetry, and meet-semilattice operations for these structures.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Monoid.MonoidLocalization

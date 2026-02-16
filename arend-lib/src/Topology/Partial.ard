@@ -1,3 +1,4 @@
+-- The file defines a `PartialTopSpace` instance for `TopSpace` and provides lemmas and functions related to continuous maps involving partial spaces. It includes `PartialTopSpace-char`, `plift-cont`, and `plift2-cont` for characterizing and lifting continuous maps.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

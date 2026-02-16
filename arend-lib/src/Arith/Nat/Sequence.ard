@@ -1,3 +1,4 @@
+-- This file deals with logical and order-related concepts. It defines two main lemmas: `search`, which involves constructing a proof of contractibility using search functions on natural numbers, and `NatFinSubset`, which constructs a finite set from a subset of natural numbers using a quotient equivalence.
 \import Arith.Nat
 \import Data.Or
 \import Equiv (QEquiv)

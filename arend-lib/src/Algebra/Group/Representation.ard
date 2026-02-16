@@ -1,3 +1,4 @@
+-- This file defines the class `LinRepres` for linear representations, extending `LModule` and `GroupAction`, with lemmas like `g**-zro` and `g**-negative`, and functions such as `toLinearMap`. It also defines `TrivialAction` as an instance of `LinRepres`.
 \import Algebra.Group
 \import Algebra.Group.GSet.ExampleActions
 \import Algebra.Group.GSet

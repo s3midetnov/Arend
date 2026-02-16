@@ -1,3 +1,4 @@
+-- This file provides formal definitions and proofs related to matrices over rings, focusing on Smith normal form and related concepts. Key components include the definition of matrix equivalence `M~`, the `IsSmith` property for matrices, and the `SmithRing` class, which extends `StrictBezoutRing`. The file includes lemmas for working with transposed matrices, block matrices, and functions for row and column elimination. It also proves uniqueness of Smith normal forms in certain domains and defines operations such as embedding 2x2 matrices into larger ones.
 {- | The proofs are based on the following papers:
  -   Irving Kaplansky, Elementary divisors and modules, 1949
  -   Guillaume Cano, Cyril Cohen, Maxime Dénès, Anders Mörtberg, Vincent Siles, Formalized linear algebra over Elementary Divisor Rings in Coq, 2016, https://arxiv.org/abs/1601.07472

@@ -1,3 +1,4 @@
+-- This file defines `PermSet`, a quotient of arrays by permutation equivalence (`EPerm`). Key functions include `inPS`, `permSet-map`, `permSet-sum`, and `permSet-length`. It provides instances like `PermSetMonoid` and `PermSetDec`, allowing operations and equality decisions. It also includes lemmas for properties like associativity, commutativity, and naturality.
 \import Algebra.Monoid
 \import Algebra.Monoid.MonoidHom
 \import Algebra.Pointed

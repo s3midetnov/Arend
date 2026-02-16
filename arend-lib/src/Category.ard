@@ -1,3 +1,4 @@
+-- This file defines a categorical framework in Arend. Key definitions include:
 \import Algebra.Meta
 \import Equiv
 \import Equiv.Path

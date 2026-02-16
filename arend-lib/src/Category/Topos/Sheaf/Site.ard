@@ -1,3 +1,4 @@
+-- The file defines `Presieve`, `Sieve`, and `Site` structures in category theory, including operations like `pullback`, `map`, and `isSieve`. It introduces `SiteWithBasis` and related homomorphisms, focusing on properties like `isCover` and `basicCover-stable`.
 \import Category
 \import Category.Functor
 \import Category.Limit

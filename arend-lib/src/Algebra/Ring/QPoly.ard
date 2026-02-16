@@ -1,3 +1,4 @@
+-- The file defines `QPoly`, a quotient type for arrays over an additive pointed set, using an equivalence relation that equates arrays differing by trailing zeroes. It includes lemmas for proving properties about this relation, such as `lists-lem1` and `lists-lem2`, and operations like `qadd` for polynomial addition.
 \import Algebra.Pointed
 \import Arith.Nat
 \import Data.Array

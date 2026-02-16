@@ -1,3 +1,4 @@
+-- The file defines two main data structures, `CatTerm` and `CatNF`, to represent categorical terms and their normal forms. It provides functions to convert `CatTerm` to `CatNF` using `normalize`, and interprets both forms in a category with `interpret` and `interpretNF`. The `HData` class offers additional lemmas for consistency and equality of these interpretations.
 \import Category
 \import Function.Meta
 \import Paths

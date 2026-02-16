@@ -1,3 +1,4 @@
+-- This file defines logical constructs: `Empty`, `Not`, and `/=` (inequality). It includes `TruncP` and `ToProp` for handling propositions and their properties, such as `isProp`. It defines `||` (or) and its mappings, and `<->` (logical equivalence) with related lemmas. It also contains `OneOf` and `ElemOf` for types in arrays and proves `propExt` for proposition equality. A `NegatedProp` class is defined with an `Empty` instance.
 \import Algebra.Meta
 \import Data.Or
 \import Function.Meta

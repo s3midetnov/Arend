@@ -1,3 +1,4 @@
+-- Defines a `Torus` type and constructs an equivalence `TorusSphere-equiv` between `Torus` and `Σ Sphere1 Sphere1`. Provides functions `SphereTorus`, `TorusSphere`, `coordinate`, `OmegaTorus`, and `Loop_S1^2`.
 \import Equiv
 \import Equiv.Univalence
 \import Homotopy.Sphere.Circle

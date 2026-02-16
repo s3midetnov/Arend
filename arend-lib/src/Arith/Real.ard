@@ -1,3 +1,4 @@
+-- The file defines operations and properties for real numbers, focusing on their order and algebraic structure. It includes definitions for operations such as addition, multiplication, meet, and join, along with lemmas establishing their properties, like transitivity and focus. It also provides instances for real numbers as a dense linear order and a linearly ordered abelian group.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Meta

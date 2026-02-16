@@ -1,3 +1,4 @@
+-- This file defines `lagrange-gen`, a lemma establishing an equivalence for subgroups, and `lagrange`, a function leveraging `lagrange-gen` to prove Lagrange's theorem for finite subgroups using finite cardinality. It includes auxiliary lemmas like `Cosets-fin` for handling cosets in finite settings.
 \import Algebra.Group
 \import Algebra.Group.Sub
 \import Algebra.Monoid

@@ -1,3 +1,4 @@
+-- This file defines linear modules (LModule) over rings, including operations, distribution properties, and linear maps. It covers concepts like independence, basis, and generating sets, along with related lemmas. Instances for product and array modules are provided, and there's support for handling ring homomorphisms with pullbacks and finite generation.
 \import Algebra.Group
 \import Algebra.Group.Product
 \import Algebra.Meta

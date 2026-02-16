@@ -1,3 +1,4 @@
+-- The file defines and investigates properties of local equivalences, including `isLocalEquiv`, extension types, and related equivalences. Key lemmas include `connected_isLocalEquiv`, `localTypesEquiv`, and `localEquivMap`, focusing on equivalence conditions and the relationship between local types and local equivalences.
 \import Equiv
 \import Equiv.Fiber
 \import Equiv.Univalence

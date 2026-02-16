@@ -1,3 +1,4 @@
+-- This file defines various algebraic structures, such as `OrderedAddMonoid`, `OrderedAbMonoid`, `OrderedAddGroup`, `OrderedRing`, and `OrderedField`, each extending foundational algebraic classes like `Monoid`, `Group`, `Ring`, and `Field`. Additionally, it defines lemmas about order properties, such as `<_+-invert-right`, `<_*_positive_positive`, and `pinv_<`, providing proofs and properties related to ordered algebraic operations and structures.
 \import Algebra.Algebra
 \import Algebra.Domain
 \import Algebra.Field

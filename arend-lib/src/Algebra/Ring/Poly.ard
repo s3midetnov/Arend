@@ -1,3 +1,4 @@
+-- This file defines a polynomial `Poly` over an additive pointed set and provides various operations and properties for polynomials. It includes functions for converting a polynomial to/from an array, mapping polynomials via a homomorphism, evaluating polynomials, and proving properties such as injectivity and degree. Additionally, it defines operations for a `Ring` and `LModule` on polynomials, and provides instances for various algebraic structures including `Ring`, `Domain`, `IntegralDomain`, and `LModule`.
 \import Algebra.Algebra
 \import Algebra.Domain
 \import Algebra.Field

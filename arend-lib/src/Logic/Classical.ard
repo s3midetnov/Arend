@@ -1,3 +1,4 @@
+-- The file defines an axiom `alem` for decidability of propositions and a `Choice` class extending `BaseSet` with a `choice` function for lifting surjections. It includes lemmas `liftDepSurj` and `liftSurj` for lifting dependent and non-dependent surjections, respectively. Additionally, it defines an axiom `achoice` with an auxiliary lemma `lemFromChoice` for deciding propositions using a choice principle.
 \import Data.Bool
 \import Homotopy.Fibration
 \import Logic

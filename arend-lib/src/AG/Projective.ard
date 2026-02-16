@@ -1,3 +1,4 @@
+-- The file defines various functions and lemmas for working with graded rings and schemes in the Arend proof assistant. Key functions include `ProjPres`, `toSpec`, and `projRingedPres`, which deal with graded ring presentations and their associated schemes. The lemmas provide properties of covers, such as `cover_spec`, `cover_factor`, and `cover_zro`, as well as the construction of homomorphisms in `functorial`. The file also defines `Proj` as a presented frame and includes auxiliary functions and proofs related to covers and ring homomorphisms.
 \import AG.Scheme
 \import Algebra.Meta
 \import Algebra.Monoid

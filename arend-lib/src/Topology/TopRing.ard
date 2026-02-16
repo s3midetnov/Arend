@@ -1,3 +1,4 @@
+-- The file introduces topological algebraic structures: `TopSemigroup`, `TopMonoid`, `TopRing`, `NearSkewField`, and `NearField`. Key lemmas include `pow-cont` ensuring continuity of power functions and `nearField-map-unique` for uniqueness of continuous maps on near fields.
 \import Algebra.Module
 \import Algebra.Monoid
 \import Algebra.Ring

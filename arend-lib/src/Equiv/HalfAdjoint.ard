@@ -1,3 +1,4 @@
+-- The file defines an `HAEquiv` record extending `QEquiv`, with properties and coherence functions like `coh_f_sec` and `coh_f_ret_f=f_sec_f`. It includes a lemma `levelProp` proving `HAEquiv` as a proposition, using concepts such as `Retraction`, `T1`, and `T2`.
 \import Equiv
 \import Equiv.Fiber
 \import Equiv.Univalence

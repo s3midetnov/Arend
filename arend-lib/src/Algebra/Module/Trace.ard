@@ -1,3 +1,4 @@
+-- This file defines the `Trace` function for square matrices in a ring, with properties like `Trace-transpose`, `Trace-prod`, `Trace-conjugation`, and `Trace-diagonal`. It also includes lemmas for these properties and their proofs.
 \import Algebra.Linear.Matrix
 \import Algebra.Module
 \import Algebra.Module.LinearMap

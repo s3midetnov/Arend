@@ -1,3 +1,4 @@
+-- The file defines various types of ideals in rings, including left, right, two-sided, and commutative ring ideals. It implements operations on these ideals like closure, radical, and properties such as being finitely generated or maximal. It also establishes a bounded lattice and commutative monoid structure on ideals.
 \import Algebra.Group
 \import Algebra.Group.Sub
 \import Algebra.Module

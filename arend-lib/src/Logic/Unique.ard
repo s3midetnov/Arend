@@ -1,3 +1,4 @@
+-- The file defines functions and classes for propositional types and contractible types. Key definitions include `isProp` and `isSet` for characterizing propositions and sets, `Contr` for contractible types, and lemmas like `contr-equiv` and `pi-Contr` for handling equivalences and pi-types with these structures.
 \import Equiv
 \import Logic
 \import Paths

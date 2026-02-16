@@ -1,3 +1,4 @@
+-- The file defines `NatMetricSpace` as a `MetricSpace` on natural numbers and provides lemmas for uniformity, total boundedness, and Cauchy filters, including `uniform-char`, `totallyBounded`, `cauchy-char`, `makeUniform`, `makeCover`, and the `atTop` Cauchy filter.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

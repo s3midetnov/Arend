@@ -1,3 +1,4 @@
+-- This file defines `SigmaFin` and `DecSubSet-isFin` lemmas for finite sets, and `ProdFin` instance for product of finite sets utilizing `SigmaFin`. It includes auxiliary functions for equivalences, particularly `aux` for sum and sigma types.
 \import Algebra.Monoid
 \import Algebra.Semiring
 \import Arith.Nat

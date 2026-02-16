@@ -1,3 +1,4 @@
+-- Defines a `CompleteLattice` instance for `ExUpperReal`, with operations `Meet` and `Join`. Includes lemmas for manipulating these operations, such as `*n_Join`, `+_Join`, `*n_join`, `+_join`, `Join-square`, and `join-square`.
 \import Algebra.Monoid
 \import Arith.Int
 \import Arith.Nat

@@ -1,3 +1,4 @@
+-- This file defines connected types and maps, focusing on the equivalence of types with local types and contractibility. Key definitions include `isConnectedType`, lemmas `isConnected=>contr`, `contr=>isConnected`, and `connected_join`, which relate connectedness and localization. The file imports various modules related to homotopy and logic.
 \import Equiv
 \import Equiv.Sigma
 \import Equiv.Univalence

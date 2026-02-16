@@ -1,3 +1,4 @@
+-- The file defines permutations of arrays with operations like `perm-refl`, `perm-sym`, and `perm-trans`. It includes functions for calculating inversions and sign of permutations, mapping permutations, and removing elements while preserving permutation order. It also provides proofs like `inversions_perm-refl` and utilities like `equiv_perm` for equivalences.
 \import Algebra.Group
 \import Algebra.Pointed
 \import Algebra.Ring

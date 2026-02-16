@@ -1,3 +1,4 @@
+-- This file defines the `Irr` class for irreducible elements in a commutative monoid, including properties like `isIrr` and `isCancelable-left`. It extends to define `Prime` elements and proves properties for `GCDMonoid`, including a lemma `nat_irr` for natural numbers.
 \import Algebra.Monoid
 \import Algebra.Monoid.GCD
 \import Algebra.Pointed

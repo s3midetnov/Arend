@@ -1,3 +1,4 @@
+-- The file defines a sorting function `sort` for arrays with elements of a linearly ordered type. It includes lemmas for sorting correctness, proofs of sortedness, and permutation relationships between pre- and post-sorted arrays. Key lemmas include `IsSorted`, `sorted_transport`, and `sort-sorted`.
 \import Arith.Nat
 \import Data.Array
 \import Data.Array.EPerm

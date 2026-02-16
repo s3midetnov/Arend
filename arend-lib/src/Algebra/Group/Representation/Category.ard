@@ -1,3 +1,4 @@
+-- The file defines `InterwiningMap` as a linear map with equivariance, `RepresentationCat` as a category of linear representations, and functions like `repr+module-iso=>repr-iso`, `KerLRepres`, `ImageLRepres`, along with instances and properties for interwining maps.
 \import Algebra.Group
 \import Algebra.Group.GSet.Category
 \import Algebra.Group.GSet

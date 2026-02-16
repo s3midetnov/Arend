@@ -1,3 +1,4 @@
+-- The file defines a function `Sphere`, constructing spheres via suspension, and a `pointed` function creating pointed types for spheres.
 \import Function.Iterate
 \import Homotopy.Pointed
 \import Homotopy.Suspension

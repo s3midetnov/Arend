@@ -1,3 +1,4 @@
+-- The file defines a `Localization` class for creating localizations of commutative rings, including functions like `lift`, `liftHom`, and `locMap`. It defines instances like `SubsetPoset` and `LocRing`, which provides a localization of a commutative ring over a submonoid. The file also contains lemmas like `locMap-inj`, `loc_change-of-base1-loc`, and `FieldOfQuotients` for integral domains, establishing properties and relations of these localizations.
 \import Algebra.Domain
 \import Algebra.Field
 \import Algebra.Group

@@ -1,3 +1,4 @@
+-- The file defines classes for algebraic structures with ordered properties, extending various algebraic classes like Monoid, Group, Lattice, and Ring with Poset properties. Key classes include:
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

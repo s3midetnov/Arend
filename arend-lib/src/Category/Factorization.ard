@@ -1,3 +1,4 @@
+-- The file defines `WFS` and `OFS` classes for weak and orthogonal factorization systems in a precategory. Key features include `factors`, `lift`, `unique-lift`, and lemmas like `left-epi` and `liftFromMono` for handling homomorphisms.
 \import Algebra.Meta
 \import Category
 \import Category.Limit

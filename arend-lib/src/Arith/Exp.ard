@@ -1,3 +1,4 @@
+-- This file defines the exponential function `exp` for a real Banach algebra as a cover map, using power series and function limits. It includes lemmas `exp-series-conv` and `inv-limit` to prove convergence criteria for the power series and establish limit properties.
 \import Algebra.Monoid
 \import Algebra.Pointed
 \import Analysis.FuncLimit

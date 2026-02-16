@@ -1,3 +1,4 @@
+-- The file defines a `BooleanRingSolverModel` for solving equations in a Boolean ring using a `SolverModel`. It introduces `Term` and `NF` as representations, and provides functions like `normalize`, `interpret`, `multiply`, and their lemmas to ensure consistency and correctness of interpretation. Key lemmas include `interpretNF'-consistent`, `collapse-consistent`, and `terms-equality`, which establish equivalence between different representations and interpretations.
 \import Algebra.Monoid
 \import Algebra.Ring.Boolean
 \import Algebra.Solver

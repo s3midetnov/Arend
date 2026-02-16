@@ -1,3 +1,4 @@
+-- The file defines functions and instances for working with algebraic structures, including `coPrimes`, `InvGroup`, and `EulerTotient`. It also includes theorems like `coPrimes-eq`, `ker-int-Coef`, and `Z/nZ=FinRing`, along with lemmas for modular arithmetic and Chinese Remainder Theorem applications.
 \import Algebra.Domain.Bezout
 \import Algebra.Domain.Euclidean
 \import Algebra.Group

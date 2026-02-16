@@ -1,3 +1,5 @@
+-- Defines `DirectedSet` extending `Preorder`, requiring inhabitation and directedness. Provides `ProductDirectedSet` and `DirectedSetHasProduct` for handling product instances.
+-- The file defines a `DirectedSet` class extending `Preorder`, requiring inhabitation and directedness. It provides a `ProductDirectedSet` instance for products of directed sets and a `DirectedSetHasProduct` instance for handling products in `DirectedSet`.
 \import Logic
 \import Logic.Meta
 \import Operations

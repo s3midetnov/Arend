@@ -1,3 +1,4 @@
+-- The file defines topological linear modules (`TopLModule`) and extends them to special cases like Hausdorff and complete modules. It includes functions to construct modules from topological rings (`RingTopLModule`) and products of modules (`ProductTopLModule`).
 \import Algebra.Group
 \import Algebra.Module
 \import Algebra.Monoid

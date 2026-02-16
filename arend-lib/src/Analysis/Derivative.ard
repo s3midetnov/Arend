@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas for calculating and manipulating derivatives in a topological module context. Main components include `dquot` for the directed quotient, `IsDirDerivAt` for directed derivatives, and `IsDerivAt` for derivatives at a point. Lemmas like `dquot_*c`, `dquot_+`, and `dquot_bilinear` handle properties of `dquot`. Other lemmas address derivative properties such as linearity, continuity, and bilinearity.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Module

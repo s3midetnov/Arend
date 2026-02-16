@@ -1,3 +1,4 @@
+-- The file defines `ObOver` as a sigma type for objects over a fixed object in a precategory. It introduces `SlicePrecat` as a precategory of such objects, with a definition for morphisms and composition. `SliceCat` is an instance of a category with univalence properties. Additionally, it defines a forgetful functor proving faithfulness.
 \import Category
 \import Category.Functor
 \import Paths

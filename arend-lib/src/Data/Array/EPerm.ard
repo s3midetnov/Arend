@@ -1,3 +1,4 @@
+-- The file defines `EPerm`, a type representing permutations of arrays, and provides functions and lemmas for reasoning about permutations. Key functions include `keep_remove-split`, `EPerm_map`, `EPerm_keep`, `EPerm_remove`, and `EPerm_nub`. Lemmas like `EPerm_len` and `EPerm_count` support proofs involving array lengths and element counts.
 \import Algebra.Group.Symmetric
 \import Arith.Nat
 \import Data.Array

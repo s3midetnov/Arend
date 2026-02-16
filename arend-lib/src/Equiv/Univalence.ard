@@ -1,3 +1,4 @@
+-- The file defines functions and conversions between types and equivalences, including `=-to-Equiv` and `=-to-QEquiv` for converting paths to equivalences and quasi-equivalences, and `Equiv-to-=` and `QEquiv-to-=` for the reverse. It also defines `univalence`, linking type paths to equivalences.
 \import Paths
 \import Paths.Meta
 \import Equiv

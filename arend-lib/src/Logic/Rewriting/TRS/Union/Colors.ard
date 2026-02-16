@@ -1,3 +1,4 @@
+-- The file defines a `TheoremContext` class for term rewriting with color-based function environments and linear rules. Key functions include `monochrome-reduction` for rewriting relations, `get-rule-pattern` for linear patterns, and `convert-to-injected-term` for transforming terms. The file also contains lemmas for handling term injections and color properties.
 \import Data.List \hiding (Sort)
 \import Logic
 \import Logic.Rewriting.TRS.Utils.FinFunctions

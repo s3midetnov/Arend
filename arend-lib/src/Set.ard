@@ -1,3 +1,4 @@
+-- This file defines decision procedures for propositions and sets, including `Dec`, `Decide`, and `DecSet`, with functions like `decToBool` and instances for products, arrays, and booleans. It also defines classes for subsets and separation, such as `BaseSet`, `SubSet`, and `Set#`.
 \import Data.Bool (Bool, So, false, not, true)
 \import Function.Meta
 \import Logic

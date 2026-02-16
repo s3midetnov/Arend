@@ -1,3 +1,4 @@
+-- This file defines Euclidean structures for semirings and rings, including operations like `gcd`, `reduce`, and `bezout`. It provides instances for `Nat` and `Int`, proving properties like GCD uniqueness and commutativity.
 \import Algebra.Domain
 \import Algebra.Domain.Bezout
 \import Algebra.Domain.GCD

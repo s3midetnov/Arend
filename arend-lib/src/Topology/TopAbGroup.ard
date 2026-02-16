@@ -1,3 +1,4 @@
+-- This file defines a `TopAbGroup` class, extending `TopSpace`, `AbGroup`, and `UniformSpace`, with continuous addition and negation, and uniform neighborhood properties. It provides lemmas for uniform continuity, open balls, and topological properties. It also defines a `TopAbGroupMap` for continuous group homomorphisms and uniform maps, and a `HausdorffTopAbGroup` for Hausdorff spaces.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Meta

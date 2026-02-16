@@ -1,3 +1,4 @@
+-- The file defines and imports algebraic structures like MonoidSet, MonoidAbMonoid, and MonoidRing, along with homomorphisms and lemmas for manipulating these constructs. Key functions include `msMonomial`, `monoidSet-coefs`, and `monoidSet-map`. It also includes proofs and instances for algebraic identities, such as distributivity and associativity, and conversions between polynomials and monoid sets.
 \import Algebra.Algebra
 \import Algebra.Group
 \import Algebra.Meta

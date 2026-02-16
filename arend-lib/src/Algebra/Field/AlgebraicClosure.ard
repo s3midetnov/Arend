@@ -1,3 +1,4 @@
+-- The file defines algebraic closure in rings and fields, including `IsAlgebraicallyClosed`, `algebraicallyClosed<->split`, and `algebraicallyClosed-integrallyClosed`. It provides `algebraicClosure-split` and constructs `countableAlgebraicClosure` for countable discrete fields.
 \import Algebra.Domain
 \import Algebra.Field
 \import Algebra.Field.Splitting

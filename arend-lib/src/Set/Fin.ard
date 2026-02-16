@@ -1,3 +1,4 @@
+-- - **FinSet Class**: Defines a finite set with properties `finEq`, `finSurj`, and methods for choice and equality decision.
 \import Algebra.Monoid
 \import Algebra.Ordered
 \import Arith.Fin.Order

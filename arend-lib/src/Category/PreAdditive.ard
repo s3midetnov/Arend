@@ -1,3 +1,4 @@
+-- This file defines the `PreAdditivePrecat` class extending `Precat` with properties for additive categories, establishes an equivalence `Ring=OneObjectPreAdd` between rings and one-object preadditive categories, and introduces `AdditivePrecat` extending both `PreAdditivePrecat` and `CartesianPrecat`.
 \import Algebra.Group
 \import Algebra.Ring
 \import Algebra.Semiring

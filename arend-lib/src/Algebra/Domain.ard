@@ -1,3 +1,4 @@
+-- This file defines algebraic structures like `Domain` and `IntegralDomain`, extending ring and monoid properties. It includes lemmas for non-zero elements, gcd operations, and cancellation laws. It also introduces `StrictDomain` and `StrictIntegralDomain`, emphasizing non-zero product properties and divisibility.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

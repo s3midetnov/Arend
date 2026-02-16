@@ -1,3 +1,4 @@
+-- The file defines `IntegrallyClosedDomain`, extending `IntegralDomain`, with a property `isIntegrallyClosedDomain` using `isIntegrallyClosed` and localization mapping.
 \import Algebra.Domain
 \import Algebra.Ring.Integral
 \import Algebra.Ring.Localization

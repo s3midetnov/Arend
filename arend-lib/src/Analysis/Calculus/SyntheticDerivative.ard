@@ -1,3 +1,4 @@
+-- This file defines differentiability in the context of DRings and linear modules. Key functions and lemmas include `isDiff`, which characterizes differentiable maps, `deriv` for computing derivatives, and `o_diff` for differentiability under composition. There are also specific derivatives for linear, constant, and sum functions, as well as bilinear maps.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Module

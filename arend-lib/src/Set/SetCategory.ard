@@ -1,3 +1,4 @@
+-- This file defines instances and functions for categories and functors in the context of sets, including `SetCat`, `SIP_Set`, `SetCoproduct`, `SetCoequalizer`, and `SetBicat`. It introduces a `SetColimit` type, a `NatFunctor` for natural numbers, and various related lemmas and helper functions.
 \import Algebra.Monoid
 \import Arith.Nat
 \import Category

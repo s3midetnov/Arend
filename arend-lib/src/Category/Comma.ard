@@ -1,3 +1,4 @@
+-- The file defines a `commaPrecat` for functors `F` and `G`, including objects, morphisms, identities, and composition. It introduces lemmas `leftForget` and `rightForget` as functors projecting to `C` and `D`. The `functor` definition allows transformation between comma categories. `commaCat` extends `commaPrecat` to categories with univalence.
 \import Algebra.Meta
 \import Category
 \import Category.Functor

@@ -1,3 +1,4 @@
+-- This file defines algebraic structures such as `Semigroup`, `Monoid`, and their properties including power functions, commutativity, and divisors. It includes lemmas for operations like `pow`, `BigProd`, and `BigSum`, and defines classes like `CSemigroup`, `CMonoid`, `AbMonoid`, and `CancelMonoid`. It also handles concepts like inverses and associativity within these structures.
 \import Algebra.Meta
 \import Algebra.Pointed
 \import Arith.Nat

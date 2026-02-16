@@ -1,3 +1,4 @@
+-- The file defines a `CompleteUniformSpace` class extending `UniformSpace` and `CompleteCoverSpace`. It implements functions like `dense-uniform-lift` and `uniform-completion` that handle uniform maps, cauchy filters, and embeddings. It includes various lemmas related to uniformity, such as `mkSet_<=*`, `cauchyFilter-uniform-char`, and `regularFilter-uniform-char`.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

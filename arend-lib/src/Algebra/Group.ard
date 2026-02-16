@@ -1,3 +1,4 @@
+-- The file defines algebraic structures, including `Group`, `AddGroup`, `CGroup`, and `AbGroup`. Key functions include `ipow` for integer exponentiation, `conjugate` for group elements, and operations like `*i` and `-`. Lemmas establish properties of these operations, such as distributivity, cancellation, and inverses.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Monoid.MonoidHom

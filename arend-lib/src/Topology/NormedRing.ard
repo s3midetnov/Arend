@@ -1,3 +1,4 @@
+-- The file defines classes like `ExPseudoNormedPseudoRing`, `PseudoNormedPseudoRing`, and `ExPseudoValuedRing`, with emphasis on properties of norms in rings. It includes lemmas on norm inequalities and equalities, such as `norm_*_<=`, `norm_ide_<=`, and `norm_pow`. Instances for specific rings like `RatValuedRing` and `RealValuedRing` are also provided.
 \import Algebra.Monoid
 \import Algebra.Pointed
 \import Algebra.Ring

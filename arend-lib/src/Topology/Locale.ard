@@ -1,3 +1,4 @@
+-- The file defines concepts related to locales, frames, and categorical structures, including:
 {- | We follow the following sources:
      [1] Peter T. Johnstone, Stone Spaces, 1982
      [2] Francis Borceux, Handbook of Categorical Algebra: Volume 3, 1994 (Chapter 1)

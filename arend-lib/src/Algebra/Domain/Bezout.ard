@@ -1,3 +1,4 @@
+-- This file defines the `BezoutRing`, `StrictBezoutRing`, `BezoutDomain`, and `StrictBezoutDomain` classes, extending algebraic structures like `CRing` and `GCDMonoid`. It includes lemmas for properties like Bezout's identity, gcd, coprimeness, and the Chinese Remainder Theorem.
 \import Algebra.Domain.GCD(GCDDomain)
 \import Algebra.Group
 \import Algebra.Meta

@@ -1,3 +1,4 @@
+-- The file defines `UnitAlgebra` as an instance of `AAlgebra` for a given `CRing` and `PseudoAlgebra`. It includes operations like addition, multiplication, and their properties. Lemmas `*n-comm`, `*n-comm1`, and `*n-comm2` describe commutativity with natural numbers. The `unit-algebra` function establishes a homomorphism. `UnitCAlgebra` is defined as a `CAlgebra` instance.
 \import Algebra.Algebra
 \import Algebra.Group
 \import Algebra.Group.GroupHom

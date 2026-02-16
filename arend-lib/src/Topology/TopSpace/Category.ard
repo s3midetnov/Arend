@@ -1,3 +1,4 @@
+-- Defines an instance `TopCat` of category `Cat` for `TopSpace` with continuous maps as morphisms, identity, composition, and equational properties.
 \import Category
 \import Category.Meta
 \import Paths.Meta

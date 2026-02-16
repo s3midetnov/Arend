@@ -1,3 +1,4 @@
+-- The file defines a `GenericLinearTerm` data type for linear terms, conversion functions like `convert-to-term`, and a `LinearMetaContext` function. It includes `LinearTerm` and `LinearPattern` types, a `modular-commutation` lemma, an `invariant-through-empty-subst` lemma, and `LinearRewriteRule` and `LinearRegistry` records for handling rewrite rules.
 \import Data.List \hiding (Sort)
 \import Logic
 \import Logic.Rewriting.TRS.Utils.FinFunctions

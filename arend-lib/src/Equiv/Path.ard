@@ -1,3 +1,4 @@
+-- The file defines functions for path equivalences and mappings: `pathEquiv` establishes equivalence between paths and retractions, `pathConcatEquiv` handles path concatenation equivalences, `pmapEquiv` ensures mappings preserve equivalences, `pmapEmbedding` guarantees embeddings map to embeddings, and `pmapSection` ensures sections map to sections.
 \import Equiv
 \import Equiv.HalfAdjoint
 \import Paths

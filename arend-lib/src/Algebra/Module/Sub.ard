@@ -1,3 +1,4 @@
+-- The file defines `SubLModule`, a subclass of `SubAddGroup` for left modules over a ring, and `IModule`, a left module with specific properties. It introduces `topSubLModule` for constructing top submodules, and `SubLModuleSemilattice`, forming a meet-semilattice of submodules. Functions like `*m` and `OneDimSubmod` define operations on submodules and one-dimensional submodules, respectively.
 \import Algebra.Group
 \import Algebra.Group.Sub
 \import Algebra.Module

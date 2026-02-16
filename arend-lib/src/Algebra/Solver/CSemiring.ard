@@ -1,3 +1,4 @@
+-- The file defines a `CSemiringSolverModel` for a given `CSemiring`, which includes functions and lemmas for normalization and interpretation of terms and normal forms (`NF`). It also includes a `sortMonomials` helper function and several lemmas like `interpretNF_sort` and `apply-axiom` for correctness and consistency of interpretations.
 \import Algebra.Monoid
 \import Algebra.Semiring
 \import Algebra.Solver

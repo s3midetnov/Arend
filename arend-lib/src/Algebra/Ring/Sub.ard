@@ -1,3 +1,4 @@
+-- The file defines `SubPseudoRing`, `SubRing`, and `CSubRing` classes, extending structures like `SubPseudoSemiring` and `SubAddGroup`. It includes functions for constructing ring homomorphisms and checking properties like `Contr`. The `ringHomImage` function builds a subring from a ring homomorphism.
 \import Algebra.Group
 \import Algebra.Group.Sub
 \import Algebra.Monoid

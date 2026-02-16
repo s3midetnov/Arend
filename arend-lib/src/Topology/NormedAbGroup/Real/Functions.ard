@@ -1,3 +1,4 @@
+-- The file defines several lemmas concerning Uniform and Metric Maps in various topological and metric spaces, specifically focusing on properties of distance and uniformity. Key lemmas include `lnorm-metric`, `dist-uniform-map`, `norm-metric-map`, and `upper-meet-uniform`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

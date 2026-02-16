@@ -1,3 +1,4 @@
+-- The file defines `EquivariantMap`, an extension of `SetHom` for group actions, ensuring equivariance. It introduces `IsIso` to characterize isomorphisms. The `GSet` instance for `GroupAction G` implements a category with `EquivariantMap` as morphisms, providing identity and composition operations.
 \import Algebra.Group
 \import Algebra.Group.GSet
 \import Category

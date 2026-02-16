@@ -1,3 +1,4 @@
+-- This file defines various functions to establish countability of types using Quasi-Equivalence (QEquiv) for natural numbers, pairs, tuples, sums, Maybes, arrays, and functions. It includes implementations for counting elements in finite sets, constructing countable functions, and extends to countable structures like quotient types and factor rings by leveraging surjectivity and equivalences.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Algebra.Ring.Factor

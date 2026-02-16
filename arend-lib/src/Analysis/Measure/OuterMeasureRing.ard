@@ -1,3 +1,4 @@
+-- The file defines `LowerPseudoNormedAbGroup` and `PseudoOuterPremeasureRing` classes, including properties like `norm-outer-measure` and `norm-outer-mono`. It defines an `ExtendedMeasure` class with functions `IsMeasurable` and `measure-pair`, and has lemmas like `measurable-cauchy`. Some definitions are marked for potential rewriting.
 {- TODO[server2]: Delete or rewrite this
 \import Algebra.Group
 \import Algebra.Group.GroupHom

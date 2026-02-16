@@ -1,3 +1,6 @@
+-- Defines `HasProduct` and `HasCoproduct` classes with operators `⨯` and `⨿`. Instances for `\Type` use `\Sigma` and `Or`.
+-- Defines `HasProduct` and `HasCoproduct` classes with operators `⨯` and `⨿`, using `\Sigma` and `Or` for `\Type`.
+-- Defines `HasProduct` and `HasCoproduct` classes for types with infix operators `⨯` and `⨿`, respectively. Instances for `\Type` use `\Sigma` and `Or`.
 \import Data.Or
 
 \class HasProduct (E : \hType)

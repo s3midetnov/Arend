@@ -1,3 +1,4 @@
+-- This file defines `Separated` and `ReflSeparated` universes using localization and image concepts, with functions `S`, `F`, and `pathEquiv` for homotopy equivalences, and proves a lemma `separatedLocalization`.
 \import Equiv
 \import Equiv.Sigma
 \import Equiv.Univalence

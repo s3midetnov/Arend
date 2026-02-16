@@ -1,3 +1,4 @@
+-- This file defines concepts related to fibrations and equivalences. It includes:
 \import Homotopy.Fibration
 \import Paths
 \import Logic.Unique

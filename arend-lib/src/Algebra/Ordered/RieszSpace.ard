@@ -1,3 +1,4 @@
+-- This file defines classes related to algebraic structures: `PosetDivAbGroup` and `PosetQModule` with lemmas for properties of divisibility and cancellation. It also defines `RieszSpace`, extending these with operations like join, meet, and absolute value manipulation, along with related lemmas.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

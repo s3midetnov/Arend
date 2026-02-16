@@ -1,3 +1,4 @@
+-- The file defines a `Partial` record for partial elements of a set, with functions `defined` and `undefined`. It includes lemmas like `partial-ext`, `defined-ext`, and `undefined-ext` for extending these partial elements, and functions `plift` and `plift2` for lifting operations. An instance `PartialAddMonoid` is provided for partial addition on monoids.
 \import Algebra.Monoid
 \import Function.Meta
 \import Logic

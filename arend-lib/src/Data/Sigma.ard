@@ -1,3 +1,4 @@
+-- The file defines functions for mapping over tuples, including `tupleMap` and its projections. It also defines `tupleMapLeft` and `tupleMapRight` for partial mappings, alongside their respective projection properties. Lastly, it introduces `unit-isContr` to establish a contractible type.
 \import Function
 \import Logic.Unique
 

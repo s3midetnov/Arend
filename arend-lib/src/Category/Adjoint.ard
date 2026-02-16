@@ -1,3 +1,4 @@
+-- The file defines classes for RightAdjoint, RightAdjointUnit, RightAdjointCounit, and CatEquiv, extending Functor with properties like `eta`, `epsilon`, and natural transformations. It includes lemmas like `eta_epsilon-equiv` and functions like `rightFactor`, `op`, and `reverse`.
 \import Category
 \import Category.Functor
 \import Equiv

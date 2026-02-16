@@ -1,3 +1,4 @@
+-- The file defines a class `InjData` with a function `f` and an injectivity condition `inj`. It includes lemmas `PropFin`, `aux`, `true=>equals`, and `equals=>true` concerning properties and transformations of propositions using `f`.
 \import Function.Meta
 \import Logic
 \import Meta

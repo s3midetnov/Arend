@@ -1,3 +1,4 @@
+-- The file defines and proves properties of splitting fields in algebra, focusing on discrete fields and polynomials. It includes `IsSplittingField`, lemmas `splitting-integral` and `splitting-monic`, as well as `countableSplittingField` for constructing countable splitting fields. It also defines `RootFieldData` and `SplittingFieldData` structures, and provides `CountableSplittingFieldData` with associated operations and lemmas.
 \import Algebra.Field
 \import Algebra.Field.Algebraic
 \import Algebra.Group

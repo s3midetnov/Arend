@@ -1,3 +1,4 @@
+-- The file defines categories for PrecoverSpace and CoverSpace with associated homomorphisms, identities, and composition operations. It also specifies univalence conditions for these categories using cauchy-subset and transportInv.
 \import Category
 \import Category.Meta
 \import Logic

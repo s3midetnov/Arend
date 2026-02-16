@@ -1,3 +1,4 @@
+-- This file defines `Total`, `Fib`, and related functions for dependent types. `Total` is a dependent sum type, and `Fib` constructs a fiber over a function. It includes helper functions `proj`, `make`, `ext`, and `equiv` for manipulating and equating fibers.
 \import Equiv
 \import Equiv.Path
 \import Paths

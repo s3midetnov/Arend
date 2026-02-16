@@ -1,3 +1,4 @@
+-- Defines `Fin` operations: `fzero`, `fsuc`, `fpred`, and `fcase`. Lemmas include `unfsuc`, `fsuc/=`, `fsuc/=0`, `fsuc/=-conv`, `nat_fin_=`, `fin_nat_/=`, `fsuc_fpred`, `fsuc_fpredP`. Function `finLast` returns the last element.
 \import Arith.Nat(pred)
 \import Logic
 \import Paths

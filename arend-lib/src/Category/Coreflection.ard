@@ -1,3 +1,4 @@
+-- This file defines `comma-precat`, `comma-cat`, `Coreflection`, and `RightAdjointCoreflection`. It explores coreflection properties, terminal objects in a comma category, and adjunction equivalences between functors.
 \import Category
 \import Category.Adjoint
 \import Category.Comma

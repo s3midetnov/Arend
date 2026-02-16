@@ -1,3 +1,4 @@
+-- Defines `BaseSpace` class with a type parameter `E`. `InhSpace` extends `BaseSpace`, adding `isInh : TruncP E`.
 \import Logic
 
 \class BaseSpace (E : \Type)

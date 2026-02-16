@@ -1,3 +1,4 @@
+-- Defines a `runTimed` meta that measures execution time of a computation `m`, normalizes it, prints the elapsed time, and returns the result.
 \import Debug.Meta
 \import Meta
 

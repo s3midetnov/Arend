@@ -1,3 +1,4 @@
+-- This file defines functions and lemmas for constructing and working with cover spaces. Key definitions include `OpenCoverSpace` and `ClosedCompleteCoverSpace`, which handle open and closed cover spaces respectively. It also includes lemmas like `basicCover-cover` and `basicCover-regular` for cover properties. Functions like `filter-extend` and `cauchy-filter-extend` are provided for filter operations.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

@@ -1,3 +1,4 @@
+-- The file defines `IntervalSubset`, representing closed intervals of the real numbers, and proves the Intermediate Value Theorem for strictly monotone functions (`IVT-monotone`). It includes lemmas about the properties of these intervals and functions, such as `point>=left`, `point<=right`, and `point<-char`. It also defines the `monotone-inverse` lemma for monotone functions and includes `real-cont_<-inv` for continuous functions.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

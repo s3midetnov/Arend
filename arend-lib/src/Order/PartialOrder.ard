@@ -1,3 +1,4 @@
+-- Defines `Preorder` and `Poset` classes with order properties, equivalence relations, and product instances. Includes functions for meets, joins, and sub-posets.
 \import Category
 \import Logic
 \import Paths.Meta

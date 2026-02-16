@@ -1,3 +1,4 @@
+-- This file defines local types and localizations in Arend, exploring their properties in a reflective universe. Key components include the `Universe`, `Local`, and `Localization` classes, the `LType` functor, and various lemmas such as `sectionIsEquiv`, `localizationOfLocalType`, and `pullbackLocal`. The file also discusses elimination principles and localization factor properties.
 \import Data.Sigma
 \import Equiv
 \import Equiv.Path

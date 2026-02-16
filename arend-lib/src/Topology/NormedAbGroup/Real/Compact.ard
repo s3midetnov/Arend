@@ -1,3 +1,4 @@
+-- The file contains functions and lemmas for real number interval splitting and boundedness: `real-split` divides `[a, b]` into `n` parts, and `real-approx` ensures a point's proximity within divided segments. `real-bounded-tb` demonstrates the total boundedness of balls in a real normed space.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

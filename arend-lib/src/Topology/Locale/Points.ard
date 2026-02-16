@@ -1,3 +1,4 @@
+-- Defines `OpensFrame` for locales as frames of open sets. Introduces `PointsSpace` as topologies from locales, with `PointsSpaceFunctor` as a functor from locales to topological spaces. Includes lemmas on properties of points and filters, such as `points_*`, `points^*`, and their relationships. Defines `HasDensePoints` and `HasStronglyDensePoints` properties for locales and provides lemmas for dense points conditions.
 \import Category.Functor
 \import Function.Meta
 \import Logic

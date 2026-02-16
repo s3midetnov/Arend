@@ -1,3 +1,4 @@
+-- The file defines instances `ExUpperRealMetric` and `UpperRealMetric` for `CompleteExMetricSpace`, providing distance functions and properties like reflexivity, symmetry, and triangle inequality. It also includes lemmas `dist-left`, `dist-right`, and a function `cfPoint`. Additionally, it defines `upper-ex-isometry` as an isometric map between `UpperRealMetric` and `ExUpperRealMetric`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

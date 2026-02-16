@@ -1,3 +1,4 @@
+-- This file defines structures and operations for Banach spaces, Real Banach spaces, and related classes, including PreBanachSpace, SeparatedPreBanachSpace, and RealPreBanachSpace. It covers norm operations, uniformity properties, and bounded linear maps. It also provides instances for completing Banach spaces and reflections for separated spaces.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Module

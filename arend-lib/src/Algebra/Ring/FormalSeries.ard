@@ -1,3 +1,4 @@
+-- Defines `FSeries` as a type of formal series over a ring `R`. Introduces instances for `FSeries` as a `Ring`, `CAlgebra`, `Ring.With#`, `Domain`, and `IntegralDomain`. Provides `poly-FSeries` as a ring homomorphism from polynomials to `FSeries`. Includes lemmas for series application and properties of finite sums, pairs, and geometric series.
 \import Algebra.Algebra
 \import Algebra.Domain
 \import Algebra.Group

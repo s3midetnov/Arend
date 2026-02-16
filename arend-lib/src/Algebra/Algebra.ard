@@ -1,3 +1,4 @@
+-- The file defines algebraic structures extending modules and rings, including `PseudoAlgebra`, `AAlgebra`, `PseudoCAlgebra`, and `CAlgebra`. Key functions include `coefMap` and `coefHom`, with lemmas like `coefMap_natCoef` and `*a-assoc`. It also introduces operations like `*a`.
 \import Algebra.Module
 \import Algebra.Monoid
 \import Algebra.Ring

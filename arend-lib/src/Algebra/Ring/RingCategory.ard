@@ -1,3 +1,4 @@
+-- Defines categories for rings and commutative rings, including forgetful functors to sets, abelian groups, and monoids. Establishes isomorphisms and limits preservation within these categories.
 \import Algebra.Group
 \import Algebra.Group.GroupCategory
 \import Algebra.Group.GroupHom

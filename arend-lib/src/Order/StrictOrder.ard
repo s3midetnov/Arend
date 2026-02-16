@@ -1,3 +1,5 @@
+-- This file defines a `StrictPoset` class representing strict partial orders with irreflexivity and transitivity. It includes operations for reversing orders, lemmas for inequality reasoning, and checks if a function is strictly monotone between `StrictPoset` instances.
+-- This file defines a `StrictPoset` class for strict partial orders, including properties like irreflexivity and transitivity. It also provides operations for reversing orders and lemmas for reasoning about strict inequalities. The function `IsStrictlyMonotone` checks if a function between two `StrictPoset` instances preserves strict order.
 \import Logic
 \import Paths
 \import Set

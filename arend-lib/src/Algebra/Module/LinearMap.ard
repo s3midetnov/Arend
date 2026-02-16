@@ -1,3 +1,4 @@
+-- The file defines linear and bilinear maps, operations on them, and properties like independence and basis transformations. It includes lemmas for extending linear maps, matrix representation, and multilinear functions, with an emphasis on concepts like alternation and independence in linear algebra contexts.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Linear.Matrix

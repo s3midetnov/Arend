@@ -1,3 +1,4 @@
+-- This file focuses on the relative completion and lifting of cover spaces. Key functions and lemmas include `IsRelativelyComplete`, `relativelyCompleteAndSeparated`, and `dense-cauchy-relative-lift`, which handle properties of relative completeness and separation in topological spaces. Definitions related to `RelativeCompletion`, `relativeCompletion`, and `CompletionOFS` are also present, dealing with the structure and properties of cover maps and embeddings.
 \import Category.Factorization
 \import Equiv
 \import Function.Meta

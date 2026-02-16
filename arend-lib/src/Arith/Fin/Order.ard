@@ -1,3 +1,4 @@
+-- Defines a `LinearOrder.Dec` instance for `Fin n` using `NatSemiring` functions for comparison and trichotomy.
 \import Arith.Nat
 \import Order.LinearOrder
 

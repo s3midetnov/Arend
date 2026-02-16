@@ -1,3 +1,4 @@
+-- The file defines `Square` for commutative squares with `pull` and `push` transformations, and introduces `Pullback` as a class. It includes functions like `sigmaPullback`, `productPullback`, and `pathPullback`, each constructing specific pullbacks with associated universal properties.
 \import Equiv
 \import Paths
 

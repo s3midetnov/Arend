@@ -1,3 +1,4 @@
+-- This file defines instances and functions for factor rings and fields using ideals, including CRing and DiscreteField instances for FactorRing and FactorField. It imports algebraic structures for rings, monoids, and fields.
 \import Algebra.Domain.Bezout
 \import Algebra.Field
 \import Algebra.Group

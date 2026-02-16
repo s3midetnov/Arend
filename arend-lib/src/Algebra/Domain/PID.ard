@@ -1,3 +1,4 @@
+-- This file defines and proves properties of adequate rings, particularly their satisfaction of the Kaplansky condition, using concepts like `IsAdequate`, `IsAdequate'`, and `SmithRing.IsKaplansky`. It imports various algebraic structures and establishes lemmas related to GCD, PID, and domain adequacy.
 {- | Adequate rings were defined in
  -   Olaf Helmer, The elementary divisor theorem for certain rings without chain condition, 1943
  -

@@ -1,3 +1,4 @@
+-- The file defines `famUniverse` and `nullFamUniverse` as modalities with localization properties, utilizing `LData`, `dataExt`, and `dataExt-unique` for data extension and uniqueness. It also introduces `alpha-equiv` and `pushout_pullback-equiv` lemmas for equivalences, and constructs `nullTypeUniverse` from `nullFamUniverse`.
 \import Algebra.Meta
 \import Data.Or
 \import Equiv

@@ -1,3 +1,4 @@
+-- The file defines `HomogenLocRing`, constructing a commutative ring from a graded ring `R` and a submonoid `S`. It includes a `subRing` with operations and properties like `contains`, `contains_zro`, `contains_+`, `contains_*`, and `contains_negative`, ensuring homogeneity. The helper `fromSType` associates elements of `LocRing.SType S` to `HomogenLocRing`.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Algebra.Monoid.Sub

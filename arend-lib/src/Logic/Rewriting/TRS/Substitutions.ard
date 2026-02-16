@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas related to term weakening, substitution, and context manipulation in a formal rewriting system. Key functions include `plain-identity`, `weakening`, `append-context-right`, and `extend-substitution-left`, each with associated lemmas ensuring correctness and commutativity of operations like substitution and context extension.
 \import Data.List (!!, ++, ++-assoc, ++_nil, ::, List, length, nil)
 \import Function.Meta
 \import Logic

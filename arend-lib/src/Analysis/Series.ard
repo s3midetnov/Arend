@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas for series manipulation and convergence in various algebraic structures, such as `partialSum`, `IsConvSeries`, and `IsSeriesSum`. It includes properties like `seriesSum` and tests like `upper-ratio-test` and `MTest` for convergence in different contexts.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

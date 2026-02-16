@@ -1,3 +1,4 @@
+-- The file defines a `HomogenIdeal`, extending `Ideal`, with functions `hasHomogenGen`, `toGen`, and `fromGen` for handling homogeneous generators, and `irrelevantIdeal` for constructing an irrelevant ideal in a `GradedCRing`.
 \import Algebra.Monoid
 \import Algebra.Pointed
 \import Algebra.Ring.Graded

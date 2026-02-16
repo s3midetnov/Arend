@@ -1,3 +1,4 @@
+-- The file defines lemmas for approximating real numbers by rationals, integers, and natural numbers: `real-rat-approx`, `real-int-approx`, and `real-nat-approx`. It uses imports from algebra, arithmetic, logic, and topology modules.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

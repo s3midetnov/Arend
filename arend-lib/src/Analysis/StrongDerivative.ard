@@ -1,3 +1,4 @@
+-- This file defines the concept of derivatives in a topological module context, focusing on `IsDerivQuot`, `HasDeriv`, and `deriv` functions. It explores properties like continuity, uniqueness, and linearity of derivatives, including specific lemmas for linear maps, constants, and bilinear maps.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Module

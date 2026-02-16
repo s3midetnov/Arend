@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas related to symmetric groups and permutations. It introduces the `Sym` type representing permutations as equivalences on finite sets and provides instances for group operations. Key functions include `reduce`, `cycle`, and `transposition`, with lemmas like `Support`, `independent_*`, and `cycle-decomp` ensuring properties like cycle decompositions and support independence. `sign` calculates the sign of a permutation based on inversions, and `lift` extends permutations to larger sets.
 \import Algebra.Group
 \import Algebra.Group.Fin
 \import Algebra.Monoid

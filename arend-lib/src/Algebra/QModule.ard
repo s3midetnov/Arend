@@ -1,3 +1,4 @@
+-- The file defines algebraic structures like `DivisibleGroup`, `TorsionFreeGroup`, `QModule`, `QPseudoAlgebra`, and `QAlgebra`. It includes operations such as `*q` for scalar multiplication by rational numbers and conversion functions like `toRatModule` and `toRatAlgebra`. It also provides lemmas for properties of these operations, such as associativity and commutativity.
 \import Algebra.Algebra
 \import Algebra.Group
 \import Algebra.Group.GroupHom

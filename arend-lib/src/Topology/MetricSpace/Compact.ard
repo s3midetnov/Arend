@@ -1,3 +1,4 @@
+-- The file imports various modules related to algebra, arithmetic, logic, orders, paths, and topology. It defines a lemma `product-balls-tb` which shows that the Manhattan product of two totally bounded pseudo-metric spaces is also totally bounded.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Arith.Rat

@@ -1,3 +1,4 @@
+-- This Arend file defines a sequential colimit structure (`SeqColimit`) for sequences, provides equivalences for total spaces of fibrations over these colimits, and includes lemmas proving properties like surjectivity (`seqColimit-surj`) and contractibility (`constantMaps`) for specific sequences.
 \import Equiv
 \import Equiv.Univalence
 \import Logic.Unique

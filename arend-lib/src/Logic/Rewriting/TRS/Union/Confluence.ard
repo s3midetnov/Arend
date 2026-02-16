@@ -1,3 +1,4 @@
+-- This file defines functions and data types for handling term rewriting systems (TRS) with colored reductions. It includes definitions for `TopLevelColoredReduction`, `OppositeColored`, `BorderedParallelReduction`, and `SwitchingReduction`. Functions such as `bpr-confluence`, `unify-top`, and `iterate-decomposition` facilitate the management of parallel reductions and transformation of terms. The file also includes utility functions for substitution and commutation within these colored reduction systems.
 \import Algebra.Meta
 \import Logic.Rewriting.ARS.Relation
 \import Data.List (!!, ++, ++_nil, ++-assoc, List, nil, ::)

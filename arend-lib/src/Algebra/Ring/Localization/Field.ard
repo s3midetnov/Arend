@@ -1,3 +1,4 @@
+-- This file focuses on localizations in commutative rings and fields. It defines lemmas for inverses and zero elements in localizations, constructs local and discrete fields from submonoids, and describes ordered fields from ordered rings.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Meta

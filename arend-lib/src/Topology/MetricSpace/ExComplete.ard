@@ -1,3 +1,4 @@
+-- This file defines dense-metric-lift and ExMetricCompletion. The dense-metric-lift function constructs a MetricMap from an IsometricMap and a MetricMap. ExMetricCompletion defines a CompleteExMetricSpace from ExPseudoMetricSpace with properties like dist-refl, dist-symm, and dist-triang.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

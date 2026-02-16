@@ -1,3 +1,4 @@
+-- This file defines a class `TermSig` for term signatures and a data type `Term` for terms with variables and applications. It includes a function `subst` for substitution in terms and lemmas `subst-assoc` and `subst_var` for properties of substitution.
 \import Paths
 \import Paths.Meta
 

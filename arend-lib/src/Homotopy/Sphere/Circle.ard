@@ -1,3 +1,4 @@
+-- This file defines `Sphere1`, a 1-dimensional sphere, with its base point and loop. It provides equivalences between `Sphere1` and `Sphere 1`, using functions like `CircleSusp` and `SuspCircle`. Functions `encode`, `decode`, and `wind` relate paths and integers, with proofs `encode_decode` and `decode_encode` ensuring correctness. The `Loop_S1` function establishes an isomorphism between paths in `Sphere1` and integers.
 \import Arith.Int
 \import Equiv
 \import Homotopy.Cube

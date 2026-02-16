@@ -1,3 +1,4 @@
+-- The file defines a framework for manipulating group expressions, focusing on a datatype `GroupTerm` with operations like identity, inverse, and multiplication. It introduces classes `GroupData` and `NatData` to interpret these terms in a group setting, providing functions for simplifying expressions, checking normal form (`isInNF`), and removing variable pairs (`removeVar`). Correctness lemmas ensure that simplifications preserve meaning.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

@@ -1,3 +1,4 @@
+-- The file defines the `Character` function for a linear representation of a group, calculates its trace, and provides auxiliary functions `chi`, `of-1`, and `Matrix-of-1` for working with group identities and matrix representations.
 \import Algebra.Group
 \import Algebra.Group.Representation
 \import Algebra.Linear.Matrix

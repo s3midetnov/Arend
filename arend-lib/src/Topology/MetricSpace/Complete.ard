@@ -1,3 +1,4 @@
+-- This file defines functions for lifting metric maps to complete metric spaces and proving properties in such environments, including dense-metric-lift and MetricCompletion. It involves operations on isometric and metric maps and provides lemmas like dist-refl-lem and filter-dist-triang for handling distances in StrongCompletion.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Pointed

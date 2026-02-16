@@ -1,3 +1,5 @@
+-- The file defines order classes such as `TotalOrder`, `LinearOrder`, `DenseLinearOrder`, and `UnboundedDenseLinearOrder`. It includes lemmas and functions for meet/join operations. Key functions are `findMin`, `findMax`, and `trichotomy`, aiding order properties and decision procedures.
+-- The file defines various order classes like `TotalOrder`, `LinearOrder`, `DenseLinearOrder`, and `UnboundedDenseLinearOrder`, along with associated lemmas and functions for meet and join operations. Notable functions include `findMin`, `findMax`, and `trichotomy`, supporting order properties and decision procedures.
 \import Data.Array
 \import Data.Or
 \import Function

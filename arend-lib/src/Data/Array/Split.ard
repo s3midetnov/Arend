@@ -1,3 +1,4 @@
+-- The file defines a function `nub-split` which rearranges elements of an array using `EPerm` and `aux` to split elements based on unique properties. It leverages imports for array, permutation, and logic functionalities.
 \import Data.Array
 \import Data.Array.EPerm
 \import Data.Fin (unfsuc)

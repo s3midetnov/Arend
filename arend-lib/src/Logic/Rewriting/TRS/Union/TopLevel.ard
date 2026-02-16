@@ -1,3 +1,4 @@
+-- This file defines functions and lemmas for manipulating terms and substitutions in the context of colored term rewriting systems. Key functions include `join-tlcrs`, which joins colored reductions, and `lift-relation`, which lifts relations via meta-substitutions. It also provides various lemmas for handling term decompositions, color exclusions, and substitution commutations, focusing on maintaining confluence and correctness in term rewriting.
 \import Data.List \hiding (Sort)
 \import Data.Maybe
 \import Function.Meta

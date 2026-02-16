@@ -1,3 +1,4 @@
+-- The file defines and instances a `StronglyCompleteUniformSpace` structure for `InfReal`, with properties like `isSeparatedCoverSpace`, `isStronglyComplete`, and `uniform-refine`. It introduces functions such as `makeUniform`, `NFilter`, and `fromCF`, and proves lemmas like `cauchy-ball`, `infReal-ball-open`, and `infReal-half-open`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

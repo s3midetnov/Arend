@@ -1,3 +1,4 @@
+-- The file defines `StronglyCompleteUniformSpace`, `UniformStrongCompletion`, and `uniform-strongCompletion` for dealing with uniform spaces, mapping functions, and completion of spaces. It includes lemmas like `properUniform`, `makeUniform`, `cauchyFilter-uniform-char`, and `regularFilter-uniform-char` for properties and characterizations of filters and embeddings.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

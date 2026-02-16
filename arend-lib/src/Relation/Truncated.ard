@@ -1,3 +1,4 @@
+-- Defines relation `Rel` and closures: `transitive-closure`, `transitive-refl-closure`, `symmetric-closure`, `reflexive-closure`. Provides constructors and lemmas for each.
 \func Rel (A : \Set) : \Set => A -> A -> \Prop
 
 \truncated \data transitive-closure {A : \Set} (R : Rel A) (a b : A) : \Prop

@@ -1,3 +1,4 @@
+-- The file defines a type `SFunc` for a quotient of arrays of pairs of additive monoid and bottom distributive lattice elements, with an equivalence relation `~`. It provides instances for `SFunc` as an abelian monoid, abelian group, Q-module, and poset Q-module. Additionally, it includes various lemmas to handle equivalency, addition, and order properties within `SFunc`, and shows how to construct reduced forms and common refinements. There is also an instance of `SFunc` as a Riesz space with an absolute value construction.
 \import Algebra.Algebra
 \import Algebra.Group
 \import Algebra.Meta

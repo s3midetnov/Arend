@@ -1,3 +1,4 @@
+-- This file defines operations and properties on sets, including union, intersection, complements, and covers. It introduces a `SetLattice` instance for locales, defines refinement relations, and provides lemmas for set operations and properties.
 \import Data.Array
 \import Function.Meta
 \import Logic

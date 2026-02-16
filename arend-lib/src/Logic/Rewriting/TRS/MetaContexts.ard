@@ -1,3 +1,4 @@
+-- This file defines various meta-context constructions and utilities for handling terms in a rewriting system. Key functions include `ModularMetaContext`, `PointedModularMetaContext`, and `SingularMetaContext`, each providing different ways to manage metavariables. `EmptyMetaContext` represents a context with no metavariables. The file also includes the `PureTerm` type and a lemma `apply-modularity` for applying modular substitutions.
 \import Data.List (List)
 \import Data.Or
 \import Logic

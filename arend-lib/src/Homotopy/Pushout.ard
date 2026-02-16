@@ -1,3 +1,4 @@
+-- Defines a `Pushout` class with `pushout-univ` and `map` functions. Introduces `PushoutData` type for constructing pushouts, with `rec`, `equiv`, and `flattening` functions. Implements `EmbeddingPushout` class for embedding pushouts and associated encoding/decoding functions.
 \import Algebra.Meta
 \import Equiv
 \import Equiv.Sigma

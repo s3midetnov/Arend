@@ -1,3 +1,4 @@
+-- This file defines and describes structures for presheaves and sheaves, particularly in the context of category theory and topology. Key definitions include `VPresheaf`, `Presheaf`, `VSheaf`, and `Sheaf`. Instances like `VPresheafCat`, `PresheafCat`, `VSheafCat`, and `SheafCat` are provided for categorical contexts. The file also contains lemmas and functions related to sheaf properties, such as `direct_image`, `sheaf-preserve`, `sheaf-reflect`, and more specialized constructs like `vsheafOnSiteWithBasis`. These help in managing the behavior of sheaves over sites and locales, including operations like direct image and extension.
 \import Algebra.Meta
 \import Category
 \import Category.Functor

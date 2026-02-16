@@ -1,3 +1,4 @@
+-- This file defines functions and lemmas for working with arrays in Arend. It includes array construction (`mkArray`), transformations (`map`, `filter`, `insert`), concatenation (`++`, `++'`), and indexing operations. It also handles set operations like `remove`, `nub`, and provides properties like `count` and `forall`. Additionally, it contains proofs for properties of these operations, such as associativity and injectivity.
 \import Algebra.Meta
 \import Arith.Nat
 \import Data.Bool

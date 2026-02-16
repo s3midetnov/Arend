@@ -1,3 +1,4 @@
+-- The file defines lemmas and instances involving modular arithmetic and Euclidean structures for natural numbers and finite rings. Key lemmas include `int_n*_+_mod_n`, `int_mod_*-left`, and `div_suc-lem`. It also provides instances `FinRing`, `FinEuclidean`, and `FinField` with properties like associativity, commutativity, and gcd calculations.
 \import Algebra.Domain.Euclidean
 \import Algebra.Field
 \import Algebra.Group

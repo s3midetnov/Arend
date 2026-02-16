@@ -1,3 +1,4 @@
+-- This file defines `Subobj` and `RegularSubobj` as data types representing subobjects in a category, introduces preorder structures for them, and proves properties like antisymmetry. It also explores pullbacks and conditions for regular monomorphisms within these structures.
 \import Algebra.Meta
 \import Category
 \import Category.Limit

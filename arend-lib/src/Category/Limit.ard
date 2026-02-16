@@ -1,3 +1,4 @@
+-- This file defines several key concepts and structures in category theory using Arend:
 \import Algebra.Meta
 \import Category
 \import Category.Adjoint

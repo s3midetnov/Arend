@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas for determining the finite order of an element in a Group. Key components include: `hasFiniteOrder` lemma, `order` function, and supporting lemmas `order>0`, `order_pow`, and `order-min`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

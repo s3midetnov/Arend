@@ -1,3 +1,4 @@
+-- The file defines functions `iterl`, `iterr`, and corresponding induction principles `iterr-ind`, `iterr-index-ind` for iterating a function `f` over natural numbers. It also includes a lemma `iterr_inj` about injectivity of `iterr`.
 \import Arith.Nat
 \import Function
 

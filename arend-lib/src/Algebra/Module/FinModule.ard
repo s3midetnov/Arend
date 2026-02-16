@@ -1,3 +1,4 @@
+-- This file defines a `FinModule` class extending `LModule` with a finite basis, and includes lemmas for surjective maps, dimension properties, and isomorphisms. There's an instance `ArrayFinModule` for arrays with a basis.
 \import Algebra.Linear.Matrix
 \import Algebra.Meta
 \import Algebra.Module

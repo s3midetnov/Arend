@@ -1,3 +1,4 @@
+-- The file defines various equivalences and contractibility properties, including `lsigma`, `rsigma`, `equiv=`, `contr-left`, `contr-right`, `pi-contr-left`, `pi-contr-right`, `sigma-left`, `sigma-right`, `sigma-equiv`, and `unit-func`, as well as the `totalEquiv` lemma based on HoTT Theorem 4.7.7.
 \import Equiv
 \import Equiv.Fiber
 \import Equiv.HalfAdjoint

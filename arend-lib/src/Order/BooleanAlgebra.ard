@@ -1,3 +1,4 @@
+-- Defines a `BooleanAlgebra` class with operations like `compl`, `implies`, and lemmas about complements. Introduces `symm-diff` function. Implements `HeytingBooleanAlgebra` instance using negation.
 \import Function.Meta
 \import Order.HeytingAlgebra
 \import Order.Lattice

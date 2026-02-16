@@ -1,3 +1,4 @@
+-- This file defines the `GCD` record and related lemmas within various monoid structures, including `GCDMonoid`, `UnitlessMonoid`, and `DivQuotient`. It introduces functions for GCD operations, coprimeness, and distributive properties in algebraic structures. It also discusses quotienting monoids by divisibility and presents instances for these structures, such as `UnitlessGCDMonoid`.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Monoid.MonoidHom

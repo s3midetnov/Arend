@@ -1,3 +1,4 @@
+-- The file defines a `Pointed` class with a `base` element and a method `make` to construct it. An instance `UnitPointed` for unit type is provided. The infix operator `->*` denotes pointed maps between pointed types. The file also defines `PointedTrunc0` for truncating pointed types to pointed sets and `PointedTrunc0-Func` for mapping between such truncated types.
 \import Algebra.Pointed.PointedHom
 \import Homotopy.Space
 \import Logic

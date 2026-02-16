@@ -1,3 +1,4 @@
+-- The file defines instances for completeness and cocompleteness of VPresheaf categories, such as `VPresheafComplete`, `VPresheafCocomplete`, and `VPresheafCatBicomplete`. It includes `limit` and `colimit` functions for limits and colimits in these categories. There are also functions for constructing cones and natural transformations related to these limits.
 \import Category
 \import Category.CartesianClosed
 \import Category.Coreflection

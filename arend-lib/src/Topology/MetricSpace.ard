@@ -1,3 +1,4 @@
+-- This file defines `ExPseudoMetricSpace`, extending `UniformSpace` with a distance function and properties like symmetry and triangle inequality. It includes lemmas for metric continuity and features classes like `ExMetricSpace`, `PseudoMetricSpace`, and `MetricSpace`, each with additional properties, such as identity of indiscernibles or real-valued distances. Definitions for `LocallyUniformMetricMap` and `UniformMetricMap` describe maps with uniform continuity properties. Transfer functions like `ExPseudoMetricTransfer` and `MetricTransfer` are provided for creating metric spaces from existing ones.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

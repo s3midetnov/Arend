@@ -1,3 +1,4 @@
+-- The file defines the concept of a `ModelHom` for theories, and constructs a `BicompleteCat` for models, featuring limit and colimit constructions. It introduces `ColimitData` and `Colimit` structures, providing mechanisms for interpreting terms and formulas within colimit models, and includes lemmas for handling colimit properties and consistency. The file also details a `limitStructure` for models and proves related lemmas about interpretation and truth preservation.
 \import Algebra.Meta
 \import Category
 \import Category.Functor

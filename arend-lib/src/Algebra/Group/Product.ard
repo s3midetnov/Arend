@@ -1,3 +1,4 @@
+-- The file defines instances for product groups: ProductGroup, ProductAddGroup, ProductCGroup, and ProductAbGroup, using respective monoids and operations.
 \import Algebra.Group
 \import Algebra.Monoid.Product
 \import Paths

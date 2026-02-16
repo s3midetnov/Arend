@@ -1,3 +1,4 @@
+-- The file imports various modules related to logic and rewriting systems. It defines `unwrap-func`, which extracts a function symbol and its arguments from a term, and `sigma-set-equalizer`, which equates elements in a dependent pair.
 \import Data.List \hiding (Sort)
 \import Data.Maybe
 \import Logic

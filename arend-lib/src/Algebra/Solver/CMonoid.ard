@@ -1,3 +1,4 @@
+-- Defines `CMonoidSolverModel` and `AbMonoidSolverModel` for solving monoid equations using normalization and interpretation functions. Includes lemmas for consistency, permutation, and iteration-based interpretations.
 \import Algebra.Monoid
 \import Algebra.Solver \using (interpretNF, interpretNF-consistent)
 \import Algebra.Solver.Monoid

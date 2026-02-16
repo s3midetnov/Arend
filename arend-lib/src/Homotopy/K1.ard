@@ -1,3 +1,4 @@
+-- This file defines homotopy types for a group `G` using `K1`, provides path manipulation functions, and constructs equivalences using `rightMulEquiv` and `leftMulEquiv`. It includes encoding and decoding functions for these types and demonstrates their interaction with group operations through lemmas like `loop-comp` and `equivPathComposition`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

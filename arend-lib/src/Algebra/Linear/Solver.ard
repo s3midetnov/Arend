@@ -1,3 +1,4 @@
+-- The file defines linear algebraic structures and operations, including `Operation`, `LinearData`, `Equation`, `Problem`, and `CorrectCert`. It provides functions like `interpretEq`, `certSum`, `isLess`, and lemmas for solving algebraic problems (`solveContrProblem`, `solve<=Problem`, `solve=Problem`, `solve<Problem`). It extends classes like `LinearSemiringData`, `LinearRingData`, and `LinearRatData`.
 \import Algebra.Monoid
 \import Algebra.Ordered
 \import Algebra.StrictlyOrdered

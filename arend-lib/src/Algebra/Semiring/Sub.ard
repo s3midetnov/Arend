@@ -1,3 +1,4 @@
+-- This file defines `SubPseudoSemiring` and `SubSemiring` classes extending algebraic structures like monoids and semirings, providing functions for constructing semirings and pseudo-semirings with additional properties.
 \import Algebra.Monoid
 \import Algebra.Monoid.Sub
 \import Algebra.Semiring

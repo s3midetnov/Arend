@@ -1,3 +1,4 @@
+-- This file defines several instances and lemmas for intervals in posets, biordered sets, and lattices. It introduces `RealLocale` as a locale and demonstrates its compactness and regularity. Functions like `rat_real` embed rational numbers into this locale. The file also contains lemmas for constructing covers and proving properties like local compactness and strong density of points in `RealLocale`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

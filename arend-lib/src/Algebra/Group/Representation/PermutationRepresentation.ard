@@ -1,3 +1,4 @@
+-- The file defines `PermRepr`, a permutation representation of a group action on a linear module, and `PermutationRepresReducible`, proving reducibility under specific conditions. It includes functions for module actions, invariant submodules, and checks for irreducibility.
 \import Algebra.Group
 \import Algebra.Group.GSet
 \import Algebra.Group.Representation.Category

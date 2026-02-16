@@ -1,3 +1,4 @@
+-- This Arend file constructs a `UnitC*Algebra` instance from a `StoneC*PseudoAlgebra`, defining several key concepts such as norms, completeness, and algebraic operations. It also defines `StoneC*AlgebraRieszSpace` and `StoneC*PseudoAlgebraRieszSpace`, focusing on norms and algebraic properties in a Riesz space context.
 {- | The construction of {UnitC*Algebra} is taken from
      [1] Simon Henry, Constructive Gelfand Duality for non-unital commutative C*-algebras, 2014, https://arxiv.org/abs/1412.2009
  -}

@@ -1,3 +1,4 @@
+-- Defines categories `PointedCat` and `AddPointedCat` with homomorphisms, identities, and compositions. Introduces `Kernel`, `KerPointedHom`, `ImageAddPointed`, and `ImagePointed` with associated homomorphisms and lemmas on injectivity and surjectivity.
 \import Algebra.Pointed
 \import Algebra.Pointed.PointedHom
 \import Category

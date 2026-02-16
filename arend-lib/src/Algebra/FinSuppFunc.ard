@@ -1,3 +1,4 @@
+-- The file defines `FinSuppFunc`, a finitely supported function extending `SetHom` with additional instances for algebraic structures such as `AddPointed`, `AddMonoid`, `AbMonoid`, `AddGroup`, and `AbGroup`. It provides equality and arithmetic operations for these functions.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Algebra.Pointed

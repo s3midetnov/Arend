@@ -1,3 +1,4 @@
+-- Defines instances `LexicographicalProduct` and `LexicographicalList` for lexicographical order on products and lists, implementing decision procedures for `<`, `<-irreflexive`, `<-transitive`, and `trichotomy`.
 \import Data.List
 \import Logic
 \import Order.LinearOrder

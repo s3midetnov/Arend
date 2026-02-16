@@ -1,3 +1,4 @@
+-- This file defines the suspension `Susp` of a type `A` using `PushoutData`, with constructors `north` and `south`, and a path `pmerid` between them. It includes a `rec` function for recursion on `Susp A` and a `pointed` instance.
 \import Homotopy.Pointed
 \import Homotopy.Pushout
 

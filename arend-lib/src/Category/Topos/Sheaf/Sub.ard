@@ -1,3 +1,4 @@
+-- The file defines lemmas `subSheaf` and `subSheafWithBasis` for constructing sheaves using natural transformations and embeddings in a category. It imports various modules related to categories, functors, limits, sheaves, and logical equivalences.
 \import Category
 \import Category.Functor
 \import Category.Limit

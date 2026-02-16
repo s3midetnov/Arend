@@ -1,3 +1,4 @@
+-- This file defines a `GradedCRing` class with properties and operations on homogeneous elements, such as `homogen-*`, `homogen-+`, and `homogen-decomp`. It includes lemmas for combining and decomposing homogeneous sums and products, like `homogen-sum`, `homogen-factor`, and `FinSum-homogen`. The `Similar` data type and related functions manage array comparisons, ensuring homogeneous properties are preserved.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

@@ -1,3 +1,4 @@
+-- This file defines structures for submonoids, subsemigroups, and subadditive monoids. It includes functions for embedding monoids, closure operations, powers, and big sums, as well as lemmas for properties like associativity and identity.
 \import Algebra.Monoid
 \import Algebra.Monoid.MonoidHom
 \import Algebra.Pointed

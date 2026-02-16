@@ -1,3 +1,4 @@
+-- The file defines a `ValuationRing` class extending `StrictBezoutDomain` and `LocalCRing`, providing methods like `isValuationRing` and leveraging `LDiv` for divisibility. It includes default implementations for local properties and describes a `ValuationMonoid` and `ValuationTotalOrder` with totality defined via `isValuationRing`.
 \import Algebra.Domain.Bezout
 \import Algebra.Group
 \import Algebra.Meta

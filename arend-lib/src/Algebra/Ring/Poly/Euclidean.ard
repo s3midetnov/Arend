@@ -1,3 +1,4 @@
+-- This file defines instances and lemmas for polynomials over discrete fields as Euclidean domains, including `PolyEuclideanRingData` and `PolyEuclideanDomain`. It also provides properties and operations like `divMod`, `divMod_fuel`, and `poly-dec-unit`.
 \import Algebra.Domain
 \import Algebra.Domain.Bezout
 \import Algebra.Domain.Euclidean

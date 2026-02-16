@@ -1,3 +1,4 @@
+-- The file defines convergence and limits in various spaces. Key functions include `IsConvergent`, `limit`, and lemmas like `convergent-char`, `limit-conv`, and `limit-isLimit`. It also provides characterizations for convergence in metric, topological, and uniform spaces, and constructs like `SubPointDirectedSet` and `InvDirectedSet`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

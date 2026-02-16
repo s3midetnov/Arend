@@ -1,3 +1,5 @@
+-- The file defines the `HeytingAlebra` class, extending `BoundedDistributiveLattice` and `CartesianClosedPrecat`. It introduces logical operations (`implies`, `neg`, `curry`, `continuation`) and proofs (`modus-ponens`, `composition-law`, `neg_bottom`, `neg_top`).
+-- This file defines the `HeytingAlebra` class, extending `BoundedDistributiveLattice` and `CartesianClosedPrecat`, and includes lemmas and functions for logical operations like `implies`, `neg`, `curry`, and `continuation`. It also includes proofs such as `modus-ponens`, `composition-law`, `neg_bottom`, and `neg_top`.
 \import Category.Adjoint
 \import Category.CartesianClosed
 \import Category.Functor

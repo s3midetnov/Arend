@@ -1,3 +1,4 @@
+-- Defines `Pointed` and `AddPointed` classes extending `BaseSet`, with coercions between them and equality for `Pointed`.
 \import Paths
 \import Set
 

@@ -1,3 +1,4 @@
+-- The file defines `localization-unique` for uniqueness of localizations and includes `lift-iso` for isomorphisms between localizations. It also provides `localization-closure-equiv` to establish an isomorphism between localizations and `locMap-epi` to prove epimorphisms.
 \import Algebra.Monoid
 \import Algebra.Monoid.Sub
 \import Algebra.Ring

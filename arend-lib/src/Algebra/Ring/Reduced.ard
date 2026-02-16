@@ -1,3 +1,4 @@
+-- The file defines algebraic structures: `ReducedRing`, `ReducedCRing`, `PPRing`, `ImpotentRing`, and `ImpotentCRing`, extending various algebraic properties and providing lemmas for handling division and nilpotent elements.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Meta

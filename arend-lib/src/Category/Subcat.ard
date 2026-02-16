@@ -1,3 +1,4 @@
+-- The file defines subcategories and reflective subcategories, detailing `subPrecat`, `subCat`, and their properties. It introduces `ReflectiveSubPrecat` with structure and functions like `reflector`, `reflectorMap`, and `isReflective`. It also discusses creating reflective subcategories from right adjoints and constructing colimits in reflective subprecategories.
 \import Category
 \import Category.Adjoint
 \import Category.Functor

@@ -1,3 +1,4 @@
+-- Defines `ProductLRepres` for linear representations, including `in_1`, `in_2`, `proj_1`, `proj_2`, and `coprod-map` as intertwining maps for module operations and group actions.
 \import Algebra.Group
 \import Algebra.Group.Representation.Category
 \import Algebra.Group.Representation

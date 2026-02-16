@@ -1,3 +1,4 @@
+-- This file defines functions and lemmas for handling sum signatures in term rewriting systems. Key functions include `SumFSignature` for combining function signatures, `inject-term` for injecting terms into a sum signature, and `inject-rule-container` for handling rewrite rules. Lemmas like `over-transport-sort` and `over-transport-ctx` handle transport within these injections. The file also defines `SumRegistry` to combine rule registries.
 \import Data.List (List)
 \import Meta
 \import Paths

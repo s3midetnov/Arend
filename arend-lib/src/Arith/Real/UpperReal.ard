@@ -1,3 +1,4 @@
+-- This file defines `ExUpperReal` and `UpperReal` as records, providing properties and operations for them, including addition, multiplication, meet, and join. It establishes various algebraic structures like semigroups, ordered lattices, and boundedness conditions. Key lemmas handle arithmetic operations, order relations, and ensure properties like associativity and commutativity.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

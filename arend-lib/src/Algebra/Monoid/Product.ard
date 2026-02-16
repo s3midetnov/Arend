@@ -1,3 +1,4 @@
+-- This file defines instances of product structures for monoids, additive monoids, commutative monoids, and abelian monoids, using paired operations and identities.
 \import Algebra.Monoid
 \import Algebra.Pointed
 \import Paths

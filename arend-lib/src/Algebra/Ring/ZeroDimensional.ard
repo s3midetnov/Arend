@@ -1,3 +1,4 @@
+-- The file defines lemmas characterizing zero-dimensional and von Neumann regular rings, including `zeroDimensional-char`, `zeroDimensional_local-char`, `vonNeumann_idempotent`, `vonNeumann-char`, and `zeroDim->inv`. It also introduces `zeroDim->field` as a function constructing a discrete field from an impotent zero-dimensional ring.
 \import Algebra.Field
 \import Algebra.Meta
 \import Algebra.Monoid

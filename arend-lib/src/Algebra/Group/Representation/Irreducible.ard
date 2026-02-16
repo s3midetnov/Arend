@@ -1,3 +1,4 @@
+-- The file defines an `Irreducible` representation for groups and a class `Hom-between-Irreducible` that includes a function `Schur's-Lemma`, which determines when a map between irreducible representations is zero or an isomorphism.
 \import Algebra.Group
 \import Algebra.Group.Representation.Category
 \import Algebra.Group.Representation

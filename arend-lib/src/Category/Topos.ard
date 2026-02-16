@@ -1,3 +1,4 @@
+-- The file defines a `ToposPrecat` class extending `FinCompletePrecat` and `CartesianClosedPrecat`, introducing concepts like subobject classifiers (`omega`), characteristic maps, exponentiability of `omega`, and functions for power objects. It includes lemmas on transposition and uniqueness, and constructs related to functional relations (`image`, `is-image-single`, `graphs`). There's a `SetTopos` instance for sets.
 \import Algebra.Meta
 \import Category
 --\import Category.Adjoint

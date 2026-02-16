@@ -1,3 +1,4 @@
+-- The file imports various algebraic and topological modules and defines instances for `RatNormed` and `RealNormed`, focusing on normed abelian groups and their properties. It introduces functions like `rat_real` and `real-lift2`, and lemmas such as `dense`, `dense-coverEmbedding`, and `real_dist>0`, dealing with dense embeddings, open intervals, and distance properties in real numbers.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

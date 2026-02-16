@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas for supremum and infimum operations on sets of real numbers, including `IsSup`, `HasSup`, `makeSup`, `IsInf`, `HasInf`, and `makeInf`. It also includes proofs of properties like uniqueness and existence of supremums and infimums for given sets.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

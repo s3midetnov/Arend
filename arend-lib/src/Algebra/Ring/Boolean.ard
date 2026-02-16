@@ -1,3 +1,4 @@
+-- This file defines `BooleanRing` and `UnitalBooleanRing` classes with algebraic properties and lemmas, including `isBooleanRing`, `double=0`, `negative=id`, `diff`, and `split`. It also provides an instance `HeytingBooleanRing` and imports various algebraic structures.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Pointed

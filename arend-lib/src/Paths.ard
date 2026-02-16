@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas for working with paths in type theory, including identity, path mapping (`pmap`), transport, inverses (`inv`), and composition (`*>`, `<*`). It also covers homotopy properties and commutativity of path operations.
 \func idpe {A : \Type} (a : A) : a = a => idp
 
 \func pmap {A B : \Type} (f : A -> B) {a a' : A} (p : a = a') : f a = f a' => path (\lam i => f (p @ i))

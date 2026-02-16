@@ -1,3 +1,4 @@
+-- This file defines algebraic structures, focusing on subgroups and related properties. Key definitions include `SubGroup`, `DecSubGroup`, `NormalSubGroup`, and `SubAddGroup`. Functions like `IGroup`, `equivalence`, and `Cosets` relate to group operations and equivalence relations. The file also establishes instances like `SubGroupPreorder` and subgroups in finite groups with `FinSubGroup`.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

@@ -1,3 +1,4 @@
+-- This file defines classes and functions related to uniform spaces in Arend. It introduces `PreuniformSpace`, `RegularPreuniformSpace`, `UniformSpace`, and `StronglyRegularUniformSpace`, each extending previous structures with more properties. Key functions include `makeCauchy`, `IsProperUniform`, and `IsWeaklyProperUniform`. Lemmas such as `proper_weaklyProper` and `uniform-separated` provide proofs about uniform and cauchy covers. The file also defines mappings like `UniformMap` and transfer functions like `UniformTransfer` for transforming spaces while preserving uniform properties.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

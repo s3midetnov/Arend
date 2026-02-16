@@ -1,3 +1,4 @@
+-- This file defines continuous germs, their equivalence relation, and operations in topological spaces. Key components include `ContGerm`, the equivalence `~-equiv`, and functions like `comp-right`, `tuple`, and `evalCG`. It also provides instances for algebraic structures: `ContGermAbGroup`, `ContGermRing`, and `ContGermLModule`, and lemmas for morphisms and linearity.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Module

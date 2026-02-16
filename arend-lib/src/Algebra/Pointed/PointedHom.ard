@@ -1,3 +1,4 @@
+-- This file defines `PointedHom` and `AddPointedHom` records, extending `SetHom`. It implements identity and composition functions for each, ensuring homomorphisms respect pointed and add-pointed structures.
 \import Algebra.Pointed
 \import Paths
 \import Set.SetHom

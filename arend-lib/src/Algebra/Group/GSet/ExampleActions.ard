@@ -1,3 +1,4 @@
+-- The file defines various group actions: `TranslationAction` and `TranslationActionOnSubsets` for a group `G`, `conjAction` for conjugation, and `trivialAction` for any set. It also defines `conjugate-subset` for a subset under conjugation. These utilize group operations and properties.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Group.GSet

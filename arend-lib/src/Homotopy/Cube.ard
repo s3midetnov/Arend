@@ -1,3 +1,4 @@
+-- The file defines `Cube2` for squares with specified boundaries and `Cube3` for 3-dimensional cubes with specified face conditions. It includes `equality` and `map` functions to transform and manipulate paths in these structures.
 \import Paths
 
 -- | The type of squares with a specified boundary

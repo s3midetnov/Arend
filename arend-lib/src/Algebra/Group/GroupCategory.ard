@@ -1,3 +1,4 @@
+-- This file defines categorical structures for groups, add groups, and abelian groups, including instances for morphisms and quotient maps. It establishes isomorphism criteria and constructs image and kernel groups.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Group.Sub

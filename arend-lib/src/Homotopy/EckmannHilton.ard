@@ -1,3 +1,4 @@
+-- Defines `Algebraic-Eckmann-Hilton` class with operations `o` and `#`, identities, and `rel`. Proves monoid commutativity. Defines `Omega^2-Commutative` class for composition structure, proving commutativity using horizontal whiskering.
 \import Function.Meta
 \import Homotopy.Loop
 \import Homotopy.Pointed \using  (Pointed \as HPointed)

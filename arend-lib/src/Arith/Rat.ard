@@ -1,3 +1,4 @@
+-- This file defines and implements rational numbers (`Rat`) as a quotient of integers, providing essential functions like `ratNom`, `ratDenom`, and `makeRat`. It includes operations: addition, multiplication, negation, and inversion, ensuring properties like `RatField` and `RatDenseOrder`. It also defines rounding functions: `rat_floor` and `rat_ceiling`, and provides lemmas for order and arithmetic operations.
 \import Algebra.Domain.Euclidean
 \import Algebra.Field
 \import Algebra.Group

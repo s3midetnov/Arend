@@ -1,3 +1,4 @@
+-- Defines `Maybe` type with `nothing` and `just`, includes `map`, `maybe`, `unjust`, and `just-injective` functions for handling `Maybe`.
 \import Paths
 
 \data Maybe (A : \Type) | nothing | just A

@@ -1,3 +1,4 @@
+-- This file defines `OrderedC*AlgebraHom` and `StoneC*AlgebraHom` for algebra homomorphisms, focusing on properties like `IsDense` and `IsIsometric`. It introduces `dense-c*-lift` for lifting homomorphisms and includes the `StoneC*AlgebraCompletion` instance.
 \import Algebra.Group
 \import Algebra.Module
 \import Algebra.Monoid

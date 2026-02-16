@@ -1,3 +1,4 @@
+-- This file defines structures and lemmas for pseudo-normed, normed, and complete abelian groups, providing properties like norm inequalities and continuity. It includes classes like `ExPseudoNormedAbGroup`, `NormedAbGroup`, and `CompleteNormedAbGroup` and records for group maps.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Meta

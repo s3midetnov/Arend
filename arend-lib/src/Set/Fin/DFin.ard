@@ -1,3 +1,4 @@
+-- The file defines `isDFin`, a property for a set `A` indicating that any injective function `f: A -> A` is also surjective. It includes lemmas `isEquiv` and `fromPigeonhole`, and a function `isSplit`, leveraging the pigeonhole principle for proofs.
 \import Equiv
 \import Function
 \import Function.Iterate

@@ -1,3 +1,4 @@
+-- The file defines algebraic structures and operations on ring terms, including `RingTerm`, `BaseData`, `AlgData`, and `CAlgData`. Main functions include `interpret`, `normalize`, and `interpretRingNF`, which evaluate terms and convert them to normal forms. Lemmas like `normalize-consistent` ensure correctness in transformations.
 \import Algebra.Algebra
 \import Algebra.Group
 \import Algebra.Group.GroupHom

@@ -1,3 +1,4 @@
+-- Defines classes `PigeonholeSet` and `BoundedPigeonholeSet` with pigeonhole principles. Lemmas include `pigeonhole<`, `isEquiv`, `boundedPigeonhole<`, and `pigeonhole-surj`. Implements `pigeonhole-fin` lemma with auxiliary functions.
 \import Arith.Fin.Order
 \import Arith.Nat
 \import Data.Fin

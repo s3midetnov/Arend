@@ -1,3 +1,4 @@
+-- The file defines `OrderedMonoid`, extending `Poset` and `Monoid`, with order-preserving multiplication. It also defines `OrderedCMonoid`, extending `OrderedMonoid` and `CMonoid`, with commutative property.
 \import Algebra.Monoid
 \import Order.PartialOrder
 \import Paths

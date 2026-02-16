@@ -1,3 +1,4 @@
+-- The file defines lemmas and functions like `monotone-inj`, `monotone-diagonal-fin`, and `fin_monotone_iso_unique` for working with order homomorphisms and monotonicity. It also introduces instances `SimplexPrecat` and `SimplexCat` for precategories and categories, and functions like `Simplex_iso`, `iso_iso`, and `iso_isProp` related to isomorphisms in these structures.
 \import Arith.Fin.Order
 \import Arith.Nat
 \import Category

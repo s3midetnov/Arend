@@ -1,3 +1,4 @@
+-- This file defines an instance `RealField` of `OrderedFieldAlgebra` and includes various operations and properties for real numbers, such as multiplication, distribution, and positivity. It also defines lemmas for algebraic operations and properties of real numbers and rational numbers.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Meta

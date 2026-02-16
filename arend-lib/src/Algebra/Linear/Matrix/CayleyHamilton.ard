@@ -1,3 +1,4 @@
+-- This file defines the Cayley-Hamilton theorem for matrices over a commutative ring, involving `polyMapEval` and `charPoly`. It includes helper functions like `toLinearMap` and `poly_func_matrix` for matrix operations.
 \import Algebra.Algebra
 \import Algebra.Group
 \import Algebra.Linear.Matrix

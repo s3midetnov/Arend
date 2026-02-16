@@ -1,3 +1,4 @@
+-- The file defines a matrix type, various matrix operations, and properties in Arend. Key functions include `mkMatrix`, `addColumn`, and `blockMatrix`. It establishes properties such as `matrixExt`, `MatrixAbGroup`, and `MatrixRing`. Lemmas cover matrix determinants, transpose, adjugate, and their interactions, including `determinant_*`, `determinant_transpose`, and `adjugate-left`.
 \import Algebra.Algebra
 \import Algebra.Group
 \import Algebra.Group.GroupHom

@@ -1,3 +1,4 @@
+-- The file defines a framework for handling locally ringed locales and schemes, including definitions like `SpecPres`, `RingedLocale`, `RingedLocaleHom`, `LocallyRingedLocale`, and `Scheme`. It provides functions for constructing affine schemes, such as `affineRingedPres`, `affineRingedLocale`, and `affineScheme`, and explores properties like local triviality and local ringedness.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Meta

@@ -1,3 +1,4 @@
+-- The file defines concepts and functions related to Cartesian closed categories, including `isExponential`, `isExponentiable`, and `CartesianClosedPrecat`. It also provides implementations for `transpose`, `antitranspose`, `eval-map`, `internal-comp`, and `internal-homFunctor`. An instance `SetCartesianClosed` is created for the set category.
 \import Category
 \import Category.Adjoint
 \import Category.Coreflection

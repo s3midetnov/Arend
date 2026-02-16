@@ -1,3 +1,4 @@
+-- This file defines instances and functions related to linear modules and linear maps in Arend. It introduces LModuleCat as a category of linear modules, and instances like LModulePreAdditive, LinearMapLModule, KerLModule, and ImageLModule. Functions like IsZeroMod and IsZeroMap check zero properties, while lemmas like iso<->inj+surj and zeroKer-FullIm<->inj+surj establish equivalences between isomorphisms, injectivity, and surjectivity.
 \import Algebra.Group
 \import Algebra.Group.GroupCategory
 \import Algebra.Group.GroupHom

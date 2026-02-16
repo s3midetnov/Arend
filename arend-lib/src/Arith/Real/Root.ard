@@ -1,3 +1,4 @@
+-- This file defines functions and lemmas related to the nth root and square root of real numbers. Key definitions include `root` and `sqrt`. Lemmas ensure properties like monotonicity, positivity, and equivalence of powers for roots and square roots.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Ordered

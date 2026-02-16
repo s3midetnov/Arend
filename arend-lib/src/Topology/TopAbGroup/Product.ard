@@ -1,3 +1,4 @@
+-- This file defines instances and lemmas for topological abelian groups, including `ProductTopAbGroup`, which defines product topology for abelian groups, and lemmas like `negative-uniform` and `+-uniform` that ensure continuity and group operations. It also defines mappings for multiplication by integers and natural numbers.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

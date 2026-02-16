@@ -1,3 +1,4 @@
+-- Defines `GrothendieckRing` and `GrothendieckCRing` instances for a `Semiring` and `CSemiring`, using localization techniques, with operations and properties like associativity, distributivity, and commutativity.
 \import Algebra.Meta
 \import Algebra.Monoid.MonoidLocalization
 \import Algebra.Pointed

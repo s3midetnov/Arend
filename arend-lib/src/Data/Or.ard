@@ -1,3 +1,4 @@
+-- The file defines the `Or` type with constructors `inl` and `inr`, and includes functions `levelProp`, `map`, `rec`, and `Or_Equiv` to manipulate `Or` types and establish equivalences.
 \import Equiv
 \import Paths
 \import Logic

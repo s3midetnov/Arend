@@ -1,3 +1,4 @@
+-- This file defines algebraic structures such as `PremeasureRing`, `MeasureRing`, and `CompleteMeasureRing`, extending Boolean rings and topological abelian groups with measure properties. Functions involve operations on measures, open sets, and Cauchy filters, including lemmas for measure inequalities and modularity.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

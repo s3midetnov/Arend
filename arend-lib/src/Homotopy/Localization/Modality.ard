@@ -1,3 +1,4 @@
+-- This file defines a `Modality` class extending `ReflUniverse` with `isModality` for local types and presents a lemma `modality-elim` as an elimination principle for localization in a modality.
 \import Equiv
 \import Homotopy.Localization.Universe
 

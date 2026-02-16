@@ -1,3 +1,4 @@
+-- The file defines a `CRingSolverModel` for a commutative ring `R` with functions for normalizing terms and interpreting them within a solver model. It includes lemmas for term equality, conversion, and applying axioms.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Algebra.Pointed

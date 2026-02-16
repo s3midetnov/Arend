@@ -1,3 +1,4 @@
+-- This file defines `GroupSolverModel` for groups, providing term normalization and interpretation functions, and establishes consistency lemmas. It also includes `AddGroupSolverModel` for additive groups and imports various algebraic and logical components.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Algebra.Solver \using (>>=-consistent)

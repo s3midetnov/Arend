@@ -1,3 +1,4 @@
+-- Defines dense-normed-lift, ExNormedAbGroupCompletion, SeparatedNormedAbGroupReflection, and separated-completion to work with normed groups and their completions. Includes instances for complete and separated normed groups.
 \import Algebra.Group
 \import Algebra.Meta
 \import Algebra.Monoid

@@ -1,3 +1,4 @@
+-- This file defines a `Complex` record with real parts and instances it as a `Field`. It includes operations for addition, negation, and multiplication, and specifies properties like associativity and commutativity. It also defines `ComplexMonoid` and a lemma `inv-char` for inversion characterization.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Meta

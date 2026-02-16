@@ -1,3 +1,5 @@
+-- The file defines instances of `Elem U` for order types: `StrictPoset`, `Poset`, `BiorderedSet`, and `LinearOrder`, maintaining order properties like transitivity and antisymmetry.
+-- Defines instances for `Elem U` in various order types: `StrictPoset`, `Poset`, `BiorderedSet`, and `LinearOrder`, preserving order properties.
 \import Order.Biordered
 \import Order.LinearOrder
 \import Order.PartialOrder

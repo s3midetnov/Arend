@@ -1,3 +1,4 @@
+-- The file defines algebraic structures related to C*-algebras, including `OrderedC*Algebra`, `StoneC*PseudoAlgebra`, and `StoneC*Algebra`. It also includes lemmas for norm properties, algebraic operations, and constructive proofs on square positivity and ordering within these algebraic contexts.
 {- | Some of the definitions and proofs are taken from
      [1] Coquand, Spitters, Constructive Gelfand Duality for C*-algebras, 2009, https://arxiv.org/abs/0808.1518
  -}

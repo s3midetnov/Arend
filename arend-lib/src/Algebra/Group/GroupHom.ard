@@ -1,3 +1,4 @@
+-- This file defines `GroupHom` and `AddGroupHom` for homomorphisms of groups and additive groups, respectively. It includes definitions for kernels, isomorphisms, and injectivity tests. Functions for composition and identity of homomorphisms are also provided.
 \import Algebra.Group
 \import Algebra.Group.Sub
 \import Algebra.Monoid

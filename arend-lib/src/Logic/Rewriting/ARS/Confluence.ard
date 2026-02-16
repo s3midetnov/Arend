@@ -1,3 +1,4 @@
+-- This file defines properties and relations for Abstract Reduction Systems (ARS), including StrongJoin, confluence, and Church-Rosser properties. It provides lemmas for deriving confluence from Church-Rosser, strong confluence, and normalization properties, as well as equivalences between local and global confluence under termination conditions.
 \import Logic.Rewriting.ARS.AbstractReductionSystem
 \import Logic
 \import Paths

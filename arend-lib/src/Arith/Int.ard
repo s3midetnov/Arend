@@ -1,3 +1,4 @@
+-- The file defines integer operations and properties: `isuc`, `ipred` for successor/predecessor, lemmas `ipred_isuc`, `isuc_ipred` for inverses, `signum` function and its properties. It includes `IntRing` instance for ordered commutative ring, with operations `+`, `*`, and comparisons `<`, `<=`. Functions `iabs` for absolute value, integer division with `ldiv_iabs`, and integer comparisons like `pos<pos`, `neg<neg`. The file also discusses integer units and decision procedures for integer comparisons.
 \import Algebra.Group
 \import Algebra.Monoid
 \import Algebra.StrictlyOrdered

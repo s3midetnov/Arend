@@ -1,3 +1,4 @@
+-- The file defines functions and lemmas related to the characteristic polynomial of a matrix, including `charPoly`, `charPoly-degree`, `charPoly-monic`, and `charPoly_map`. It also defines the type `isEigenvalue` and proves that an eigenvalue is a root of the characteristic polynomial with `eigen-root`.
 \import Algebra.Group
 \import Algebra.Group.GroupHom
 \import Algebra.Group.Symmetric

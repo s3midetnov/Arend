@@ -1,3 +1,4 @@
+-- This file defines instances and functions for product spaces in the context of uniform spaces and regular preuniform spaces, including `ProductRegularPreuniformSpace`, `ProductUniformSpace`, projections `proj1`, `proj2`, and product map `prod`. It also involves uniformity properties like `uniform-star` and `properUniform`.
 \import Data.Bool
 \import Function.Meta
 \import Logic

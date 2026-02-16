@@ -1,3 +1,4 @@
+-- The file defines classes for spaces with norm properties: `ExPseudoNormedRieszSpace`, `BanachLattice`, `RieszLSpace`, and `RieszMSpace`, extending various abstract algebraic and topological structures.
 \import Arith.Real.UpperReal
 \import Arith.Real.UpperRealLattice
 \import Function.Meta

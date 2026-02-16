@@ -1,3 +1,4 @@
+-- The file defines primality and related properties for natural numbers, including lemmas `nat_irr-isPrime`, `prime-div`, `prime-less`, and a primality test `isPrime`. It proves equivalence between `isPrime` and `Prime` with `isPrime=>prime` and `prime=>isPrime`, and provides a decision procedure `prime-isDec`.
 \import Algebra.Domain
 \import Algebra.Domain.Euclidean
 \import Algebra.Monoid

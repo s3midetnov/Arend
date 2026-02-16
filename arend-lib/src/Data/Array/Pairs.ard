@@ -1,3 +1,4 @@
+-- This file defines functions and lemmas for working with pairs of arrays, including `pairs`, which creates an array of paired elements, and various properties like `pairs-flip`, `pairs_++-left`, `pairs_map`, and `pairs-assoc`. It also includes `pairs-index` and `pairs-index-inj` for indexing and injectivity, and `pairs-index-surj` and `pairs-index-equiv` for surjectivity and equivalence. Lastly, `pairs-distr` demonstrates distributive properties in the context of semirings.
 \import Algebra.Semiring
 \import Data.Array
 \import Data.Array.EPerm

@@ -1,3 +1,4 @@
+-- The file defines structures for handling subobjects in categories. Key definitions include `SubobjectPoset`, a poset of subobjects, and `widePullback`, a record for wide pullbacks. It introduces `SubobjectMeetsemilatice`, a meet semilattice for subobjects, and functions like `subobj-product` for operations on subobjects.
 \import Category
 \import Category.Limit
 \import Category.Subobj

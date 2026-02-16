@@ -1,3 +1,4 @@
+-- This file defines concepts related to Cauchy filters and maps in the context of cover spaces, including `IsCauchyFilter`, `CauchyFilter`, `CauchyMap`, `CoverMap`, and their properties. It includes instances for poset and equivalence relations on Cauchy filters, and provides lemmas about embeddings, completeness, and separability of cover spaces.
 \import Function
 \import Function.Meta
 \import Logic.Unique

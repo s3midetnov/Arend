@@ -1,3 +1,4 @@
+-- The file defines classes for various algebraic structures, including `BanachAlgebra`, `RealPreBanachAlgebra`, and `RealBanachPseudoAlgebra`. It provides functions and lemmas for operations like multiplication, square roots, and properties of norms, including commutativity and associativity. The file also includes instances for completing these structures, particularly for `RealBanachAlgebra` using `BanachAlgebraCompletion`.
 {- | Some of the definitions and proofs are taken from
      [1] Coquand, Spitters, Constructive Gelfand Duality for C*-algebras, 2009, https://arxiv.org/abs/0808.1518
  -}

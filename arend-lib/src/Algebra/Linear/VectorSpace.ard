@@ -1,3 +1,4 @@
+-- This file defines and works with vector spaces, particularly focusing on matrix rank and Smith normal form. Key functions include `rank`, which calculates the rank of a matrix, and lemmas related to properties of rank such as `rank_transpose`, `rank_<=`, and `rank_smith_<=`. Classes like `VectorSpace` and `FinVectorSpace` extend the `LModule` class. The file also defines instances and lemmas for finite modules and linear maps, including `image-fin` and `kernel-fin` instances for finite modules.
 \import Algebra.Domain
 \import Algebra.Field
 \import Algebra.Group

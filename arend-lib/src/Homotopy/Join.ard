@@ -1,3 +1,4 @@
+-- The file defines operations and properties of the `Join` type, a pushout of two types. Key elements include: `Join`, `jinl`, `jinr`, `jglue`, `Join_Contr`, `Join_Sphere0`, `Join-sym`, `Join-assoc`, `Join_Susp`, and `Join_Sphere`. These functions involve homotopy theory concepts such as spheres, suspensions, and equivalences.
 \import Equiv
 \import Equiv.Univalence
 \import Function.Iterate

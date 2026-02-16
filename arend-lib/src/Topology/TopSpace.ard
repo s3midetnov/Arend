@@ -1,3 +1,4 @@
+-- This file defines a topological space and related concepts like dense sets, continuity, limit, and Hausdorff properties. It includes lemmas for open sets, closure, continuity characterizations, and lifting properties for continuous maps. It also defines special types of spaces and maps, such as discrete spaces, Hausdorff spaces, and continuous maps with properties like density and embeddings.
 \import Data.Bool
 \import Function.Meta ($)
 \import Logic

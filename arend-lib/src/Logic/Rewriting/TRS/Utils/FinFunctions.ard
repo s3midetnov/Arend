@@ -1,3 +1,4 @@
+-- This file defines functions for manipulating indices and modular functions over finite sets and lists, including `expand-fin-left`, `expand-fin-right`, `partial-fin-induction`, `modular-function`, `modular-induction`, `pointed-function`, `pointed-induction`, `modular-to-pointed`, and `modular-to-pointed-forward`, with associated correctness proofs and utilities.
 \import Data.Fin
 \import Data.List
 \import Data.Or

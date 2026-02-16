@@ -1,3 +1,4 @@
+-- This file defines a `TopCover` for a `TopSpace` with regularity properties, detailing conditions for Cauchy sequences, topological refinement, and glueing. It also includes the lemma `top-cover-unit`, establishing a continuous map from `TopSpace` to `TopCover`.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

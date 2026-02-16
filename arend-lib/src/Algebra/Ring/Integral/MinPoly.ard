@@ -1,3 +1,4 @@
+-- The file is focused on algebraic structures and properties of polynomials in the context of ring homomorphisms. Key definitions include `isMinPoly`, which describes a minimal polynomial, and `isMonicMinPoly`, which extends this to monic polynomials. Lemmas like `integral_factor-equiv`, `minPoly_degree-char`, and `irr_minPoly` explore relationships and characteristics of minimal polynomials, especially in fields and rings. Functions such as `finDim_minPoly` and `minPoly-exists` address the existence and computation of minimal polynomials in finite-dimensional settings.
 \import Algebra.Algebra
 \import Algebra.Domain
 \import Algebra.Domain.Euclidean

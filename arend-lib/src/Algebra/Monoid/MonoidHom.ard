@@ -1,3 +1,4 @@
+-- The file defines `MonoidHom` and `AddMonoidHom`, extending `PointedHom` and `AddPointedHom` respectively, focusing on homomorphisms between monoids and add-monoids. It includes lemmas like `func-pow`, `func-BigProd`, `func-Inv`, and `func-*n` to demonstrate how these homomorphisms preserve operations. Functions such as `equals`, `id`, `presInv`, and `func-FinSum` provide additional structure and proofs related to these homomorphisms.
 \import Algebra.Monoid
 \import Algebra.Pointed.PointedHom
 \import Logic

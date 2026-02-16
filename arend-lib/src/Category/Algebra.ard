@@ -1,3 +1,4 @@
+-- The file defines three classes: `BaseObject`, `CMonoidObject`, and `AbGroupObject`, each extending from `BaseObject` with specific operations and axioms. `CRingObject` combines `AbGroupObject` and `CMonoidObject` with a distributive law.
 \import Category
 \import Category.Limit
 \open PrecatWithBprod

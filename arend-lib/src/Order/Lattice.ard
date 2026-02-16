@@ -1,3 +1,5 @@
+-- The file defines various algebraic structures such as `MeetSemilattice`, `JoinSemilattice`, `Lattice`, `DistributiveLattice`, `TopMeetSemilattice`, `BottomJoinSemilattice`, `BoundedLattice`, `BottomDistributiveLattice`, `BoundedDistributiveLattice`, and `CompleteLattice`. Each class includes operations like `meet` (∧) and `join` (∨) with associated properties and lemmas for lattice operations, focusing on idempotence, commutativity, associativity, and distributivity.
+-- The file defines algebraic structures such as `MeetSemilattice`, `JoinSemilattice`, `Lattice`, `DistributiveLattice`, `TopMeetSemilattice`, `BottomJoinSemilattice`, `BoundedLattice`, `BottomDistributiveLattice`, `BoundedDistributiveLattice`, and `CompleteLattice`. Each class extends various interfaces and defines operations like `meet` (∧), `join` (∨), `top`, and `bottom`, along with corresponding properties and lemmas for idempotence, commutativity, associativity, distributivity, and universality in a lattice context.
 \import Algebra.Monoid
 \import Algebra.Semiring
 \import Category.Limit

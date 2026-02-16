@@ -1,3 +1,4 @@
+-- The file defines a `PowerLModule` instance, which constructs an `LModule` over a function space `J -> M` from a given `LModule` `M`. It also defines `FunctorPowerLMod`, a functor mapping from `SetCat.op` to `LModuleCat R`, utilizing the `PowerLModule` to create linear maps.
 \import Algebra.Module
 \import Algebra.Module.ModuleCategory
 \import Algebra.Module.LinearMap

@@ -1,3 +1,4 @@
+-- The file defines a function `binom` for computing binomial coefficients and includes lemmas `binom_0` and `binom_<` for special cases. It also defines `expansion` for binomial expansion in a commutative ring.
 \import Algebra.Meta
 \import Algebra.Monoid
 \import Algebra.Ring

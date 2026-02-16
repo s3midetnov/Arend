@@ -1,3 +1,4 @@
+-- Defines product topology for topological spaces, including instances, continuous maps, and properties like density and embedding. Contains lemmas on open sets, limits, and order relations in topological structures.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

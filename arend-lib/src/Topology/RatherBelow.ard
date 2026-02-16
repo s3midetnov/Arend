@@ -1,3 +1,4 @@
+-- Defines `RatherBelow` class over a semilattice with properties and lemmas for relations. Introduces `Omega` and `Interpolative` as instances. Provides lemmas for constructing, transforming, and relating these structures.
 \import Function.Meta
 \import Logic
 \import Logic.Meta

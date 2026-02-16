@@ -1,3 +1,4 @@
+-- This file defines `DPrecat` as a decorated precategory with custom homomorphisms (`DHom`) and identity/composition laws. It introduces `DIso` for isomorphisms in `DPrecat`, and constructs a `totalPrecat` from it. The `DCat` class extends `DPrecat` with univalence, and defines `totalCat` and `total-iso` to handle total categories and isomorphisms within them.
 \import Category
 \import Category.Functor
 \import Equiv (Equiv, QEquiv, sigmaEquiv, transEquiv)

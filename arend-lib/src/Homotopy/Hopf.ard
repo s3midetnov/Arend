@@ -1,3 +1,4 @@
+-- This file defines `HSpace` and `HSpaceConn` classes, proving equivalences for connected H-spaces. It includes lemmas `HSpaceConn-left` and `HSpaceConn-right`, instances like `Circle_HSpace`, and functions such as `hopf` for constructing mappings between spaces.
 \import Equiv
 \import Equiv.HalfAdjoint
 \import Equiv.Univalence

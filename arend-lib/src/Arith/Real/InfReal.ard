@@ -1,3 +1,4 @@
+-- This file defines `InfReal`, an extension of `LowerReal` and `ExUpperReal`, with properties like `LU-disjoint`, `LU-located`, and `LU-focus-bound`. It provides lemmas for real number properties and operations such as addition, meet, and join. The file includes instances like `InfRealAbMonoid`, offering algebraic structure and order relations for `InfReal`.
 \import Algebra.Field
 \import Algebra.Group
 \import Algebra.Meta

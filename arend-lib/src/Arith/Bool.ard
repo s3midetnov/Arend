@@ -1,3 +1,4 @@
+-- This file defines `BoolLattice` as a `BoundedDistributiveLattice` for `Bool`, implementing operations like `meet`, `join`, `top`, and `bottom`. It also defines `BoolPoset` as a `Dec` instance, providing order relations `<` and `<=` for `Bool`.
 \import Data.Bool
 \import Logic.Meta
 \import Meta
