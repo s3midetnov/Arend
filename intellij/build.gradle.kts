@@ -37,6 +37,7 @@ dependencies {
     implementation("org.scilab.forge:jlatexmath:1.0.7")
     implementation("com.github.vlsi.mxgraph:jgraphx:4.2.2")
     implementation("com.fifesoft:rsyntaxtextarea:3.1.3")
+    implementation("ai.koog:koog-agents:0.6.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.6.1")
     testImplementation("junit:junit:4.13.1")
 

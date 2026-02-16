@@ -1,5 +1,10 @@
 package org.arend.toolWindow.server
 
+import ai.koog.agents.core.agent.AIAgent
+import ai.koog.agents.core.tools.ToolRegistry
+import ai.koog.agents.core.tools.reflect.asTools
+import ai.koog.prompt.executor.clients.openai.OpenAIModels
+import ai.koog.prompt.executor.llms.all.simpleOpenAIExecutor
 import com.intellij.ide.CommonActionsManager
 import com.intellij.ide.DefaultTreeExpander
 import com.intellij.openapi.actionSystem.ActionManager
@@ -54,6 +59,15 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.application.ReadAction
 import com.intellij.openapi.application.ModalityState
+import javax.swing.JTextField
+import javax.swing.JButton
+import javax.swing.JTextArea
+import javax.swing.BorderFactory
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import org.arend.koogChat.ArendTools
+import java.awt.Dimension
 
 class ArendServerStateView(private val project: Project, toolWindow: ToolWindow) {
     private var suppressSelectionEvents: Boolean = false
@@ -73,6 +87,62 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
 
     private val panel = SimpleToolWindowPanel(false)
     private val statusLabel = JLabel()
+
+    // Chat components
+    private val chatMessagesArea = JTextArea().apply {
+        isEditable = false
+        lineWrap = true
+        wrapStyleWord = true
+    }
+    private val chatInputField = JTextField()
+    private val chatSendButton = JButton("Send")
+    private val chatScope = CoroutineScope(Dispatchers.Default)
+
+    // Data class for chat messages
+    private data class ChatMessage(val text: String, val isUser: Boolean, val timestamp: Long = System.currentTimeMillis())
+
+  val apiKey = System.getenv("OPENAI_API")
+
+  private val myTools = ArendTools(project)
+  private val toolRegistry = ToolRegistry{
+    tools(myTools.asTools())
+  }
+
+  val agent = AIAgent(
+    promptExecutor =  simpleOpenAIExecutor(apiKey),
+    systemPrompt = "You are an assistant for writing in the proof assistant language Arend. Answer concisely",
+    llmModel = OpenAIModels.Chat.GPT4o,
+    temperature = 0.7,
+    toolRegistry = toolRegistry
+  )
+
+    // Suspend function that generates a reply for each message
+    private suspend fun generateReply(userMessage: String): String {
+
+        return agent.run(userMessage)
+    }
+
+    // Function to send a message and trigger the reply
+    private fun sendMessage(message: String) {
+        if (message.isBlank()) return
+        
+        // Add user message to chat area
+        val userText = "You: $message\n"
+        ApplicationManager.getApplication().invokeLater {
+            chatMessagesArea.append(userText)
+            chatInputField.text = ""
+        }
+        
+        // Launch coroutine to generate reply
+        chatScope.launch {
+            val reply = generateReply(message)
+            ApplicationManager.getApplication().invokeLater {
+                chatMessagesArea.append("Server: $reply\n\n")
+                // Auto-scroll to bottom
+                chatMessagesArea.caretPosition = chatMessagesArea.document.length
+            }
+        }
+    }
 
     // Helpers to extract current selection
     private fun selectedModuleLocations(): List<ModuleLocation> {
@@ -328,6 +398,31 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
         statusLabel.text = "Modules: 0/0 • Definitions: 0/0 • Errors: 0 • Goals: 0"
         contentPanel.add(statusLabel, BorderLayout.NORTH)
         contentPanel.add(ScrollPaneFactory.createScrollPane(tree, true), BorderLayout.CENTER)
+        
+        // Build chat panel at the bottom
+        val chatPanel = JPanel(BorderLayout())
+        chatPanel.border = BorderFactory.createTitledBorder("Chat")
+        
+        // Chat messages scroll pane
+        val chatScrollPane = ScrollPaneFactory.createScrollPane(chatMessagesArea, true)
+        chatScrollPane.preferredSize = Dimension(0, 150)
+        chatPanel.add(chatScrollPane, BorderLayout.CENTER)
+        
+        // Input panel with text field and send button
+        val inputPanel = JPanel(BorderLayout())
+        inputPanel.add(chatInputField, BorderLayout.CENTER)
+        inputPanel.add(chatSendButton, BorderLayout.EAST)
+        chatPanel.add(inputPanel, BorderLayout.SOUTH)
+        
+        // Add action listeners for sending messages
+        chatSendButton.addActionListener {
+            sendMessage(chatInputField.text)
+        }
+        chatInputField.addActionListener {
+            sendMessage(chatInputField.text)
+        }
+        
+        contentPanel.add(chatPanel, BorderLayout.SOUTH)
         panel.setContent(contentPanel)
         tree.cellRenderer = ArendServerStateTreeCellRenderer(project)
         tree.isRootVisible = false
