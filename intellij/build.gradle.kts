@@ -32,11 +32,15 @@ repositories {
 
 dependencies {
     implementation(project(":base"))
-    implementation(kotlin("reflect"))
-    implementation(kotlin("stdlib-jdk8"))
     implementation("org.scilab.forge:jlatexmath:1.0.7")
     implementation("com.github.vlsi.mxgraph:jgraphx:4.2.2")
     implementation("com.fifesoft:rsyntaxtextarea:3.1.3")
+    implementation("ai.koog:koog-agents:0.6.0") {
+        exclude(group = "org.jetbrains.kotlinx", module = "kotlinx-coroutines-core")
+        exclude(group = "org.jetbrains.kotlinx", module = "kotlinx-coroutines-core-jvm")
+        exclude(group = "org.jetbrains.kotlin", module = "kotlin-stdlib")
+        exclude(group = "org.jetbrains.kotlin", module = "kotlin-reflect")
+    }
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.6.1")
     testImplementation("junit:junit:4.13.1")
 

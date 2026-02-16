@@ -7,11 +7,16 @@
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.yaml</depends>
     <depends>com.intellij.java</depends>
     <depends optional="true" config-file="plugin-json.xml">com.intellij.modules.json</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+
+
+        <inline.completion.provider implementation="org.arend.copilot.ArendCopilotProvider" id="ArendCopilot"/>
+        <inline.completion.handler/>
 
         <!-- Project -->
 
