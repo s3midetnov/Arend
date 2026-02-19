@@ -72,6 +72,7 @@ import javax.swing.BorderFactory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.arend.koogChat.AgentProvider
 import org.arend.koogChat.ArendTools
 import java.awt.Dimension
 
@@ -107,10 +108,11 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
   // Data class for chat messages
   private data class ChatMessage(val text: String, val isUser: Boolean, val timestamp: Long = System.currentTimeMillis())
 
-  val apiKey = System.getenv("OPENAI_API")
+  val agentProvider = AgentProvider(project)
 
-  val executor : PromptExecutor = simpleOpenAIExecutor(apiKey)
-  val model = OpenAIModels.Chat.GPT4o
+  val apiKey = agentProvider.apiKey
+  val executor = agentProvider.executor
+  val model = agentProvider.targetModel
 
   private val myTools = ArendTools(project)
   private val toolRegistry = ToolRegistry{
@@ -140,7 +142,9 @@ class ArendServerStateView(private val project: Project, toolWindow: ToolWindow)
   }
 
   private suspend fun generateReply(userMessage: String): String {
-    return agentService.createAgentAndRun(userMessage)
+//    return agentService.createAgentAndRun(userMessage)
+   agentProvider.createProofPlannerAgent(executor).run(userMessage)
+    return "what i've done"
   }
 
   // Function to send a message and trigger the reply

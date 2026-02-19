@@ -68,7 +68,9 @@ class ArendTools(private val project: Project) : ToolSet {
   fun getOpenEditorContent(): String {
     var content = "No file open"
     ApplicationManager.getApplication().runReadAction {
-      content = FileEditorManager.getInstance(project).selectedTextEditor?.document?.text ?: "No file open"
+      val editor = FileEditorManager.getInstance(project).selectedTextEditor
+      println("Open file path: ${editor?.virtualFile?.path}")
+      content = editor?.document?.text ?: "No file open"
     }
     return content
   }
