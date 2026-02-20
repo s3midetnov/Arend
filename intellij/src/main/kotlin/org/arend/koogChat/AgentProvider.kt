@@ -12,6 +12,9 @@ import ai.koog.prompt.executor.model.PromptExecutor
 import ai.koog.prompt.params.LLMParams
 import ai.koog.prompt.xml.xml
 import ai.koog.agents.core.dsl.builder.strategy
+import ai.koog.agents.core.tools.ToolRegistry
+import ai.koog.agents.core.tools.ToolRegistry.Companion.invoke
+import ai.koog.agents.core.tools.reflect.asTools
 import ai.koog.prompt.dsl.prompt
 import ai.koog.prompt.executor.llms.all.simpleOpenAIExecutor
 import com.intellij.openapi.fileEditor.FileEditorManager
@@ -38,10 +41,15 @@ class AgentProvider(val project : Project) {
     )
 
     val proofPlannerStrategy = proofPlannerStrategy()
+     val myTools = ArendTools(project)
+     val toolRegistry = ToolRegistry{
+      tools(myTools.asTools())
+    }
 
     return AIAgent<String, List<String>>(
       promptExecutor = promptExecutor,
       strategy = proofPlannerStrategy,
+      toolRegistry = toolRegistry,
       agentConfig = agentConfig,
     ) {
       handleEvents {
@@ -59,15 +67,26 @@ class AgentProvider(val project : Project) {
   //probably later it should become strategy<String, List<Definition>)
   fun proofPlannerStrategy() = strategy<String, List<String>>("proofPlanner") {
 
-    //llm call is inside
     val naturalLanguageFormulation by subgraphWithTask<String, List<String>>() { initialMessage ->
+      xml {
+        tag("instructions") {
+          +File("naturalLanguageFormulationPrompt.md").readText()
+            .trimIndent()
+        }
+        tag("initial_user_message") {
+          +initialMessage
+        }
+      }
+    }
+
+    val doesThisMathLookPlausible by subgraphWithTask<List<String>, List<String>>() { naturalLanguageLemmas ->
       xml {
         tag("instructions") {
           +File("/Users/artem.semidetnov/Documents/testLLMArendCompletion/src/main/kotlin/systemPrompt.md").readText()
             .trimIndent()
         }
         tag("initial_user_message") {
-          +initialMessage
+          +naturalLanguageLemmas[0]
         }
       }
     }
@@ -79,7 +98,8 @@ class AgentProvider(val project : Project) {
         val translationPrompt = prompt("translate-item") {
           system("""You are a professional math formalizer in the language Arend. " +
                         "Translate the following lemma into Arend. Make it into a \func or a \lemma with correct types.
-                        Instead of body of the function or a lemma write the unsolved goal symbol {?}""")
+                        Instead of body of the function or a lemma write the unsolved goal symbol {?}.
+                        DON'T use the code notation ```, just return the text of the Arend code. """)
           user(lemma)
         }
         val response = executor.execute(
@@ -101,6 +121,13 @@ class AgentProvider(val project : Project) {
       }}
       lemmas
     }
+
+//    val checkArendCorrectness by subgraphWithTask<List<String>, List<String>>(
+//      tools = ArendTools(project).asTools()
+//    ){
+//
+//
+//    }
 
     nodeStart then naturalLanguageFormulation then arendFormulation then writeToArendFile then nodeFinish
   }
